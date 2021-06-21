@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="left-contactheader">
+            <a href="index.html"><img src="images/014-cactus.png" alt="cactus logo"></a>
+        </div>
+        <div class="right-contactheader">
+            <h2>Contact Matê</h2>
+            <p>She'll be available for any of your needs!</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="hobbies.html">HOBBIES</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        <img class="sidebar-profilepic" src="images/snowbear.jpeg" alt="profile image">
+        <div class="button-container">
+            <button class="sidebar-button">Account</button>
+            <button class="sidebar-button">Music</button>
+            <button class="sidebar-button">Movies</button>
+            <button class="sidebar-button">Games</button>
+            <button class="sidebar-button">Settings</button>
+        </div>
+    </div> 
+
+    <div class="myform">
+        <section>
+            <form>
+                <fieldset>
+                    <legend>About yourself!</legend>
+                    <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Juan Dela Cruz">
+                    <label for="address">Address:</label>
+                        <input type="text" id="address" name="address">
+                    <label for="date">Birthdate:</label>
+                        <input type="date" id="date" name="date">
+                    <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="youremail@email.com">
+                    <label for="cellnumber">Phone number:</label>
+                        <input type="number" id="cellnumber" name="cellnumber">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>About your concern!</legend>
+                    
+                    <p>What is your demographic?</p>
+                    <label> 
+                        <input type="radio" name="demographic" value="female"> female
+                    </label>
+                    <label> 
+                        <input type="radio" name="demographic" value="male"> male
+                    </label>
+                    <label for="specify"> Specify:
+                        <input type="text" id="specify" name="demographic"> 
+                    </label>
+                    <label for="concernoptions">What is your concern?</label>
+                        <select id="concernoptions" name="concernoptions">
+                            <option selected>What is your concern?</option>
+                            <option value="inquiry">Inquiry</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="hiring">For hire</option>
+                            <option value="friend">Someone to talk to</option>
+                        </select>
+                    <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" placeholder="Type your concern here..."></textarea>
+                </fieldset>       
+            </form>
+            <button class="submit-button" type="submit">Submit form</button>
+
+        </section>
+
+        <aside>
+            <h2>Let's connect!</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4861.3099827697!2d121.07310256872378!3d14.637312758352591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1624074415322!5m2!1sen!2sph" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <a target="_blank" href="https://www.linkedin.com/in/martina-therese-reyes-8b490a205/">Linkedin</a>
+            <img class="imgfloat" src="images/1969971-admin/png/023-sign form.png">
+        </aside>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#">FACEBOOK</a></li>
+            <li><a href="#">TWITTER</a></li>
+            <li><a href="#">INSTAGRAM</a></li>
+            <li><a href="#">LINKEDIN</a></li>
+            <li><a href="#">PINTEREST</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
