@@ -1,6 +1,8 @@
 /* IMPORTED FONTS FROM INTERNET */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 body {
     background-color: #FCE3B5;
     margin: 0;
@@ -12,11 +14,31 @@ body:after {
     clear:both;
 }
 
+/* MOVIE REVIEW HEADER*/
 .header-container {
     background-color: #B5CEFC;
-    text-align: center;
-    
     padding: 2px;
+    display: flex;
+}
+
+.header-left {
+    flex-basis: 45%;
+    text-align: right;
+}
+
+.header-right {
+    flex-basis: 60%;
+    margin-left: 2rem;
+}
+
+.header-right h1{
+    margin-bottom: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+
+.header-right p{
+    margin-top: 0.1rem;
 }
 
 /* NAV BAR STYLING */
@@ -51,7 +73,7 @@ nav ul li a:hover{
     color: #14D4F6;
 }
 
-/* HEADER FOR THE CONTACT FORM WITH CACTUS LOGO */
+/* HEADER FOR THE CONTACT FORM WITH CACTUS LOGO IN CONTACT.HTML*/
 header {
     display: flex;
     justify-content: space-between;
@@ -79,6 +101,52 @@ header .right-contactheader h2{
 header .right-contactheader p{
     margin-top: 0.5rem;
 }
+
+/* ===== ABOUT.HTML STYLING ===== */
+.aboutme-container {
+    border:2px solid blue;
+    border-radius: 2px;
+
+    padding: 1rem;
+    margin: 3rem 10rem;
+}
+    /* ABOUT ME HEADER STYLES*/
+    .aboutme-header {
+        display: flex;
+        margin: 0 15rem;
+    }
+
+    .aboutme-leftheader {
+        flex-basis: 30%;
+    }
+
+    .aboutme-rightheader {
+        margin-left: 2rem;
+        flex-basis: 100%;
+    }
+
+    .aboutme-rightheader h1{
+        font-size: 50px;
+        margin-bottom:0.5rem;
+    }
+
+    .aboutme-rightheader h4{
+        font-size: 25px;
+        margin-top:0;
+    }
+
+    .aboutme-description {
+        margin: 3rem 4rem;
+        font-size: 20px;
+    }
+    
+    /*SKILLS*/
+    .skills-container {
+        border: 2px solid blue;
+        border-radius: 2px;
+        margin: 3rem 1rem;
+    }
+
 
 /*SIDE BAR WITH FEATURES*/
 .sidebar {
