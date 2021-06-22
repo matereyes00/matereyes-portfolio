@@ -144,7 +144,25 @@ header .right-contactheader p{
     .skills-container {
         border: 2px solid blue;
         border-radius: 2px;
-        margin: 3rem 1rem;
+
+        margin: 0 2rem;
+        padding: 2rem;
+    }
+
+    .skills-container ul{
+        border: green 2px solid;
+        
+        list-style-type: none;
+        padding: 0;
+        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .skills-container ul li{
+        border:2px solid red;
     }
 
 
