@@ -79,7 +79,7 @@ nav ul li a:hover{
 .aboutme-container {
     background-color: #76b9ce;
     border-radius: 2rem;
-
+    
     padding: 1rem;
     margin: 3rem 10rem;
 }
@@ -91,11 +91,14 @@ nav ul li a:hover{
     /* ABOUT ME HEADER STYLES*/
     .aboutme-header {
         display: flex;
-        margin: 0 15rem;
+        flex-wrap: row wrap;
+        align-items: center;
+        justify-content: center;
     }
-
+    
     .aboutme-leftheader {
-        flex-basis: 30%;
+        flex-basis: 70%;
+        text-align: right;
     }
 
     .aboutme-rightheader {
