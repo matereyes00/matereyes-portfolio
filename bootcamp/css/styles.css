@@ -75,6 +75,52 @@ nav ul li a{
 nav ul li a:hover{
     color: #14D4F6;
 }
+/* ====== FEATURED PROJECTS ========== */
+.featured-projects {    
+    border: 2px solid red;
+
+    padding: 7rem;
+    margin-bottom: 2rem;
+}
+
+.featured-projects-content {
+    border: 2px solid red;
+    padding:5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.content-right {
+    margin-left: 2rem;
+}
+
+.content-left {
+    margin-right: 2rem;
+}
+
+.content-left h1{
+    font-size:35px;
+}
+
+.project-button {
+    border: none;
+    border-radius: 4rem;
+    padding: 1rem;
+    background-color: #76b9ce;
+}
+
+.project-button:hover {
+    border: none;
+    background-color: #63a0b3;
+}
+
+.button-link {
+    text-decoration: none;
+    color: #E6EFFF;
+    font-size: 2rem;
+
+}
 
 /* ===== ABOUT.HTML STYLING ===== */
 .aboutme-container {
