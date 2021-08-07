@@ -43,38 +43,54 @@ body:after {
     margin-top: 0.1rem;
 }
 
-/* NAV BAR STYLING */
+/*====== NAV BAR STYLING ======*/
 nav {
     border-top: 0.2rem solid #D8696A;
     border-bottom: 0.2rem solid #D8696A;
     text-align: center;
-
     width: 60%;
-    margin: 2rem auto;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-nav ul {
+#nav-ul {
     list-style-type: none;
+    flex-flow: column wrap;
     padding: 0;
     margin: 0;
+    display: none;
     font-size: 1.5rem;
 }
 
-nav ul li {
+#nav-ul li {
     display: inline-block;
     margin: 0 2rem;
     padding: 1rem 1rem;
     justify-content: space-between;
 }
 
-nav ul li a{
+#nav-ul li a {
     text-decoration: none;
     color: #053080;
 }
 
-nav ul li a:hover{
+#nav-ul li a:hover {
     color: #14D4F6;
 }
+#nav-ul.show {
+    display: inline-block;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+}
+
 /* ====== FEATURED PROJECTS ========== */
 .featured-projects {
     padding: 7rem;
