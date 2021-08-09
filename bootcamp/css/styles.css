@@ -11,12 +11,7 @@ body {
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
-body:after {
-    clear:both;
-}
-
-/* MOVIE REVIEW HEADER*/
+/* ================ MOVIE REVIEW HEADER ============*/
 .header-container {
     background-color: #3fa8b1;
     padding: 2px;
@@ -191,6 +186,31 @@ nav {
 
     padding: 0.4rem;
     flex-basis: 40%;
+}
+/* ============ POLL =========== */
+#poll {
+    padding: 0.4rem;
+    background-color: wheat;
+}
+
+#options {
+    display: flex;
+}
+
+#option1 {
+    text-align: center;
+    flex-basis: 50%;
+}
+
+#option2 {
+    text-align: center;
+    flex-basis: 50%;
+}
+
+.add-option {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
 }
 
 /* ===== ABOUT.HTML STYLING ===== */
