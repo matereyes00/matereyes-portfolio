@@ -21,24 +21,25 @@ hamburger.addEventListener('click', () => {
 let chickenCount = document.getElementById("chicken-number-display");
 let fishCount = document.getElementById("fish-number-display");
 
-let count = 0;
+let count_chckens = 0;
+let count_fish = 0;
 
 function addChicken() {
-  count += 1
-  chickenCount.textContent = count;
+  count_chckens += 1
+  chickenCount.textContent = count_chckens;
 }
 
 function addFish() {
-  count += 1
-  fishCount.textContent = count;
+  count_fish += 1
+  fishCount.textContent = count_fish;
 }
 
 function removeChicken() {
-  count -= 1;
-  chickenCount.textContent = count;
+  count_chckens -= 1;
+  chickenCount.textContent = count_chckens;
 }
 
 function removeFish() {
-  count -= 1;
-  fishCount.textContent = count;
+  count_fish -= 1;
+  fishCount.textContent = count_fish;
 }
