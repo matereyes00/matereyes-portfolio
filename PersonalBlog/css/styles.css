@@ -54,7 +54,6 @@ nav {
     flex-flow: column wrap;
     padding: 0;
     margin: 0;
-    display: none;
     font-size: 1.5rem;
 }
 
@@ -72,18 +71,6 @@ nav {
 
 #nav-ul li a:hover {
     color: #14D4F6;
-}
-#nav-ul.show {
-    display: inline-block;
-}
-
-.hamburger {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    display: block;
 }
 
 /* ====== FEATURED PROJECTS ========== */
@@ -336,41 +323,21 @@ nav {
             border-radius: 10px;
         }
 
-    /*ENTERTAINMENT FLEXBOX*/
-    .entertainment-container {
-        padding: 1rem;
-        margin-bottom: 3rem;
-        background-color: #76b9ce;
-    }
+        .progressmade-js {
+            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
+            width: 20%;
+            /* Adjust with JavaScript */
+            height: 20px;
+            border-radius: 10px;
+        }
 
-    .entertainment-container h1 {
-        font-family: 'Lily Script One', cursive;
-        font-size: 45px;
-        text-align: center;
-        margin-bottom: 0;
-    }
-
-    .entertainment-container ul {
-        list-style-type: none;
-        text-align: center;
-        padding:0;
-        margin-top:3rem;
-
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;        
-    }
-
-    .entertainment-container h3{
-        font-family: 'Lily Script One', cursive;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .entertainment-container ul li h1{
-        margin-top:0;
-    }
+        .progressmade-sql {
+            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
+            width: 35%;
+            /* Adjust with JavaScript */
+            height: 20px;
+            border-radius: 10px;
+        }
 
 
 /* ========== CONTACT FORM STYLING ============= */

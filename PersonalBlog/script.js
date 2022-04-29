@@ -9,14 +9,6 @@ function changeElement() {
     }
   }
 
-/* =========== HAMBURGER MENU ============ */
-const hamburger = document.getElementById('hamburger');
-const navUL =  document.getElementById('nav-ul');
-
-hamburger.addEventListener('click', () => {
-    navUL.classList.toggle('show');
-});
-
 /*========== POLL =============== */
 let chickenCount = document.getElementById("chicken-number-display");
 let fishCount = document.getElementById("fish-number-display");
