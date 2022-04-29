@@ -7,6 +7,7 @@
     <title>About</title>
 
     <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4dce4f17c1.js" crossorigin="anonymous"></script>
 
 </head>
@@ -27,7 +28,8 @@
         <h1>About me!</h1>
         <div class="aboutme-header">
             <div class="aboutme-leftheader">
-                <img src="images/user.png" alt="user picture">
+                <img src="images/decentmate.jpg" alt="user picture" 
+                    id="profilepic" onclick="changePic()">
             </div>
             <div class="aboutme-rightheader">
                 <h1>Martina Reyes</h1>
@@ -36,23 +38,22 @@
         </div>
         <div class="aboutme-description">
             <p> Hi! I'm Martina Reyes and I'm 21 years old. My nickname is Matê and my preferred pronouns are she/her. I am currently a third year college student taking up BS Computer Science with a specialization in Data Science and Analytics in Ateneo de Manila University.</p>
-            <p>During the pandemic, I got into quite a few fields such as Web Development, User Experience Research and Design, and Data Science. I took up a few online courses on HTML, CSS, and basic JavaScript. I also have experience working on Basic React and Django. I am also familiar with the basic usage of Tableau and Tableay prep builder from my Data Visualization elective. I also learned about the UX research process through my invovement with User Experience Society.</p> 
+            <p>During the pandemic, I got into quite a few fields such as Web Development, User Experience Research and Design, and Data Science. I took up a few online courses on HTML, CSS, and basic JavaScript. I also have experience working on Basic React and Django. I am also familiar with the basic usage of Tableau and Tableau Prep Builder from my Data Visualization elective. I also learned about the UX research process through my invovement with User Experience Society.</p> 
             <p>I aspire for a career in Data Science. I enjoy learning and using platforms such as Coursera and Kaggle to increase my Data Science and Analytics skills. My personal goal is to use the knowledge, skills, and understanding I have in my course in helping other people. I work well individually but perfer working collaboratively on a team. I empathize with others, value inclusive environments and adapt a growth mindset in any project or task I partake in.</p> 
         </div>
     </div>
-
-    <!--Add a circle with a percentage of how much u mastered the language or level of comfortability with it-->
+    
     <div class="languages-container">
         <h1>Languages I know</h1>
         <ul>
-            <li>
+            <li class="mySlides">
                 <h3>PYTHON</h3>
                 <img src="images/python.png"  alt="languages I know icon">
                 <div class="progressbar">
                     <div class="progressmade-python">50%</div>
                 </div>
             </li>
-            <li>
+            <li class="mySlides">
                 <h3>HTML</h3>
                 <img src="images/001-coding.png" alt="languages I know icon">
                 <div class="progressbar">
@@ -94,15 +95,13 @@
 
     <footer>
         <ul>
-            <li><a href="#">FACEBOOK</a></li>
-            <li><a href="#">TWITTER</a></li>
-            <li><a href="#">INSTAGRAM</a></li>
-            <li><a href="https://www.linkedin.com/in/martina-therese-reyes-8b490a205/" target="_blank">LINKEDIN</a></li>
-            <li><a href="#">PINTEREST</a></li>
+            <li><a href="https://www.linkedin.com/in/martina-therese-reyes-8b490a205/" 
+                target="_blank">LINKEDIN</a></li>
         </ul>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>

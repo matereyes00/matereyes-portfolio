@@ -35,3 +35,9 @@ function removeFish() {
   count_fish -= 1;
   fishCount.textContent = count_fish;
 }
+
+//  ===========
+let aboutProfilePic = document.getElementsById("profilepic");
+function changePic() {
+  document.getElementById("profilepic").src="images/mate.jpg";
+}

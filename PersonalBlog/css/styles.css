@@ -114,71 +114,6 @@ nav {
     cursor: pointer;
     color: black;
 }
-/* ==== PRACTICE JS SECTION =====*/
-.trying-out-js {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-#big-section {
-    background-color: #D8696A;
-    text-align: center;
-
-    padding: 0.4rem;
-    flex-basis: 60%;
-}
-
-#changing-button {
-    border: none;
-    border-radius: 4rem;
-    padding: 1rem;
-    margin-right: 0.5rem;
-    background-color: #63a0b3;
-    cursor: pointer;
-}
-
-#changing-button:hover {
-    background-color: #EAE3CD;
-    color: black;
-    transition: 0.2s;
-}
-
-#small-section {
-    background-color: #053080;
-    color: whitesmoke;
-    text-align: center;
-
-    padding: 0.4rem;
-    flex-basis: 40%;
-}
-/* ============ POLL =========== */
-#poll {
-    padding: 0.4rem;
-    background-color: wheat;
-}
-
-#options {
-    display: flex;
-}
-
-#option1 {
-    text-align: center;
-    flex-basis: 50%;
-}
-
-#option2 {
-    text-align: center;
-    flex-basis: 50%;
-}
-
-.add-option {
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-}
 
 /* ===== ABOUT.HTML STYLING ===== */
 .aboutme-container {
@@ -231,16 +166,17 @@ nav {
     /*LANGUAGES FLEX BOX*/
     .languages-container {
         border-radius: 2px;
-        padding: 1rem;
         margin-bottom: 3rem;
         background-color: #76b9ce;
+        overflow-x: auto;
+        white-space: nowrap;
     }
     
     .languages-container h1{
         font-family: 'Fredoka One', cursive;
         font-size: 50px;
         text-align: center;
-        margin-bottom: 0.5rem;
+        margin: 0 auto;
     }
 
     .languages-container h3{
@@ -260,22 +196,20 @@ nav {
         text-align: center;
         padding: 0;
         margin-top: 0.5rem;
-        
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
     }
 
     .languages-container ul li{
+        display: inline-block;
         padding: 1rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
     }
 
     /* ===== PROGRESS BARS ======= */
         .progressbar {
             background-color: #ECECF1;
             border-radius: 13px;
-            /* (height of inner div) / 2 + padding */
+            margin-top: .7rem;
             padding: 0.3rem;
         }
 
