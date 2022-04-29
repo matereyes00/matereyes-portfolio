@@ -15,36 +15,16 @@ body {
 .header-container {
     background-color: #3fa8b1;
     padding: 2px;
-    display: flex;
-}
-
-.header-left {
-    flex-basis: 45%;
-    text-align: right;
-}
-
-.header-right {
-    flex-basis: 60%;
-    margin-left: 2rem;
-}
-
-.header-right h1{
-    margin-bottom: 0;
-    font-family: 'Anton', sans-serif;
-    font-size: 30px;
-}
-
-.header-right p{
-    margin-top: 0.1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 /*====== NAV BAR STYLING ======*/
 nav {
-    border-top: 0.2rem solid #D8696A;
-    border-bottom: 0.2rem solid #D8696A;
     text-align: center;
     width: 60%;
-    margin: 1rem auto;
+    margin: .1rem auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -334,6 +314,13 @@ nav {
         .progressmade-sql {
             background-image: linear-gradient(to right, #FF7915 , #FB673A);;
             width: 35%;
+            /* Adjust with JavaScript */
+            height: 20px;
+            border-radius: 10px;
+        }
+        .progressmade-git {
+            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
+            width: 40%;
             /* Adjust with JavaScript */
             height: 20px;
             border-radius: 10px;
