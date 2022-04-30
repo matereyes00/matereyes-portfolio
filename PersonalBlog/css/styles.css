@@ -117,7 +117,7 @@ nav {
 
 /* ===== ABOUT.HTML STYLING ===== */
 .aboutme-container {
-    background-color: #76b9ce;
+    background: rgba(234, 227, 205, 0.5);
     border-radius: 2rem;
     
     padding: 1rem;
@@ -165,11 +165,12 @@ nav {
     
     /*LANGUAGES FLEX BOX*/
     .languages-container {
-        border-radius: 2px;
-        margin-bottom: 3rem;
-        background-color: #76b9ce;
+        border-radius: 2rem;
+        background-color: rgba(184, 171, 129, 0.5);;
         overflow-x: auto;
         white-space: nowrap;
+        width: 70%;
+        margin: 3rem auto;
     }
     
     .languages-container h1{
@@ -260,6 +261,30 @@ nav {
             border-radius: 10px;
         }
 
+/*============= DOWNLOAD RESUME AND CV =============*/
+.download-resume-container{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(234, 227, 205, 0.5);
+    border-radius: 2rem 2rem 0 0;
+    padding-top:1rem;
+}
+.download-resume {
+    display: flex;
+    flex-wrap: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-link {
+    text-decoration: none;
+    color: white;
+}
+
+.a-link:hover{
+    color: #76b9ce;
+}
 
 /* ========== CONTACT FORM STYLING ============= */
 .myform {
@@ -335,9 +360,10 @@ aside h3{
 /*FOOTER STYLING*/
 
 footer {
-    background-color:#3FA8B1;
+    background-color:rgba(30, 223, 240, 0.5);
     text-align: center;
     padding: 2rem;
+    margin-top: 1rem;
     font-size: 1.5rem;
 }
 
@@ -353,8 +379,12 @@ footer ul li{
     margin-left: 5rem;
 }
 
-footer ul li a{
+.social-media{
     text-decoration: none;
+}
+
+.fa-cog {
+    color: black;
 }
 
 /* BUTTONS */
