@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
 
 body {
@@ -125,7 +124,6 @@ nav {
 }
 
 .aboutme-container h1 {
-    font-family: 'Fredoka One', cursive;
     font-size: 55px;
 }
     /* ABOUT ME HEADER STYLES*/
@@ -148,13 +146,11 @@ nav {
 
     .aboutme-rightheader h1{
         font-size: 50px;
-        font-family: 'Fredoka One', cursive;
         margin-bottom:0.5rem;
     }
 
     .aboutme-rightheader h4{
         font-size: 25px;
-        font-family: 'Montserrat', sans-serif;
         margin-top:0;
     }
 
@@ -167,27 +163,26 @@ nav {
     .languages-container {
         border-radius: 2rem;
         background-color: rgba(184, 171, 129, 0.5);;
-        overflow-x: auto;
-        white-space: nowrap;
+        margin: 0 auto;
         width: 70%;
-        margin: 3rem auto;
     }
     
-    .languages-container h1{
-        font-family: 'Fredoka One', cursive;
+    .stack-title-section{
         font-size: 50px;
         text-align: center;
-        margin: 0 auto;
+    }
+
+    .stack-section {
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .languages-container h3{
-        font-family: 'Fredoka One', cursive;
         font-size: 30px;
         text-align: center;
     }
 
     .languages-container p{
-        font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         text-align: center;
     }

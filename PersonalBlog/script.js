@@ -9,6 +9,10 @@ function changeElement() {
     }
   }
 
+// == Plays audio ==
+let song = document.getElementById("song");
+song.play();
+
 /*========== POLL =============== */
 let chickenCount = document.getElementById("chicken-number-display");
 let fishCount = document.getElementById("fish-number-display");
