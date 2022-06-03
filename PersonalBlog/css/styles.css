@@ -118,13 +118,13 @@ nav {
 .aboutme-container {
     background: rgba(234, 227, 205, 0.5);
     border-radius: 2rem;
-    
-    padding: 1rem;
+    padding: 3rem;
     margin: 3rem 10rem;
 }
 
 .aboutme-container h1 {
     font-size: 55px;
+    text-align: center;
 }
     /* ABOUT ME HEADER STYLES*/
     .aboutme-header {
@@ -135,13 +135,11 @@ nav {
     }
     
     .aboutme-leftheader {
-        flex-basis: 70%;
         text-align: right;
     }
 
     .aboutme-rightheader {
         margin-left: 2rem;
-        flex-basis: 100%;
     }
 
     .aboutme-rightheader h1{
