@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Update Student Information Page</title>
+</head>
+<body>
+    <header>
+        <nav class="top-nav" role="navigation">
+            <div class="top-nav-leftside">
+                <h2><abbr title="Ateneo Integrated Student Information System">AISIS</abbr> ONLINE</h2>
+            </div>
+            <div class="top-nav-rightside">
+                <ul class="index-navbar-ul">
+                    <li class="index-navbar-li" role="menuitem"><a class="link" href="../index.html">Home</a></li>
+                    <li class="index-navbar-li" role="menuitem"><a class="link" href="#">Sign Out</a></li>
+                    <li class="index-navbar-li" role="menuitem"><a class="link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h2>Ateneo Integrated Student Information System</h2>
+    </header>
+
+    <div class="page-navigation">
+        <nav class="page-navbar" role="navigation">
+            <ul class="index-navbar-ul">
+                <li class="index-navbar-li" role="menuitem"><a class="link" href="updateinfo_pageone.html">Update Student Information</a></li>
+                <li class="index-navbar-li" role="menuitem"><a class="link" href="../classSchedule.html">Class Schedules</a></li>
+                <li class="index-navbar-li" role="menuitem"><a class="link" href="../mygrades.html">My Grades</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-header">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="link" href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a class="link" href="updateinfo_pagethree.html">Update Student Information</a></li>
+            </ol>
+        </nav>
+        <div class="page-header-partition">
+            <div class="page-header-left">
+                <h3>Update Student Information</h3>
+                <h5>2<sup>nd</sup> Semester, <abbr title="School Year">S.Y.</abbr> 2021-2022</h5>	
+            </div>
+            <div class="page-header-right"><h6>User Identified As: JUAN DELA CRUZ</h6></div>
+        </div>
+    </div>
+    
+    <div class="page-container">
+        <form>
+            <fieldset id="page5" class="emergency-address subform">
+                <legend>Emergency Address</legend>
+                <button class="btn btn-dark">Copy Information from Parent's/Guardian's Permanent Mailing Address</button>
+                
+                <div class="col">
+                    <label for="unitno-building">Unit No. and Building:
+                        <input type="text" name="unitno-building" aria-label="Your Unit Number and Building" aria-required="true">
+                    </label>
+                    <label for="Street-number">Street Number:
+                        <input type="number" name="Street-number" aria-label="Your Street Number" aria-required="true">
+                    </label>
+                    <label for="village-barangay">Village/Barangay Name:
+                        <input type="text" name="village-barangay" aria-label="Your Village and Barangay Name"aria-required="true">
+                    </label>
+                    <label for="city">City:
+                        <input type="text" name="city" aria-label="Your city" aria-required="true">
+                    </label>
+                    <label for="province">Province:<input type="text" name="province" aria-label="Your province"aria-required="true">
+                    </label>
+                    <label for="Contact-Person">Contact Person:
+                        <input for="name" name="Contact-Person" aria-label="Your Contact Person's name"aria-required="true">
+                    </label>
+                    <label for="MobileNumber">Mobile Number:
+                        <input type="number" name="MobileNumber" aria-label="Your Mobile Number"aria-required="true">
+                    </label>
+                    <label for="Fax-Number">Fax Number:<input type="tel" name="Fax-Number" aria-label="Your Fax Number"aria-required="true">
+                    </label>
+                    <label for="StreetName">Street Name:
+                        <input type="street-address" name="StreetName" aria-label="Your Street Name"aria-required="true">
+                    </label>
+                    <label for="Municipality">Municipality:
+                        <input type="text" name="Municipality" aria-label="Your Municipality"aria-required="true">
+                    </label>
+                </div>
+                
+                <div class="col">
+                    <label for="Zip-PostalCode">Zip or Postal Code:
+                        <input type="postal-code" name="Zip-PostalCode" aria-label="Your Postal Code"aria-required="true">
+                    </label>
+                    <label for="country">Country:<input type="country-name" name="country" aria-label="Your Country"aria-required="true">
+                    </label>
+                    <label for="Email">Email:<input type="email" name="Email" aria-label="Your Email">
+                    </label>
+                    <label for="landline">Landline:<input type="tel" name="landline" aria-label="Your Telephone Number">
+                    </label>
+                    <fieldset>
+                        <label for="relationship">Relationship:</label>
+                        <input class="form-check-input" type="radio" name="Mother" id="Mother" aria-label="Your Mother"><label for="Mother">Mother</label>
+                        <input class="form-check-input" type="radio" name="Father" id="Father" aria-label="Your Father"><label for="Father">Father</label>
+                        <input class="form-check-input text-box" type="text" name="Other" id="Other" aria-label="Others"><label for="Other">Other</label>
+                    </fieldset>
+                </div>
+                
+            </fieldset>
+
+            <fieldset id="page6" class="father-address subform">
+                <legend>FATHER'S ADDRESS</legend>
+                <button class="btn btn-dark">Copy Information from Parent's/Guardian's Permanent Mailing Address</button>
+                <div class="col">
+                    <label for="unitno-building">Unit No. and Building:<input type="text" name="unitno-building" aria-label="Your Unit Number and Building"aria-required="true"></label>
+                    <label for="Street-number">Street Number:<input type="number" name="Street-number" aria-label="Your Street Number"aria-required="true"></label>
+                    <label for="village-barangay">Village/Barangay Name:<input type="text" name="village-barangay" aria-label="Your Village and Barangay Name"aria-required="true"></label>
+                    <label for="city">City:<input type="text" name="city" aria-label="Your city"aria-required="true"></label>
+                    <label for="province">Province:<input type="text" name="province" aria-label="Your province" aria-required="true"></label>
+                    <label for="Contact-Person">Contact Person:<input for="name" name="Contact-Person" aria-label="Your Contact Person's name" aria-required="true"></label>
+                    <label for="MobileNumber">Mobile Number:<input type="number" name="MobileNumber" aria-label="Your Mobile Number" aria-required="true"></label>
+                    <label for="Fax-Number">Fax Number:<input type="tel" name="Fax-Number" aria-label="Your Fax Number" aria-required="true"></label>
+                    <label for="StreetName">Street Name:<input type="street-address" name="StreetName" aria-label="Your Street Name" aria-required="true"></label>
+                    <label for="Municipality">Municipality:<input type="text" name="Municipality" aria-label="Your Municipality" aria-required="true"></label>
+                </div>
+                <div class="col">
+                    <label for="Zip-PostalCode">Zip or Postal Code:<input type="postal-code" name="Zip-PostalCode" aria-label="Your Postal Code" aria-required="true"></label>
+                    <label for="country">Country:<input type="country-name" name="country" aria-label="Your Country" aria-required="true"></label>
+                    <label for="Email">Email:<input type="email" name="Email" aria-label="Your Email" aria-required="true"></label>
+                    <label for="landline">Landline:<input type="tel" name="landline" aria-label="Your Telephone Number" aria-required="true"></label>
+                    <fieldset>
+                        <label for="relationship">Relationship:</label>
+                        <input class="form-check-input" type="radio" name="Living" id="Living" aria-label="Living"><label for="Living">Living</label>
+                        <input class="form-check-input" type="radio" name="Deceased" id="Deceased" aria-label="Deceased"><label for="Deceased">Deceased</label>
+                        <input class="form-check-input" type="radio" name="NA" id="NA" aria-label="Not Applicable"><label for="NA"><abbr title="Not Applicable">N/A</abbr></label>
+                        <input class="form-check-input" type="radio" name="Single-Parent" id="Single-Parent" aria-label="Single Parent"><label for="Single-Parent">Single Parent</label>
+                    </fieldset>
+                </div>
+                
+            </fieldset>
+
+            <nav class="update-form-nav" aria-label="Page navigation for Update Student Information form">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pageone.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pagetwo.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pagethree.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pagefour.html">4</a></li>
+                </ul>
+            </nav>
+            <p>Page 3 of 4</p>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <ul class="footer-ul">
+                <li class="footer-li"><a class="link" href="../index.html">Home</a></li>
+                <li class="footer-li"><a class="link" href="#">Terms and Conditions</a></li>
+                <li class="footer-li"><a class="link" href="#">Privacy Policy</a></li>
+                <li class="footer-li"><a class="link" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirm Submission</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Are you sure you want to update your student information?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

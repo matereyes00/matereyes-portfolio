@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Update Student Information Page</title>
+</head>
+<body>
+    <header>
+        <nav class="top-nav" role="navigation">
+            <div class="top-nav-leftside">
+                <h2><abbr title="Ateneo Integrated Student Information System">AISIS</abbr> ONLINE</h2>
+            </div>
+            <div class="top-nav-rightside">
+                <ul class="index-navbar-ul">
+                    <li class="index-navbar-li" role="menuitem"><a class="link" href="../index.html">Home</a></li>
+                    <li class="index-navbar-li" role="menuitem"><a class="link" href="#">Sign Out</a></li>
+                    <li class="index-navbar-li" role="menuitem"><a class="link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h2>Ateneo Integrated Student Information System</h2>
+    </header>
+
+    <div class="page-navigation">
+        <nav class="page-navbar" role="navigation">
+            <ul class="index-navbar-ul">
+                <li class="index-navbar-li" role="menuitem"><a class="link" href="updateinfo_pageone.html">Update Student Information</a></li>
+                <li class="index-navbar-li" role="menuitem"><a class="link" href="../classSchedule.html">Class Schedules</a></li>
+                <li class="index-navbar-li" role="menuitem"><a class="link" href="../mygrades.html">My Grades</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-header">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="link" href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a class="link" href="updateinfo_pageone.html">Update Student Information</a></li>
+            </ol>
+        </nav>
+        <div class="page-header-partition">
+            <div class="page-header-left">
+                <h3>Update Student Information</h3>
+                <h5>2<sup>nd</sup> Semester, <abbr title="School Year">S.Y.</abbr> 2021-2022</h5>	
+            </div>
+            <div class="page-header-right"><h6>User Identified As: JUAN DELA CRUZ</h6></div>
+        </div>
+    </div>
+    
+
+    <div class="page-container">
+        <form>
+            <fieldset id="page1" class="student-contact-number subform">
+                <legend>Student Contact Number</legend>
+                <label for="primary-email">Primary Email:<input size=80 class="form-control" type="text" placeholder="juan.dela.cruz@obf.ateneo.edu" readonly></label> 
+                <label for="secondary-email">Secondary Email:
+                    <input type="email" size=80 name="secondary-email" id="secondary-email" aria-label="Your Secondary Email" aria-required="true">
+                    <p>(Please note that this email will not be used for official notices by the school unless all means to contact you are exhausted.)</p>
+                </label>
+                <label for="primary-mobile-number">Primary Mobile Number:
+                    <input type="number" size=80 name="primary-mobile-number" id="secondary-email" aria-label="Your Primary Mobile Number" aria-required="true">
+                    <p>(*Please note that your mobile number should be updated every time you change contact number as this is a primary and urgent means to get in touch with you for official communication <abbr title="for example">e.g.</abbr> notices, summons, correspondences and during emergencies. This is also your registered number on the Atenista Ka App (AKApp) <abbr title="Short Message Service">SMS</abbr> blast service of the school which allows you to receive important notices, announcements and bulletins from the school.)</p>
+                </label>
+            </fieldset>
+            
+            <fieldset id="page2" class="permanent-mailing-address subform">
+                <legend>Parents' or Guardian's Permanent Mailing Address</legend>
+                <p>Note: Changes to Parent's/Guardian's Permanent Mailing Address can only be made through the Office of the Registrar.</p>
+                <label for="unitno-building">Unit No. and Building:<input size=80 class="form-control" type="text" placeholder="123 BuildingA" readonly></label>
+                <label for="Street-number">Street Number:<input class="form-control" size=80 type="text" placeholder="N/A" readonly></label>
+                <label for="village-barangay">Village/Barangay Name:<input size=80 class="form-control" type="text" placeholder="Barangay 0172A" readonly></label>
+                <label for="city">City:<input class="form-control" size=80 type="text" placeholder="New Manila" readonly></label>
+                <label for="province">Province:<input class="form-control" size=80 type="text" placeholder="National Capital Region" readonly></label>
+                <label for="Contact Person">Contact Person:<input class="form-control" size=80 type="text" placeholder="Juanita Dela Cruz" readonly></label>
+                <label for="Mobile Number">Mobile Number:<input class="form-control" size=80 type="text" placeholder="+63 1234 567 8901" readonly></label>
+                <label for="Street Name">Street Name:<input class="form-control" size=80 type="text" placeholder="New Streets" readonly></label>
+                <label for="Municipality">Municipality:<input class="form-control" size=80 type="text" placeholder="Sampaguita" readonly></label>
+                <label for="Zip-PostalCode">Zip or Postal Code:<input class="form-control" size=80 type="text" placeholder="0987" readonly></label>
+                <label for="country">Country:<input class="form-control" size=80 type="text" placeholder="Philippines" readonly></label>
+                <label for="Email">Email:<input class="form-control" size=80 type="text" placeholder="juan.delacruz@gmail.com" readonly></label>
+                <label for="landline">Landline:<input class="form-control" size=80 type="text" placeholder="0987654329" readonly></label>
+            </fieldset>
+
+            <nav class="update-form-nav" aria-label="Page navigation for Update Student Information form">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pageone.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pagetwo.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pagethree.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="/forms/updateinfo_pagefour.html">4</a></li>
+                </ul>
+            </nav>
+            <p>Page 1 of 4</p>
+        </form>
+        
+    </div>
+    
+
+    <footer>
+        <div class="footer-nav">
+            <ul class="footer-ul">
+                <li class="footer-li"><a class="link" href="../index.html">Home</a></li>
+                <li class="footer-li"><a class="link" href="#">Terms and Conditions</a></li>
+                <li class="footer-li"><a class="link" href="#">Privacy Policy</a></li>
+                <li class="footer-li"><a class="link" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <p>(c) Copyright 2006 Ateneo Integrated Student Information System. Ateneo de Manila University. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirm Submission</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            Are you sure you want to update your student information?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
