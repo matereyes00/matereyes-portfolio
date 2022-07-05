@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.calc-wrapper {
+    width: 40rem;
+    margin: 0 auto;
+}
+
+.screen {
+    text-align: right;
+    padding: 2rem 1rem;
+    font-size: 5rem;
+    background-color: #2D3142;
+    color: #EFEFD0;
+}
+
+.button-pad-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.calc-button {
+    padding: 1rem;
+    font-size: 3rem;
+    border: none;
+    height: 5rem;
+    flex-basis: 20%; /*how big i want the button to be*/
+}
+
+.double-horizontal {
+    flex-basis: 60%;
+}
+
+.operation-button {
+    background-color: #818AA3;
+}
+
+.operation-button:hover {
+    background-color: #717991;
+}
+
+.operation-button:active {
+    background-color: #acb5d1;
+}
+
+.clear-button {
+    background-color: #AA5042;
+    color: #EFEFD0;
+}
+
+.clear-button:hover{
+    background-color: #853d32;
+}
+
+.clear-button:active{
+    background-color: #e05a45;
+}
