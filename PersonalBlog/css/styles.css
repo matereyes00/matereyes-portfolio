@@ -213,9 +213,17 @@ nav {
             height: 20px;
             border-radius: 10px;
         }
-        .progressmade-git {
+        .progressmade-git, .progressmade-django {
             background-image: linear-gradient(to right, #FF7915 , #FB673A);;
             width: 40%;
+            /* Adjust with JavaScript */
+            height: 20px;
+            border-radius: 10px;
+        }
+
+        .progressmade-bootstrap {
+            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
+            width: 25%;
             /* Adjust with JavaScript */
             height: 20px;
             border-radius: 10px;
