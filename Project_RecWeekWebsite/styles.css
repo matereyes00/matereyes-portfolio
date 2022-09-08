@@ -1,0 +1,60 @@
+body {
+    margin:0;
+    padding: 0;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+.banner-left {
+    flex-basis: 60%;
+}
+
+.banner-right {
+    flex-basis: 80%;
+}
+
+.cluster {
+    text-align: center;
+    width: 90%;
+    margin: 5em auto;
+}
+
+h5[class="cluster-title"] {
+    border-bottom:1px black solid;
+}
+
+.cluster-cards {
+    display: grid;
+    gap: 50px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2em;
+}
+
+.cluster-card {
+    padding: 1em;
+    text-align: left;
+    flex: 1 0 31%;
+    margin: 0.5em;
+    box-shadow: 10px 12px 5px 9px rgba(0,0,0,0.09);
+    -webkit-box-shadow: 10px 12px 5px 9px rgba(0,0,0,0.09);
+    -moz-box-shadow: 10px 12px 5px 9px rgba(0,0,0,0.09);
+}
+
+.read-more-btn {
+    float: right;
+}
+
+footer {
+    text-align: center;
+    padding: 4em;
+    margin: 4em;
+}
+
+p[class="footer-text"] {
+    margin:-0.2em;
+}
