@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
 body {
     margin:0;
     padding: 0;
@@ -5,40 +9,121 @@ body {
 
 .banner {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-flow: row nowrap;
+    overflow:hidden;
     padding: 3em;
+    background-color: black;
+    color: white;
 }
 
+.banner-header {
+    font-family: 'Libre Baskerville', serif;
+}
+
+p[class="banner-description"] {
+    margin: -0.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+    #news, #social-media {
+        color: #274472;
+    }
+
+    #sports {
+        color: #41729F;
+    }
+
+    #inquiry, #research {
+        color: #821D30;
+    }
+
+    #beyond-loyola, #externals, #photos {
+        color: #E1C340;
+    }
+
+    #features {
+        color:#81B622;
+    }
+
+    #vantage-magazine {
+        color:#b6a9d1;
+    }
+
+    #broadcast-news {
+        color:#ea9515;
+    }
+
+    #human-resources{
+        color: #3bb01f;
+    }
+
+    #graphic-design {
+        color:#93addd;
+    }
+
+    #video-production {
+        color: #d3807f;
+    }
+
+    #digital-development {
+        color: #41be69;
+    }
+
 .banner-left {
-    flex-basis: 60%;
+    margin-bottom: 8em;
+    flex-basis: 100%;
 }
 
 .banner-right {
-    flex-basis: 80%;
+    padding: 2em;
+}
+
+.clusters {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 90%;
 }
 
 .cluster {
-    text-align: center;
-    width: 90%;
-    margin: 5em auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-h5[class="cluster-title"] {
+h1[class="cluster-name"] {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    margin-top: 1em;
+}
+
+h2[class="cluster-title"] {
     border-bottom:1px black solid;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+p[class="cluster-description"] {
+    font-family: 'Poppins', sans-serif;
 }
 
 .cluster-cards {
     display: grid;
-    gap: 50px 100px;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em 6em;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
     padding: 2em;
 }
 
 .cluster-card {
     padding: 1em;
     text-align: left;
-    flex: 1 0 31%;
+    /* flex: 1 0 31%; */
+    width: 110%;
     margin: 0.5em;
     box-shadow: 10px 12px 5px 9px rgba(0,0,0,0.09);
     -webkit-box-shadow: 10px 12px 5px 9px rgba(0,0,0,0.09);
@@ -49,12 +134,57 @@ h5[class="cluster-title"] {
     float: right;
 }
 
+.read-more-btn:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
 footer {
     text-align: center;
-    padding: 4em;
+    padding: 2em;
     margin: 4em;
+    color: gray;
 }
 
 p[class="footer-text"] {
     margin:-0.2em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .banner {
+        flex-flow: row wrap;
+    }
+
+    .banner-logo {
+        width: 50px;
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        flex-wrap: wrap;
+    }
+
+    .banner-description {
+        display: none;
+    }
+
+    .banner-logo {
+        width: 50px;
+        height: 60px;
+    }
+
+    .banner-header {
+        display: inline;
+        margin-left: .5em;
+        font-size: 1.7em;
+    }
+
+    iframe {
+        transform: scale(0.75);
+        border: 1px solid white;
+        position:relative;
+        right: 7em;
+    }
 }

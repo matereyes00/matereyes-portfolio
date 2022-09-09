@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" src="media/Logo-fbshare.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>The GUIDON RecWeek 2022</title>
@@ -13,125 +14,134 @@
 <body>
     <div class="banner">
         <div class="banner-left">
-            <h2>Defend the truth.</h2>
-            <p>COA RECWEEK 2022</p>
-            <p>AUGUST 22 - SEPTEMBER 2</p>
+            <img class="banner-logo" src="media/logo-white.png" alt="Italian Trulli">
+            <h2 class="banner-header">Defend the truth.</h2>
+            <p class="banner-description">COA RECWEEK 2022</p>
+            <p class="banner-description">AUGUST 22 - SEPTEMBER 2</p>
         </div>
         <div class="banner-right">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/fCg9WAI6dRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
-    <div class="cluster">
-        <h2>Writing Cluster</h2>
-        <div class="cluster-cards">
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">News</h5>
-                <p>At the forefront of The GUIDON, News is committed to chronicling all relevant events and developments within the Loyola ...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Sports</h5>
-                <p>Sports transcends the field of play in its ability to capture the essence of human tenacity in the face of immense adver...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Inquiry</h5>
-                <p>As the investigative and analytical arm of The GUIDON, Inquiry is tasked with looking into the heart of current events a...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Beyond Loyola</h5>
-                <p>Through its reportage of diverse and underserved realities outside the University, Beyond Loyola situates the Filipino i...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Features</h5>
-                <p>Dedicated to telling stories of the human, Features delves into topics surrounding phenomena that shape the individual a...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Vantage Magazine</h5>
-                <p>We are The GUIDON’s online magazine: A publication dedicated to campus culture and the people who make it. Vantage Magaz...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card broadcast-news">
-                <h5 class="cluster-title">Broadcast News</h5>
-                <p>Broadcast News aims to amplify voices through the use of the audio-visual medium, capturing human-centric stories that h...</p>
-                <button type="button" class="btn btn-light read-more-btn read-more-btn">Read More</button>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="cluster">
-        <h2>Organizational Cluster</h2>
-        <div class="cluster-cards">
-            
-            <div class="cluster-card">
-                <h5 class="cluster-title">Social Media</h5>
-                <p>The Social Media staff is the online consultative arm of the publication. As the Truth continues to be distorted, we hel...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Human Resources</h5>
-                <p>Serving as the internal affairs arm of The GUIDON, the Human Resources staff empowers its staffers to promote member wel...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Externals</h5>
-                <p>As the face of The GUIDON, the Externals staff brings forward the publication’s advocacies to different sectors and comm...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
-
-            <div class="cluster-card">
-                <h5 class="cluster-title">Research</h5>
-                <p>The Research Staff is The GUIDON’s analytical arm, focused on mining data-driven content and strategies that augment the...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
+    <div class="clusters">
         
-        </div>
-    </div>
-
-    <div class="cluster">
-        <h2>Design Cluster</h2>
-        <div class="cluster-cards">
+        <h1 class="cluster-name">Writing Cluster</h1>
+        <div class="cluster">
             
-            <div class="cluster-card">
-                <h5 class="cluster-title">Graphic Design</h5>
-                <p>The Graphic Design staff aims to capture present-day stories within and outside the confines of Ateneo through illustrat...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
+            <div class="cluster-cards">
 
-            <div class="cluster-card">
-                <h5 class="cluster-title">Photos</h5>
-                <p>The Photos staff is The GUIDON’s premier photojournalistic arm, manned by visual storytellers who aspire to shed light o...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="news">News</h5>
+                    <p class="cluster-description">At the forefront of The GUIDON, News is committed to chronicling all relevant events and developments within the Loyola ...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="news"><strong>Read More</strong></button>
+                </div>
 
-            <div class="cluster-card">
-                <h5 class="cluster-title">Video Production</h5>
-                <p>The GUIDON’s Video Production staff is at the forefront of the publication’s shift to multimedia journalism. The staff i...</p>
-                <button type="button" class="btn btn-light read-more-btn">Read More</button>
-            </div>
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="sports">Sports</h5>
+                    <p class="cluster-description">Sports transcends the field of play in its ability to capture the essence of human tenacity in the face of immense adver...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="sports"><strong>Read More</strong></button>
+                </div>
 
-            <div class="cluster-card">
-                <h5 class="cluster-title">Digital Development</h5>
-                <p>The Digital Development staff provides an avenue to innovate Philippine campus journalism through the production of stro...</p>
-                <button type="button" class="btn btn-light read-more-btn read-more-btn">Read More</button>
-            </div>
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="inquiry">Inquiry</h5>
+                    <p class="cluster-description">As the investigative and analytical arm of The GUIDON, Inquiry is tasked with looking into the heart of current events a...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="inquiry"><strong>Read More</strong></button>
+                </div>
 
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="beyond-loyola">Beyond Loyola</h5>
+                    <p class="cluster-description">Through its reportage of diverse and underserved realities outside the University, Beyond Loyola situates the Filipino i...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="beyond-loyola"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="features">Features</h5>
+                    <p class="cluster-description">Dedicated to telling stories of the human, Features delves into topics surrounding phenomena that shape the individual a...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="features"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="vantage-magazine">Vantage Magazine</h5>
+                    <p class="cluster-description">We are The GUIDON’s online magazine: A publication dedicated to campus culture and the people who make it. Vantage Magaz...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="vantage-magazine"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card broadcast-news">
+                    <h2 class="cluster-title" id="broadcast-news">Broadcast News</h5>
+                    <p class="cluster-description">Broadcast News aims to amplify voices through the use of the audio-visual medium, capturing human-centric stories that h...</p>
+                    <button type="button" class="btn btn-light read-more-btn read-more-btn" id="broadcast-news"><strong>Read More</strong></button>
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="cluster-name">Organizational Cluster</h1>
+        <div class="cluster">
+            
+            <div class="cluster-cards">
+                
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="social-media">Social Media</h5>
+                    <p class="cluster-description">The Social Media staff is the online consultative arm of the publication. As the Truth continues to be distorted, we hel...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="social-media"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="human-resources">Human Resources</h5>
+                    <p class="cluster-description">Serving as the internal affairs arm of The GUIDON, the Human Resources staff empowers its staffers to promote member wel...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="human-resources"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="externals">Externals</h5>
+                    <p class="cluster-description">As the face of The GUIDON, the Externals staff brings forward the publication’s advocacies to different sectors and comm...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="externals"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="research">Research</h5>
+                    <p class="cluster-description">The Research Staff is The GUIDON’s analytical arm, focused on mining data-driven content and strategies that augment the...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="research"><strong>Read More</strong></button>
+                </div>
+            
+            </div>
+        </div>
+
+        <h1 class="cluster-name">Design Cluster</h1>
+        <div class="cluster">
+            <div class="cluster-cards">
+        
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="graphic-design">Graphic Design</h5>
+                    <p class="cluster-description">The Graphic Design staff aims to capture present-day stories within and outside the confines of Ateneo through illustrat...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="graphic-design">
+                        Read More
+                    </button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="photos">Photos</h5>
+                    <p class="cluster-description">The Photos staff is The GUIDON’s premier photojournalistic arm, manned by visual storytellers who aspire to shed light o...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="photos"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="video-production">Video Production</h5>
+                    <p class="cluster-description">The GUIDON’s Video Production staff is at the forefront of the publication’s shift to multimedia journalism. The staff i...</p>
+                    <button type="button" class="btn btn-light read-more-btn" id="video-production"><strong>Read More</strong></button>
+                </div>
+
+                <div class="cluster-card">
+                    <h2 class="cluster-title" id="digital-development">Digital Development</h5>
+                    <p class="cluster-description">The Digital Development staff provides an avenue to innovate Philippine campus journalism through the production of stro...</p>
+                    <button type="button" class="btn btn-light read-more-btn read-more-btn" id="digital-development"><strong>Read More</strong></button>
+                </div>
+
+            </div>
         </div>
     </div>
+    
 
     <footer>
         <p class="footer-text">© The GUIDON 2022.</p>
