@@ -12,12 +12,18 @@ body {
     flex-flow: row nowrap;
     overflow:hidden;
     padding: 3em;
-    background-color: black;
     color: white;
+    background-image: url("https://99designs-blog.imgix.net/blog/wp-content/uploads/2013/12/snapwire.jpg?auto=format&q=60&fit=max&w=930");
+    background-size: cover;
+    -moz-background-size: cover;
 }
 
 .banner-header {
     font-family: 'Libre Baskerville', serif;
+}
+
+#recweek-msg {
+    display:none;
 }
 
 p[class="banner-description"] {
@@ -105,7 +111,9 @@ h2[class="cluster-title"] {
     border-bottom:1px black solid;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    
 }
+
 
 p[class="cluster-description"] {
     font-family: 'Poppins', sans-serif;
@@ -131,12 +139,22 @@ p[class="cluster-description"] {
 }
 
 .read-more-btn {
+    transition: rgb(218, 215, 215) 0.5s ease;
     float: right;
 }
 
+/* .read-more-btn:hover */
+
 .read-more-btn:hover {
-    background-color: grey;
     cursor: pointer;
+    transform: scale(1.06) perspective(1px);
+    /* box-shadow: 1px -1px 5px 11px darkgrey;
+    -webkit-box-shadow: 1px -1px 5px 11px darkgrey;
+    -moz-box-shadow: 1px -1px 5px 11px darkgrey; */
+}
+
+#arrow-btn {
+    display:none;
 }
 
 footer {
@@ -164,6 +182,8 @@ p[class="footer-text"] {
 @media only screen and (max-width: 600px) {
     .banner {
         flex-wrap: wrap;
+        padding: 0;
+        text-align: center;
     }
 
     .banner-description {
@@ -185,6 +205,31 @@ p[class="footer-text"] {
         transform: scale(0.75);
         border: 1px solid white;
         position:relative;
-        right: 7em;
+        right: 5em;
     }
+
+    .read-more-btn{
+        display: none;
+    }
+
+    #arrow-btn {
+        float: right;
+        border: none;
+        display:block;
+        background-color: rgb(43, 52, 117);
+        border-radius: 50%;
+        color: white;
+        height: 3em;
+        width: 3em;
+        cursor: pointer;
+    }
+
+    #recweek-msg {
+        display:block;
+        background-color: rgb(218, 215, 215);
+        width: 100%;
+        padding: 2.5em;
+        color: rgb(140, 132, 132);
+    }
+
 }
