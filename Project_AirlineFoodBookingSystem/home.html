@@ -10,22 +10,18 @@
 <body>
     <div id="welcome-container">
         <h1>Please Input Your Username:</h1>
-        <input type="text" id="username">
-        <button id="submit-username">Submit</button>
+        <form action="">
+            <input type="text" id="username" autocomplete="off">
+            <button type="submit" id="submit-username">Submit</button>
+        </form>
     </div>
     <div id="container">
         <div id="menu">
-            <button id="meal-chicken-btn" value="Meal_Chicken">Chicken</button>
-            <button id="meal-fish-btn" value="Meal_Fish">Fish</button>
-            <button id="meal-beef-btn" value="Meal_Beef">Beef</button>
+            <button id="meal-chicken-btn" class="menu-item-btn" value="Meal_Chicken" disabled autocomplete="off">Chicken</button>
+            <button id="meal-fish-btn" value="Meal_Fish" disabled autocomplete="off">Fish</button>
+            <button id="meal-beef-btn" value="Meal_Beef" disabled autocomplete="off">Beef</button>
         </div>
-        <div id="transaction-area">
-            <h3>Transaction Area</h3>
-            <p id="check-for-stocks"></p>
-            <p id="order-message"></p> <!-- order of customer will come out -->
-            <p id="validity-message"></p> <!-- is the customer's order valid or not? -->
-
-        </div>
+        <div id="transaction-area"></div>
     </div>
     
     <script type="text/javascript" src="home.js"></script>

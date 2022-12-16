@@ -1,0 +1,4 @@
+Sources used:
+>> https://flexiple.com/javascript/disable-button-javascript/
+>> https://stackoverflow.com/questions/38799096/clear-input-fields-on-page-refresh-microsoft-edge
+>> https://www.w3docs.com/snippets/html/how-to-disable-browser-autocomplete-and-autofill-on-html-form-and-input-fields.html
