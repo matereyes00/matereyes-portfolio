@@ -1,0 +1,201 @@
+/* IMPORTED FONTS FROM INTERNET */
+@import "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Anton&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap";
+
+// font
+$Roboto-font: 'Roboto Condensed', sans-serif;
+$Montserrat-font: 'Montserrat', sans-serif;
+
+// colors
+$header-container: #9CC0E7;
+$header-hover: #e4a016;
+$page-header: #FAEACB;
+$aboutme-container: rgba(234, 227, 205, 0.5);
+$stack-container: rgba(184, 171, 129, 0.5);
+$resume-container: rgba(234, 227, 205, 0.5);
+$link-hover: #76b9ce;
+
+@mixin container-format($width, $background-color, $padding, $margin) {
+	width: $width;
+	background-color: $background-color;
+	padding: $padding;
+    margin: $margin;
+}
+
+@mixin flex-format($display, $flex-direction, $flex-wrap, $justify-content, $align-items) {
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $Roboto-font;
+}
+.header-container {
+    @include container-format(100%, $header-container, .5rem, none);
+	position: fixed;
+	top: 0;
+}
+nav {
+	text-align: center;
+	width: 60%;
+	margin: .1rem auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+#nav-ul {
+	list-style-type: none;
+	flex-flow: column wrap;
+	padding: 0;
+	margin: 0;
+	font-size: 1.5rem;
+	li {
+		display: inline-block;
+		margin: 0 2rem;
+		padding: 1rem 1rem;
+		justify-content: space-between;
+		a {
+			text-decoration: none;
+			color: #053080;
+			&:hover {
+				background-color: $header-hover;
+			}
+			&:focus {
+				background-color: $header-hover;
+			}
+		}
+	}
+}
+.page-header {
+    @include flex-format(flex, none, none, center, center);
+    @include container-format(50%, $page-header, 1rem, 5rem auto);
+	margin-top: 6rem;
+	border-radius: 2rem;
+}
+.button-link {
+	text-decoration: none;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 2rem;
+	&:hover {
+		cursor: pointer;
+		color: black;
+	}
+}
+.aboutme-container {
+    @include container-format(none, $aboutme-container, 3rem, 3rem 10rem);
+	border-radius: 2rem;
+	h1 {
+		font-size: 55px;
+		text-align: center;
+	}
+}
+.aboutme-header { @include flex-format(flex, row, wrap, center, center);}
+.aboutme-leftheader {
+	text-align: right;
+}
+.aboutme-rightheader {
+	margin-left: 2rem;
+	h1 {
+		font-size: 50px;
+		margin-bottom: 0.5rem;
+	}
+	h4 {
+		font-size: 25px;
+		margin-top: 0;
+	}
+}
+.aboutme-description {
+	margin: 3rem 4rem;
+	font-size: 20px;
+}
+.stack-container {
+    @include container-format(70%, $stack-container, none, 0 auto);
+	border-radius: 2rem;
+	h3 {
+		font-size: 30px;
+		text-align: center;
+	}
+	p {
+		font-size: 18px;
+		text-align: center;
+	}
+	ul {
+		list-style-type: none;
+		text-align: center;
+		display: flex;
+		padding: 0;
+		margin-top: 0.5rem;
+	}
+}
+.stack-title-section {
+	font-size: 50px;
+	text-align: center;
+}
+.stack-section {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+.mySlides {
+	display: inline-block;
+	padding: 1rem;
+	margin-right: 2rem;
+	margin-left: 2rem;
+	height: 20rem;
+}
+.download-resume-container {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	background: $resume-container;
+	border-radius: 2rem 2rem 0 0;
+	padding-top: 1rem;
+}
+.download-resume { @include flex-format(flex, row, wrap, center, center); }
+.a-link {
+	text-decoration: none;
+	color: white;
+	&:hover {
+		color: $link-hover;
+	}
+}
+.page-content {
+	margin: 0 auto;
+	width: 80%;
+}
+.proj-card {
+	width: 70%;
+	background-color: $page-header;
+	border-radius: 1rem;
+	padding: 1rem;
+	margin: 2rem auto;
+}
+footer {
+	background-color: $header-container;
+	text-align: center;
+	padding: 2rem;
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin-left: 5rem;
+		}
+	}
+}
+.social-media {
+	text-decoration: none;
+}
+.fa-cog {
+	color: black;
+}

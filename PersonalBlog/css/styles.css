@@ -1,250 +1,222 @@
 /* IMPORTED FONTS FROM INTERNET */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
-
+@import "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Anton&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap";
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-/* ================ MOVIE REVIEW HEADER ============*/
-.header-container {
-    background-color: #9CC0E7;
-    padding: 2px;
-    position: fixed;
-    top: 0;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-/*====== NAV BAR STYLING ======*/
+.header-container {
+  width: 100%;
+  background-color: #9CC0E7;
+  padding: 0.5rem;
+  margin: none;
+  position: fixed;
+  top: 0;
+}
+
 nav {
-    text-align: center;
-    width: 60%;
-    margin: .1rem auto;
-    display: flex;
-    flex-wrap: wrap;
+  text-align: center;
+  width: 60%;
+  margin: 0.1rem auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #nav-ul {
-    list-style-type: none;
-    flex-flow: column wrap;
-    padding: 0;
-    margin: 0;
-    font-size: 1.5rem;
+  list-style-type: none;
+  flex-flow: column wrap;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
 }
-
 #nav-ul li {
-    display: inline-block;
-    margin: 0 2rem;
-    padding: 1rem 1rem;
-    justify-content: space-between;
+  display: inline-block;
+  margin: 0 2rem;
+  padding: 1rem 1rem;
+  justify-content: space-between;
 }
-
 #nav-ul li a {
-    text-decoration: none;
-    color: #053080;
+  text-decoration: none;
+  color: #053080;
+}
+#nav-ul li a:hover {
+  background-color: #e4a016;
+}
+#nav-ul li a:focus {
+  background-color: #e4a016;
 }
 
-#nav-ul li a:hover, #nav-ul li a:focus {
-    background-color: #e4a016;
-}
-
-/* ====== FEATURED PROJECTS ========== */
 .page-header {
-    padding: 1rem;
-    margin: 5rem auto;
-    margin-top: 6rem;
-    width: 50%;
-    background-color: #FAEACB;
-    border-radius: 2rem;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: none;
+  flex-wrap: none;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: #FAEACB;
+  padding: 1rem;
+  margin: 5rem auto;
+  margin-top: 6rem;
+  border-radius: 2rem;
 }
 
 .button-link {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 2rem;
 }
-
 .button-link:hover {
-    cursor: pointer;
-    color: black;
+  cursor: pointer;
+  color: black;
 }
 
-/* ===== ABOUT.HTML STYLING ===== */
 .aboutme-container {
-    background: rgba(234, 227, 205, 0.5);
-    border-radius: 2rem;
-    padding: 3rem;
-    margin: 3rem 10rem;
+  width: none;
+  background-color: rgba(234, 227, 205, 0.5);
+  padding: 3rem;
+  margin: 3rem 10rem;
+  border-radius: 2rem;
 }
-
 .aboutme-container h1 {
-    font-size: 55px;
-    text-align: center;
+  font-size: 55px;
+  text-align: center;
 }
-    /* ABOUT ME HEADER STYLES*/
-    .aboutme-header {
-        display: flex;
-        flex-wrap: row wrap;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .aboutme-leftheader {
-        text-align: right;
-    }
 
-    .aboutme-rightheader {
-        margin-left: 2rem;
-    }
-
-    .aboutme-rightheader h1{
-        font-size: 50px;
-        margin-bottom:0.5rem;
-    }
-
-    .aboutme-rightheader h4{
-        font-size: 25px;
-        margin-top:0;
-    }
-
-    .aboutme-description {
-        margin: 3rem 4rem;
-        font-size: 20px;
-    }
-    
-    /*LANGUAGES FLEX BOX*/
-    .stack-container {
-        border-radius: 2rem;
-        background-color: rgba(184, 171, 129, 0.5);;
-        margin: 0 auto;
-        width: 70%;
-    }
-    
-    .stack-title-section{
-        font-size: 50px;
-        text-align: center;
-    }
-
-    .stack-section {
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .stack-container h3{
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .stack-container p{
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .stack-container ul{
-        list-style-type: none;
-        text-align: center;
-        display: flex;
-        padding: 0;
-        margin-top: 0.5rem;
-    }
-
-    /*.stack-container ul li*/
-    .mySlides {
-        display: inline-block;
-        padding: 1rem;
-        margin-right: 2rem;
-        margin-left: 2rem;
-        height: 20rem;
-    }
-
-/*============= DOWNLOAD RESUME AND CV =============*/
-.download-resume-container{
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    background: rgba(234, 227, 205, 0.5);
-    border-radius: 2rem 2rem 0 0;
-    padding-top:1rem;
+.aboutme-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+.aboutme-leftheader {
+  text-align: right;
+}
+
+.aboutme-rightheader {
+  margin-left: 2rem;
+}
+.aboutme-rightheader h1 {
+  font-size: 50px;
+  margin-bottom: 0.5rem;
+}
+.aboutme-rightheader h4 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.aboutme-description {
+  margin: 3rem 4rem;
+  font-size: 20px;
+}
+
+.stack-container {
+  width: 70%;
+  background-color: rgba(184, 171, 129, 0.5);
+  padding: none;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+.stack-container h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.stack-container p {
+  font-size: 18px;
+  text-align: center;
+}
+.stack-container ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.stack-title-section {
+  font-size: 50px;
+  text-align: center;
+}
+
+.stack-section {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.mySlides {
+  display: inline-block;
+  padding: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  height: 20rem;
+}
+
+.download-resume-container {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(234, 227, 205, 0.5);
+  border-radius: 2rem 2rem 0 0;
+  padding-top: 1rem;
+}
+
 .download-resume {
-    display: flex;
-    flex-wrap: row wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .a-link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+}
+.a-link:hover {
+  color: #76b9ce;
 }
 
-.a-link:hover{
-    color: #76b9ce;
-}
-
-/* ========== Projects.html STYLING ============= */
 .page-content {
-    margin: 0 auto;
-    width: 80%;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .proj-card {
-    width: 70%;
-    background-color: #FAEACB;
-    border-radius: 1rem;
-    padding:1rem;
-    margin: 2rem auto;
+  width: 70%;
+  background-color: #FAEACB;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem auto;
 }
-
-/*FOOTER STYLING*/
 
 footer {
-    background-color:#9CC0E7;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+  background-color: #9CC0E7;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
-
 footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  display: inline-block;
+  margin-left: 5rem;
 }
 
-footer ul li{
-    display: inline-block;
-    margin-left: 5rem;
-}
-
-.social-media{
-    text-decoration: none;
+.social-media {
+  text-decoration: none;
 }
 
 .fa-cog {
-    color: black;
-}
-
-/* BUTTONS */
-
-.submit-button {
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.submit-button:hover {
-    color: white;
-    background-color: black;
-    transition: 0.3s;
-}
-
+  color: black;
+}/*# sourceMappingURL=styles.css.map */
