@@ -199,61 +199,6 @@ nav {
         margin-left: 2rem;
     }
 
-    /* ===== PROGRESS BARS ======= */
-        .progressbar {
-            background-color: #ECECF1;
-            border-radius: 13px;
-            margin-top: .7rem;
-            padding: 0.3rem;
-        }
-
-        .progressmade-python {
-            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
-            width: 50%;
-            /* Adjust with JavaScript */
-            height: 20px;
-            border-radius: 10px;
-        }
-
-        .progressmade-html {
-            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
-            width: 75%;
-            /* Adjust with JavaScript */
-            height: 20px;
-            border-radius: 10px;
-        }
-
-        .progressmade-css {
-            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
-            width: 65%;
-            /* Adjust with JavaScript */
-            height: 20px;
-            border-radius: 10px;
-        }
-
-        .progressmade-js {
-            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
-            width: 20%;
-            /* Adjust with JavaScript */
-            height: 20px;
-            border-radius: 10px;
-        }
-
-        .progressmade-sql {
-            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
-            width: 35%;
-            /* Adjust with JavaScript */
-            height: 20px;
-            border-radius: 10px;
-        }
-        .progressmade-git {
-            background-image: linear-gradient(to right, #FF7915 , #FB673A);;
-            width: 40%;
-            /* Adjust with JavaScript */
-            height: 20px;
-            border-radius: 10px;
-        }
-
 /*============= DOWNLOAD RESUME AND CV =============*/
 .download-resume-container{
     width: 70%;
