@@ -36,6 +36,13 @@ p[class="banner-description"] {
         color: #274472;
     }
 
+    #news-underline, #social-media-underline {
+        border-top: 1px solid #274472;
+        width: 30%;
+        border-width: 0.2em;
+        margin: 0;
+    }
+
     #sports {
         color: #41729F;
     }
@@ -52,28 +59,74 @@ p[class="banner-description"] {
         color:#81B622;
     }
 
+    #features-underline {
+        border-top: 1px solid #81B622;
+        width: 30%;
+        border-width: 0.2em;
+        margin: 0;
+    }
+
     #vantage-magazine {
         color:#b6a9d1;
+    }
+
+    #vantage-magazine-underline {
+        border-top: 1px solid #b6a9d1;
+        width: 30%;
+        border-width: 0.2em;
+        margin: 0;
     }
 
     #broadcast-news {
         color:#ea9515;
     }
 
+    #broadcast-news-underline {
+        border-top: 1px solid #ea9515;
+        width: 30%;
+        border-width: 0.2em;
+        margin: 0;
+    }
+
     #human-resources{
         color: #3bb01f;
+    }
+
+    #human-resources-underline {
+        border-top: 1px solid #3bb01f;
+        width: 30%;
+        border-width: 0.2em;
+        margin: 0;
     }
 
     #graphic-design {
         color:#93addd;
     }
 
+    #graphic-design-underline {
+        border-top: 1px solid #93addd;
+        width: 30%;
+        border-width: 0.2em;
+        margin: 0;
+    }
+
     #video-production {
         color: #d3807f;
     }
 
+    #video-production-underline {
+        border-top: 1px solid #d3807f;
+        width: 30%;
+        border-width: 0.2em;
+        margin: 0;
+    }
+
     #digital-development {
         color: #41be69;
+    }
+
+    #digital-development-underline {
+
     }
 
 .banner-left {
@@ -108,12 +161,34 @@ h1[class="cluster-name"] {
 }
 
 h2[class="cluster-title"] {
-    border-bottom:1px black solid;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    
+    margin-bottom: 0;
 }
 
+
+
+
+#beyond-loyola-underline, #externals-underline, #photos-underline {
+    border-top: 1px solid #E1C340;
+    width: 30%;
+    border-width: 0.2em;
+    margin: 0;
+}
+
+#sports-underline {
+    border-top: 1px solid #41729F;
+    width: 30%;
+    border-width: 0.2em;
+    margin: 0;
+}
+
+#inquiry-underline, #research-underline {
+    border-top: 1px solid #821D30;
+    width: 30%;
+    border-width: 0.2em;
+    margin: 0;
+}
 
 p[class="cluster-description"] {
     font-family: 'Poppins', sans-serif;
