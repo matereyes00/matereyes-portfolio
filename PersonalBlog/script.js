@@ -18,6 +18,8 @@ const languages_panel = document.getElementById('languages-panel');
 const tools_panel = document.getElementById('tools-panel');
 const frameworks_panel = document.getElementById('frameworks-panel');
 
+let arrow_toggle = document.getElementsByClassName("arrow");
+
 ShowLangBtn.addEventListener("click", function() {
   if (languages_panel.style.display === "none") {
     languages_panel.style.display = "block";
