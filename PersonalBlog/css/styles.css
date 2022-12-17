@@ -52,8 +52,8 @@ nav {
 
 .page-header {
   display: flex;
-  flex-direction: none;
-  flex-wrap: none;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 50%;

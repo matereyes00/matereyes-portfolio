@@ -83,7 +83,7 @@ nav {
 	}
 }
 .page-header {
-    @include flex-format(flex, none, none, center, center);
+    @include flex-format(flex, row, wrap, center, center);
     @include container-format(50%, $page-header, 1rem, 5rem auto);
 	margin-top: 6rem;
 	border-radius: 2rem;
