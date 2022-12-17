@@ -121,7 +121,7 @@ nav {
   width: 70%;
   background-color: rgba(184, 171, 129, 0.5);
   padding: none;
-  margin: 0 auto;
+  margin: 1rem auto;
   border-radius: 2rem;
 }
 .stack-container h3 {
@@ -138,6 +138,10 @@ nav {
   display: flex;
   padding: 0;
   margin-top: 0.5rem;
+}
+
+#languages-panel, #tools-panel, #frameworks-panel {
+  display: none;
 }
 
 .stack-title-section {
@@ -192,8 +196,8 @@ nav {
   width: 70%;
   background-color: #FAEACB;
   border-radius: 1rem;
-  padding: 1rem;
   margin: 2rem auto;
+  padding: 1rem;
 }
 
 footer {

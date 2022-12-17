@@ -30,7 +30,7 @@
         <div class="aboutme-header">
             <div class="aboutme-leftheader">
                 <img src="images/decentmate.jpg" alt="user picture" 
-                    id="profilepic" onclick="changePic()">
+                    id="profilepic">
             </div>
             <div class="aboutme-rightheader">
                 <h1>Martina Reyes</h1>
@@ -38,6 +38,7 @@
             </div>
         </div>
     </div>
+    
     <div class="aboutme-container">
         <div class="aboutme-description">
             <p> Hi! I'm Martina Reyes and I'm 22 years old. My nickname is Matê and my preferred pronouns are she/her. I am currently a fourth year college student taking up BSMS Computer Science with a specialization in Data Science and Analytics in Ateneo de Manila University.</p>
@@ -47,8 +48,12 @@
     </div>
     
     <div class="stack-container">
-        <div class="stack-title-section"><h1>My Languages Stack</h1></div>
-        <ul class="stack-section">
+        <div class="stack-title-section">
+            <h1> My Languages Stack </h1>
+            <button id="show-languages">click</button>
+        </div>
+        
+        <ul id="languages-panel" class="stack-section" >
             <li class="mySlides">
                 <h3>PYTHON</h3>
                 <img src="images/python.png"  alt="languages I know icon">
@@ -74,8 +79,11 @@
     </div>
     
     <div class="stack-container">
-        <div class="stack-title-section"><h1>My Tools Stack</h1></div>
-        <ul class="stack-section">
+        <div class="stack-title-section">
+            <h1>My Tools Stack</h1>
+            <button id="show-tools">click</button>
+        </div>
+        <ul id='tools-panel' class="stack-section">
             <li class="mySlides">
                 <h3>Github</h3> 
                 <img src="images/github.png" alt="languages I know icon">
@@ -88,8 +96,11 @@
     </div>
 
     <div class="stack-container">
-        <div class="stack-title-section"><h1>My Pre-processors and Frameworks Stack</h1></div>
-        <ul class="stack-section">
+        <div class="stack-title-section">
+            <h1>My Pre-processors and Frameworks Stack</h1>
+            <button id="show-frameworks">click</button>
+        </div>
+        <ul id='frameworks-panel' class="stack-section">
             <li class="mySlides">
                 <h3>Django</h3> 
                 <img src="images/django-icon.png" alt="Framework I know icon">
@@ -104,14 +115,15 @@
             </li>
             <li class="mySlides">
                 <h3>SASS</h3> 
-                <!-- <img src="images/Bootstrap_logo.png" alt="Framework I know icon"> -->
+                <img src="images/CSS Pre processors/sass.png" alt="Framework I know icon">
             </li>
             <li class="mySlides">
                 <h3>LESS</h3> 
-                <!-- <img src="images/Bootstrap_logo.png" alt="Framework I know icon"> -->
+                <img src="images/CSS Pre processors/less.png" alt="Framework I know icon">
             </li>
             <li class="mySlides">
                 <h3>STYLUS</h3> 
+                <img src="images/CSS Pre processors/stylus.png" alt="Framework I know icon">
                 <!-- <img src="images/Bootstrap_logo.png" alt="Framework I know icon"> -->
             </li>
         </ul>
