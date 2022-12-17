@@ -15,6 +15,7 @@ $page-header: #FAEACB;
 $navbar-text: #053080;
 $aboutme-container: rgba(234, 227, 205, 0.5);
 $stack-container: rgba(184, 171, 129, 0.5);
+$toggle-arrow: rgba(79, 66, 26, 0.5);
 $resume-container: rgba(234, 227, 205, 0.5);
 $link-hover: #76b9ce;
 
@@ -167,7 +168,7 @@ nav {
 
 .a-link {
 	text-decoration: none;
-	// color: white;
+	color: white;
 	&:hover {
 		color: $link-hover;
 	}
@@ -212,13 +213,12 @@ button {
 	padding-right: 1rem;
 }
 
-.arrow {
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-}
-.down {
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
+.triangle {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 14px 24.2px 14px;
+	border-color: transparent transparent $toggle-arrow transparent;
+	transform: rotate(180deg);
+	margin-top: 1rem;
 }

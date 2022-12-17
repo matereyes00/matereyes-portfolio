@@ -181,6 +181,7 @@ nav {
 
 .a-link {
   text-decoration: none;
+  color: white;
 }
 .a-link:hover {
   color: #76b9ce;
@@ -231,14 +232,12 @@ button {
   padding-right: 1rem;
 }
 
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 14px 24.2px 14px;
+  border-color: transparent transparent rgba(79, 66, 26, 0.5) transparent;
+  transform: rotate(180deg);
+  margin-top: 1rem;
 }/*# sourceMappingURL=styles.css.map */
