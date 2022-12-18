@@ -13,10 +13,10 @@ $header-container: #9CC0E7;
 $header-hover: #e4a016;
 $page-header: #FAEACB;
 $navbar-text: #053080;
-$aboutme-container: rgba(234, 227, 205, 0.5);
-$stack-container: rgba(184, 171, 129, 0.5);
-$toggle-arrow: rgba(79, 66, 26, 0.5);
-$resume-container: rgba(234, 227, 205, 0.5);
+$aboutme-container: rgba(234, 227, 205, 1);
+$stack-container: rgba(184, 171, 129, 1);
+$toggle-arrow: rgba(79, 66, 26, 1);
+$resume-container: rgba(234, 227, 205, 1);
 $link-hover: #76b9ce;
 
 @mixin marg-pad($margin, $padding) {
@@ -47,6 +47,11 @@ $link-hover: #76b9ce;
 body {
 	@include marg-pad(0, 0);
 	font-family: $Roboto-font;
+	// https://stackoverflow.com/questions/3540194/how-to-make-a-grid-like-graph-paper-grid-with-just-css
+	background-size: 40px 40px;
+	background-image:
+		linear-gradient(to right, grey 1px, transparent 1px),
+		linear-gradient(to bottom, grey 1px, transparent 1px);
 }
 .header-container {
     @include container-format(100%, $header-container, .5rem, none);
@@ -73,12 +78,20 @@ nav {
 		a {
 			text-decoration: none;
 			color: $navbar-text;
+			transition: 0.3s;
 			&:hover {
-				background-color: $header-hover;
+				// background: $header-hover;
+				border-radius: 10rem;
+				padding-bottom: 1rem;
 			}
 			&:focus {
 				background-color: $header-hover;
 			}
+		}
+		&:hover {
+			background: $header-hover;
+			border-radius: 10rem;
+			padding-bottom: 1rem;
 		}
 	}
 }
