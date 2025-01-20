@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/matereyes00.github.io/static/css/main.239085cf.css",
-    "main.js": "/matereyes00.github.io/static/js/main.9b688f5c.js",
+    "main.js": "/matereyes00.github.io/static/js/main.f44d3f2a.js",
     "static/js/453.67e80234.chunk.js": "/matereyes00.github.io/static/js/453.67e80234.chunk.js",
     "static/media/mate.jpg": "/matereyes00.github.io/static/media/mate.78f59d75ac15b36682f8.jpg",
     "static/media/decentmate.jpg": "/matereyes00.github.io/static/media/decentmate.d717d04065bc7a68b2b8.jpg",
@@ -25,11 +25,11 @@
     "static/media/css.svg": "/matereyes00.github.io/static/media/css.8fe37b3430423bafeedb1dc7875a165a.svg",
     "static/media/html.svg": "/matereyes00.github.io/static/media/html.f064b3740c16d30101bff45358ea72c1.svg",
     "main.239085cf.css.map": "/matereyes00.github.io/static/css/main.239085cf.css.map",
-    "main.9b688f5c.js.map": "/matereyes00.github.io/static/js/main.9b688f5c.js.map",
+    "main.f44d3f2a.js.map": "/matereyes00.github.io/static/js/main.f44d3f2a.js.map",
     "453.67e80234.chunk.js.map": "/matereyes00.github.io/static/js/453.67e80234.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.239085cf.css",
-    "static/js/main.9b688f5c.js"
+    "static/js/main.f44d3f2a.js"
   ]
 }
