@@ -24,6 +24,11 @@ function About() {
         setActiveSection(section);  // Update active section based on button clicked
     };
 
+    // const me1 = process.env.PUBLIC_URL + '/assets/_0897.JPG';
+    // const me2 = process.env.PUBLIC_URL + '/assets/decentmate.jpg';
+    // const me3 = process.env.PUBLIC_URL + '/assets/mate.jpg';
+    // const me5 = process.env.PUBLIC_URL + '/assets/mate-icoph.jpg';
+
     const images = [
         me1, me2, me3, me5
     ];

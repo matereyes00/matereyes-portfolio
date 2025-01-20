@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/matereyes00.github.io/static/css/main.239085cf.css",
+    "main.js": "/matereyes00.github.io/static/js/main.f44d3f2a.js",
+    "static/js/453.67e80234.chunk.js": "/matereyes00.github.io/static/js/453.67e80234.chunk.js",
+    "static/media/mate.jpg": "/matereyes00.github.io/static/media/mate.78f59d75ac15b36682f8.jpg",
+    "static/media/decentmate.jpg": "/matereyes00.github.io/static/media/decentmate.d717d04065bc7a68b2b8.jpg",
+    "static/media/mate-icoph.jpg": "/matereyes00.github.io/static/media/mate-icoph.b5aeb4b24b733cb406fd.jpg",
+    "static/media/_0897.JPG": "/matereyes00.github.io/static/media/_0897.c6ea8e7d5e1ff22de07a.JPG",
+    "static/media/postgresql.svg": "/matereyes00.github.io/static/media/postgresql.4679f66f92b9ac2b476f3b118111f0ac.svg",
+    "static/media/django.svg": "/matereyes00.github.io/static/media/django.4decbfd4b7e37a6100c433238ae57ec3.svg",
+    "static/media/logo.svg": "/matereyes00.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/quasar.svg": "/matereyes00.github.io/static/media/quasar.46efbd07e096f2d36f13c6f9f8bd161f.svg",
+    "static/media/android-studio.svg": "/matereyes00.github.io/static/media/android-studio.47dce6e0e5a7d7e267e83ea026ff8860.svg",
+    "static/media/git.svg": "/matereyes00.github.io/static/media/git.8ee81345da1c18b6cdb4bbe93b464810.svg",
+    "static/media/jupyter.svg": "/matereyes00.github.io/static/media/jupyter.b0e5563a2c41579efe2778635f6a92df.svg",
+    "static/media/streamlit.svg": "/matereyes00.github.io/static/media/streamlit.79dd91294fb12b4c13c4136368158bf6.svg",
+    "static/media/tableau-software.svg": "/matereyes00.github.io/static/media/tableau-software.f0402ba8c4066ce449429506b59c7f5f.svg",
+    "static/media/python.svg": "/matereyes00.github.io/static/media/python.88c1e5ae02864b3ae66a571cc722a3d3.svg",
+    "static/media/figma.svg": "/matereyes00.github.io/static/media/figma.eea90cbdb2df47f3f9a77474d7dd244c.svg",
+    "static/media/javascript.svg": "/matereyes00.github.io/static/media/javascript.64d9e0e76154cf546e6a54e6f4bfb9ac.svg",
+    "static/media/pytorch.svg": "/matereyes00.github.io/static/media/pytorch.84241efe2a57eb322bbfab0d921fdcf2.svg",
+    "index.html": "/matereyes00.github.io/index.html",
+    "static/media/qgis.svg": "/matereyes00.github.io/static/media/qgis.6385c0d47025e01ce15b40538ad18cbc.svg",
+    "static/media/css.svg": "/matereyes00.github.io/static/media/css.8fe37b3430423bafeedb1dc7875a165a.svg",
+    "static/media/html.svg": "/matereyes00.github.io/static/media/html.f064b3740c16d30101bff45358ea72c1.svg",
+    "main.239085cf.css.map": "/matereyes00.github.io/static/css/main.239085cf.css.map",
+    "main.f44d3f2a.js.map": "/matereyes00.github.io/static/js/main.f44d3f2a.js.map",
+    "453.67e80234.chunk.js.map": "/matereyes00.github.io/static/js/453.67e80234.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.239085cf.css",
+    "static/js/main.f44d3f2a.js"
+  ]
+}
