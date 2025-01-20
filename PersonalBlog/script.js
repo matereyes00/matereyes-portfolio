@@ -26,10 +26,12 @@ let arrow_toggle3 = document.querySelector('.toggle3');
 ShowLangBtn.addEventListener("click", function() {
   if (languages_panel.style.display === "none") {
     languages_panel.style.display = "block";
+    arrow_toggle1.style.transition = '.5s';
     arrow_toggle1.style.transform = 'rotate(0deg)';
     // arrow_toggle.forEach(el => el.style.transform = 'rotate(0deg)');
   } else {
     languages_panel.style.display = "none";
+    arrow_toggle1.style.transition = '.5s';
     arrow_toggle1.style.transform = 'rotate(180deg)';
     // arrow_toggle.forEach(el => el.style.transform = 'rotate(180deg)');
     // https://stackoverflow.com/questions/60917073/how-can-i-select-the-all-classes-in-javascript-with-same-classname
@@ -40,8 +42,10 @@ ShowToolsBtn.addEventListener("click", function() {
   if (tools_panel.style.display === "none") {
     tools_panel.style.display = "block";
     arrow_toggle2.style.transform = 'rotate(0deg)';
+    arrow_toggle2.style.transition = '.5s';
   } else {
     tools_panel.style.display = "none";
+    arrow_toggle2.style.transition = '.5s';
     arrow_toggle2.style.transform = 'rotate(180deg)';
   }
 });
@@ -49,8 +53,10 @@ ShowToolsBtn.addEventListener("click", function() {
 ShowFrameworksBtn.addEventListener("click", function() {
   if (frameworks_panel.style.display === "none") {
     frameworks_panel.style.display = "block";
+    arrow_toggle3.style.transition = '.5s';
     arrow_toggle3.style.transform = 'rotate(0deg)';
   } else {
+    arrow_toggle3.style.transition = '.5s';
     frameworks_panel.style.display = "none";
     arrow_toggle3.style.transform = 'rotate(180deg)';
   }

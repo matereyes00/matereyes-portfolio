@@ -1,0 +1,13 @@
+/* src/Carousel.css */
+.carousel {
+    /* position: relative;
+    max-width: 100%;
+    overflow: hidden; */
+    /* border: 1px solid black; */
+    height: 60vmin;
+    padding: 1vmin;
+    margin: auto;
+    width: 150%;
+    background-color: hsla(120, 60%, 70%, 0.3);
+}
+
