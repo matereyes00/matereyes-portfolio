@@ -1,22 +1,22 @@
 // src/about/AboutStack.js
 import React from 'react';
 import StackItem from './StackItem';
-import logo from '../../Assets/logo.svg';
-import python_logo from '../../Assets/python.svg';
-import html from '../../Assets/html.svg';
-import css from '../../Assets/css.svg';
-import js from '../../Assets/javascript.svg';
-import android_studio from '../../Assets/android-studio.svg';
-import django from '../../Assets/django.svg';
-import jupyter from '../../Assets/jupyter.svg';
-import streamlit from '../../Assets/streamlit.svg';
-import tableau from '../../Assets/tableau-software.svg';
-import pytorch from '../../Assets/pytorch.svg';
-import postgres from '../../Assets/postgresql.svg';
-import quasar from '../../Assets/quasar.svg';
-import figma from '../../Assets/figma.svg';
-import qgis from '../../Assets/qgis.svg';
-import git from '../../Assets/git.svg';
+import logo from '../../images/logo.svg';
+import python_logo from '../../images/python.svg';
+import html from '../../images/html.svg';
+import css from '../../images/css.svg';
+import js from '../../images/javascript.svg';
+import android_studio from '../../images/android-studio.svg';
+import django from '../../images/django.svg';
+import jupyter from '../../images/jupyter.svg';
+import streamlit from '../../images/streamlit.svg';
+import tableau from '../../images/tableau-software.svg';
+import pytorch from '../../images/pytorch.svg';
+import postgres from '../../images/postgresql.svg';
+import quasar from '../../images/quasar.svg';
+import figma from '../../images/figma.svg';
+import qgis from '../../images/qgis.svg';
+import git from '../../images/git.svg';
 import './Stack.css'; 
 
 
