@@ -33,5 +33,20 @@
 /* Add more CSS styles as needed */
 
 #home-terminal-content {
+    /* padding: 11vmin; */
     color: #d7d6ff;
 }
+#home-whoami {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 2vmin;
+}
+#home-whoami #home-whoami-flexleft {
+    width: 40%;
+
+}
+
+#home-whoami #home-whoami-flexright img{
+    width: 70%;
+} 
