@@ -10,15 +10,13 @@
 .tab-bar {
     display: flex;
     justify-content: space-between;
-    /* margin-bottom: 20px; */
+    font-family: "Open Sans", serif;
 }
 
 .tab {
     padding: 0.5vmin;
-    /* margin: 0 5px; */
-    border: 1px solid #ccc;
     border-bottom: none;
-    background-color: #f1f1f1;
+    width: 50%;
     font-size: 2vmin;
     width: 100%;
     cursor: pointer;
@@ -27,15 +25,16 @@
 .tab.active {
     border-top: none;
     border-bottom: 2px solid #333;
-    background-color: #fff;
+    background-color: #7d51ff; /* Example: Blue for active tab */
+    color: #eccfff;
 }
 
-/* Add more CSS styles as needed */
-
-#home-terminal-content {
+#home-terminal {
     /* padding: 11vmin; */
-    color: #d7d6ff;
+    color: #390060;
+    background-color: rgba(211, 195, 255, 0.75);
 }
+
 #home-whoami {
     display: flex;
     flex-flow: row wrap;
@@ -44,7 +43,7 @@
 }
 #home-whoami #home-whoami-flexleft {
     width: 40%;
-
+    margin-top: 10%;
 }
 
 #home-whoami #home-whoami-flexright img{
