@@ -17,6 +17,7 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     margin: 0 auto;
+    width: 50%;
 }
 
 .socialslogo {
@@ -41,7 +42,7 @@
 }
 
 .Applogo {
-    height: 20vmin;
+    height: 10vmin;
     pointer-events: none;
     width: 90%;
 }
