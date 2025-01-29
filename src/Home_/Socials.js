@@ -7,7 +7,7 @@ import linkedin_img from '../images/linkedin.svg'
 import orcid_img from '../images/orcid.svg'
 
 
-const Socials = () => {
+const socials = () => {
     const ItemName = ["Linkedin", "Github", "ORCID"];
     const socialLinks = ["https://www.linkedin.com/in/martina-therese-reyes-8b490a205/", "https://github.com/matereyes00", "https://orcid.org/0009-0005-6656-2780"];
     const socialsImgs = [linkedin_img, github_img, orcid_img];
@@ -27,4 +27,4 @@ const Socials = () => {
     );
 };
 
-export default Socials;
+export default socials;

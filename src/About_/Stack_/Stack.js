@@ -1,5 +1,4 @@
-// src/about/AboutStack.js
-import React from 'react';
+import React, { useState } from 'react';
 import StackItem from './StackItem';
 import logo from '../../images/logo.svg';
 import python_logo from '../../images/python.svg';
@@ -17,32 +16,67 @@ import quasar from '../../images/quasar.svg';
 import figma from '../../images/figma.svg';
 import qgis from '../../images/qgis.svg';
 import git from '../../images/git.svg';
-import github from '../../images/github.svg'
-import './Stack.css'; 
-
+import github from '../../images/github.svg';
+import './Stack.css';
 
 const AboutStack = () => {
-    const ItemName = [
-        "React", "Python", "HTML", "CSS", "JavaScript",
-        "Android Studio", "Django", "Jupyter", "Streamlit",
-        "Tableau", "PyTorch", "Postgres", "Quasar", "Figma",
-        "QGIS", "Git", "Github"
-    ];
+    const [selectedCategory, setSelectedCategory] = useState('All');
     const stackItems = [
-        logo, python_logo, html, css, js,
-        android_studio, django, jupyter, streamlit,
-        tableau, pytorch, postgres, quasar, figma,
-        qgis, git, github
+        { name: "React", classifications: ['FMW'], image: logo },
+        { name: "Python", classifications: ['BE', 'DST'], image: python_logo },
+        { name: "HTML", classifications: ['FE'], image: html },
+        { name: "CSS", classifications: ['FE'], image: css },
+        { name: "JavaScript", classifications: ['BE'], image: js },
+        { name: "Android Studio", classifications: ['MD'], image: android_studio },
+        { name: "Django", classifications: ['FMW'], image: django },
+        { name: "Jupyter", classifications: ['DST'], image: jupyter },
+        { name: "Streamlit", classifications: ['FMW', 'DST'], image: streamlit },
+        { name: "Tableau", classifications: ['DST'], image: tableau },
+        { name: "PyTorch", classifications: ['DST'], image: pytorch },
+        { name: "Postgres", classifications: ['DB'], image: postgres },
+        { name: "Quasar", classifications: ['FMW'], image: quasar },
+        { name: "Figma", classifications: ['CT'], image: figma },
+        { name: "QGIS", classifications: ['GT'], image: qgis },
+        { name: "Git", classifications: ['CT'], image: git },
+        { name: "Github", classifications: ['CT'], image: github }
     ];
+    const classification = [
+        { code: 'FMW', label: 'Web Frameworks' },
+        { code: 'BE', label: 'Backend' },
+        { code: 'DST', label: 'Data Science Tools' },
+        { code: 'FE', label: 'Frontend' },
+        { code: 'DB', label: 'Database' },
+        { code: 'CT', label: 'Collaboration Tools' },
+        { code: 'GT', label: 'Geography Tools' }
+    ];
+
+    const handleCategorySelect = (category) => {
+        setSelectedCategory(category);
+    };
+
+    const filteredItems = stackItems.filter((item) => {
+        if (selectedCategory === 'All') return true;
+        return item.classifications.includes(selectedCategory);
+    });
+
     return (
         <div>
             <div className='stack-container'>
-                {/* Map over ItemName and stackItems */}
-                {ItemName.map((name, index) => (
+                <div className="filter-container">
+                    {classification.map((category) => (
+                        <button 
+                            key={category.code} 
+                            onClick={() => handleCategorySelect(category.code)}
+                        >
+                            {category.label}
+                        </button>
+                    ))}
+                </div>
+                {filteredItems.map((item, index) => (
                     <StackItem
-                        key={index} // Always include a key when rendering lists in React
-                        ItemName={name}
-                        image={stackItems[index]} // Accessing the corresponding logo image
+                        key={index}
+                        ItemName={item.name}
+                        image={item.image}
                         className="Applogo"
                     />
                 ))}
