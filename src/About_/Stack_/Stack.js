@@ -17,6 +17,7 @@ import quasar from '../../images/quasar.svg';
 import figma from '../../images/figma.svg';
 import qgis from '../../images/qgis.svg';
 import git from '../../images/git.svg';
+import github from '../../images/github.svg'
 import './Stack.css'; 
 
 
@@ -25,13 +26,13 @@ const AboutStack = () => {
         "React", "Python", "HTML", "CSS", "JavaScript",
         "Android Studio", "Django", "Jupyter", "Streamlit",
         "Tableau", "PyTorch", "Postgres", "Quasar", "Figma",
-        "QGIS", "Git"
+        "QGIS", "Git", "Github"
     ];
     const stackItems = [
         logo, python_logo, html, css, js,
         android_studio, django, jupyter, streamlit,
         tableau, pytorch, postgres, quasar, figma,
-        qgis, git
+        qgis, git, github
     ];
     return (
         <div>

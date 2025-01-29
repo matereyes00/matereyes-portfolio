@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Event.css';
-import EventText from './EventText'; 
-import TabBar from '../../Components/TabBar';  // Import your TabBar component
 
 const Event = ({ EventName, event_id, EventHeadline, imageUrl, event_flex_left, event_flex_right }) => {
     

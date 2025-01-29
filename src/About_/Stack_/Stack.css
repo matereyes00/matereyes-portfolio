@@ -5,18 +5,29 @@
     display:flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    /* border: 1px solid black; */
 }
-.stackItem {
+
+.socials-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.socialslogo {
+    height: 7vmin;
+    pointer-events: none;
+    width: 90%;
+}
+
+/* .stackItem {
     display:flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    /* flex: 50%; */
     flex: 1 0 40%;
-    /* height: 20%; */
     margin-bottom: 3vmin;
     margin-top: 3vmin;
-}
+} */
 
 .App-logo {
     height: 20vmin;
