@@ -6,7 +6,6 @@ import './Header.css';
 function Header() {
     return (
         <header className="header">
-        <h1>My Website</h1>
         <nav>
             <ul>
             <li><Link to="/">Home</Link></li> {/* Link to Home page */}

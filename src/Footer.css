@@ -1,6 +1,6 @@
 /* src/Footer.css */
 .footer {
-    background-color: #282c34;
+    background-color: #191740;
     color: white;
     padding: 10px;
     text-align: center;
@@ -9,6 +9,6 @@
     bottom: 0;
 }
 
-.footer p {
+/* .footer p {
     margin: 0;
-}
+} */

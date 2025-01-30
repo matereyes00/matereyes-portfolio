@@ -1,0 +1,51 @@
+#home-terminal {
+    margin: 10vmin auto;
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    background-color:#3b3880;
+    border-radius: 1vmin;
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Open Sans", serif;
+}
+
+.tab {
+    padding: 0.5vmin;
+    border-bottom: none;
+    width: 50%;
+    font-size: 2vmin;
+    width: 100%;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-top: none;
+    border-bottom: 2px solid #333;
+    background-color: #7d51ff; /* Example: Blue for active tab */
+    color: #eccfff;
+}
+
+#home-terminal {
+    /* padding: 11vmin; */
+    color: #390060;
+    background-color: rgba(211, 195, 255, 0.75);
+}
+
+#home-whoami {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 2vmin;
+}
+#home-whoami #home-whoami-flexleft {
+    width: 40%;
+    margin-top: 10%;
+}
+
+#home-whoami #home-whoami-flexright img{
+    width: 70%;
+} 

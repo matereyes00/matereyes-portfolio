@@ -1,47 +1,82 @@
-// src/about/AboutStack.js
-import React from 'react';
+import React, { useState } from 'react';
 import StackItem from './StackItem';
-import logo from '../../Assets/logo.svg';
-import python_logo from '../../Assets/python.svg';
-import html from '../../Assets/html.svg';
-import css from '../../Assets/css.svg';
-import js from '../../Assets/javascript.svg';
-import android_studio from '../../Assets/android-studio.svg';
-import django from '../../Assets/django.svg';
-import jupyter from '../../Assets/jupyter.svg';
-import streamlit from '../../Assets/streamlit.svg';
-import tableau from '../../Assets/tableau-software.svg';
-import pytorch from '../../Assets/pytorch.svg';
-import postgres from '../../Assets/postgresql.svg';
-import quasar from '../../Assets/quasar.svg';
-import figma from '../../Assets/figma.svg';
-import qgis from '../../Assets/qgis.svg';
-import git from '../../Assets/git.svg';
-import './Stack.css'; 
-
+import logo from '../../images/logo.svg';
+import python_logo from '../../images/python.svg';
+import html from '../../images/html.svg';
+import css from '../../images/css.svg';
+import js from '../../images/javascript.svg';
+import android_studio from '../../images/android-studio.svg';
+import django from '../../images/django.svg';
+import jupyter from '../../images/jupyter.svg';
+import streamlit from '../../images/streamlit.svg';
+import tableau from '../../images/tableau-software.svg';
+import pytorch from '../../images/pytorch.svg';
+import postgres from '../../images/postgresql.svg';
+import quasar from '../../images/quasar.svg';
+import figma from '../../images/figma.svg';
+import qgis from '../../images/qgis.svg';
+import git from '../../images/git.svg';
+import github from '../../images/github.svg';
+import './Stack.css';
 
 const AboutStack = () => {
-    const ItemName = [
-        "React", "Python", "HTML", "CSS", "JavaScript",
-        "Android Studio", "Django", "Jupyter", "Streamlit",
-        "Tableau", "PyTorch", "Postgres", "Quasar", "Figma",
-        "QGIS", "Git"
-    ];
+    const [selectedCategory, setSelectedCategory] = useState('All');
     const stackItems = [
-        logo, python_logo, html, css, js,
-        android_studio, django, jupyter, streamlit,
-        tableau, pytorch, postgres, quasar, figma,
-        qgis, git
+        { name: "React", classifications: ['FMW'], image: logo },
+        { name: "Python", classifications: ['BE', 'DST'], image: python_logo },
+        { name: "HTML", classifications: ['FE'], image: html },
+        { name: "CSS", classifications: ['FE'], image: css },
+        { name: "JavaScript", classifications: ['BE'], image: js },
+        { name: "Android Studio", classifications: ['MD'], image: android_studio },
+        { name: "Django", classifications: ['FMW'], image: django },
+        { name: "Jupyter", classifications: ['DST'], image: jupyter },
+        { name: "Streamlit", classifications: ['FMW', 'DST'], image: streamlit },
+        { name: "Tableau", classifications: ['DST'], image: tableau },
+        { name: "PyTorch", classifications: ['DST'], image: pytorch },
+        { name: "Postgres", classifications: ['DB'], image: postgres },
+        { name: "Quasar", classifications: ['FMW'], image: quasar },
+        { name: "Figma", classifications: ['CT'], image: figma },
+        { name: "QGIS", classifications: ['GT'], image: qgis },
+        { name: "Git", classifications: ['CT'], image: git },
+        { name: "Github", classifications: ['CT'], image: github }
     ];
+    const classification = [
+        { code: 'FMW', label: 'Web Frameworks' },
+        { code: 'BE', label: 'Backend' },
+        { code: 'DST', label: 'Data Science Tools' },
+        { code: 'FE', label: 'Frontend' },
+        { code: 'DB', label: 'Database' },
+        { code: 'CT', label: 'Collaboration Tools' },
+        { code: 'GT', label: 'Geography Tools' }
+    ];
+
+    const handleCategorySelect = (category) => {
+        setSelectedCategory(category);
+    };
+
+    const filteredItems = stackItems.filter((item) => {
+        if (selectedCategory === 'All') return true;
+        return item.classifications.includes(selectedCategory);
+    });
+
     return (
         <div>
             <div className='stack-container'>
-                {/* Map over ItemName and stackItems */}
-                {ItemName.map((name, index) => (
+                <div className="filter-container">
+                    {classification.map((category) => (
+                        <button 
+                            key={category.code} 
+                            onClick={() => handleCategorySelect(category.code)}
+                        >
+                            {category.label}
+                        </button>
+                    ))}
+                </div>
+                {filteredItems.map((item, index) => (
                     <StackItem
-                        key={index} // Always include a key when rendering lists in React
-                        ItemName={name}
-                        image={stackItems[index]} // Accessing the corresponding logo image
+                        key={index}
+                        ItemName={item.name}
+                        image={item.image}
                         className="Applogo"
                     />
                 ))}

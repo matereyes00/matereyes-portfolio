@@ -6,11 +6,11 @@ import './About.css';
 import './Carousel'; 
 import Button from '../Components/Button'; // Import the Button component
 import Stack from './Stack_/Stack';
-import Carousel from './Carousel';
-import me1 from '../Assets/_0897.JPG';
-import me2 from '../Assets/decentmate.jpg';
-import me3 from '../Assets/mate.jpg';
-import me5 from '../Assets/mate-icoph.jpg';
+// import Carousel from './Carousel';
+// import me1 from '../images/_0897.JPG';
+// import me2 from '../images/decentmate.jpg';
+// import me3 from '../images/mate.jpg';
+// import me5 from '../images/mate-icoph.jpg';
 
 function About() {
     const content = "Hi! I'm Martina Reyes and I'm 24 years old. My nickname is Matê and my preferred pronouns are she/her. I am currently a Master of Science student taking up Computer Science in Ateneo de Manila University. I finished undergraduate degree as cum laude in Bachelor of Science in computer science with a specialization in Data Science and Analytics in the same university.";
@@ -29,14 +29,14 @@ function About() {
     // const me3 = process.env.PUBLIC_URL + '/assets/mate.jpg';
     // const me5 = process.env.PUBLIC_URL + '/assets/mate-icoph.jpg';
 
-    const images = [
-        me1, me2, me3, me5
-    ];
+    // const images = [
+    //     me1, me2, me3, me5
+    // ];
 
     return (
         <div>
             <h2>ABOUT ME</h2>
-            <Carousel images={images} />
+            {/* <Carousel images={images} /> */}
             <div className="button-case">
                     <Button 
                         text="Description" 

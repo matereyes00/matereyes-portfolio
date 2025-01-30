@@ -6,7 +6,7 @@ const StackItem = ({ItemName, image, className}) => {
     return (
         <div className="stackItem">
             <div className='stackItem-left'>
-                <h2>{ItemName}</h2>
+                <h3>{ItemName}</h3>
             </div>
             <div className='stackItem-right'>
                 <img 

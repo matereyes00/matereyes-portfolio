@@ -1,22 +1,39 @@
 .stack-container {
     margin: 10vmin auto;
     margin-top: 5vmin;
-    width: 50%;
+    width: 60%;
     display:flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    /* border: 1px solid black; */
+    justify-content: space-evenly;
+    background-color: beige;
 }
-.stackItem {
+.filter-container button {
+    border: 1px solid black;
+    font-size: 2.5vmin;
+}
+
+.socials-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.socialslogo {
+    height: 7vmin;
+    pointer-events: none;
+    width: 90%;
+}
+
+/* .stackItem {
     display:flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    /* flex: 50%; */
     flex: 1 0 40%;
-    /* height: 20%; */
     margin-bottom: 3vmin;
     margin-top: 3vmin;
-}
+} */
 
 .App-logo {
     height: 20vmin;
@@ -25,7 +42,7 @@
 }
 
 .Applogo {
-    height: 20vmin;
+    height: 10vmin;
     pointer-events: none;
     width: 90%;
 }
