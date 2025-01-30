@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/matereyes-portfolio/static/css/main.239085cf.css",
-    "main.js": "/matereyes-portfolio/static/js/main.a5398088.js",
+    "main.css": "/matereyes-portfolio/static/css/main.96b77279.css",
+    "main.js": "/matereyes-portfolio/static/js/main.f2610b97.js",
     "static/js/453.995bebb1.chunk.js": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js",
     "static/media/mate.jpg": "/matereyes-portfolio/static/media/mate.78f59d75ac15b36682f8.jpg",
     "static/media/decentmate.jpg": "/matereyes-portfolio/static/media/decentmate.d717d04065bc7a68b2b8.jpg",
-    "static/media/mate-icoph.jpg": "/matereyes-portfolio/static/media/mate-icoph.b5aeb4b24b733cb406fd.jpg",
-    "static/media/_0897.JPG": "/matereyes-portfolio/static/media/_0897.c6ea8e7d5e1ff22de07a.JPG",
     "static/media/postgresql.svg": "/matereyes-portfolio/static/media/postgresql.4679f66f92b9ac2b476f3b118111f0ac.svg",
     "static/media/django.svg": "/matereyes-portfolio/static/media/django.4decbfd4b7e37a6100c433238ae57ec3.svg",
     "static/media/logo.svg": "/matereyes-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/quasar.svg": "/matereyes-portfolio/static/media/quasar.46efbd07e096f2d36f13c6f9f8bd161f.svg",
+    "static/media/github.svg": "/matereyes-portfolio/static/media/github.5531be85d7a8d6f333e5c7136944a022.svg",
+    "static/media/quasar.svg": "/matereyes-portfolio/static/media/quasar.fbcddcbfc382e0a80728e933a9bad174.svg",
     "static/media/android-studio.svg": "/matereyes-portfolio/static/media/android-studio.47dce6e0e5a7d7e267e83ea026ff8860.svg",
     "static/media/git.svg": "/matereyes-portfolio/static/media/git.8ee81345da1c18b6cdb4bbe93b464810.svg",
     "static/media/jupyter.svg": "/matereyes-portfolio/static/media/jupyter.b0e5563a2c41579efe2778635f6a92df.svg",
+    "static/media/linkedin.svg": "/matereyes-portfolio/static/media/linkedin.380e05e2b51a874625268e27e043bfbf.svg",
     "static/media/streamlit.svg": "/matereyes-portfolio/static/media/streamlit.79dd91294fb12b4c13c4136368158bf6.svg",
     "static/media/tableau-software.svg": "/matereyes-portfolio/static/media/tableau-software.f0402ba8c4066ce449429506b59c7f5f.svg",
     "static/media/python.svg": "/matereyes-portfolio/static/media/python.88c1e5ae02864b3ae66a571cc722a3d3.svg",
@@ -21,15 +21,16 @@
     "static/media/javascript.svg": "/matereyes-portfolio/static/media/javascript.64d9e0e76154cf546e6a54e6f4bfb9ac.svg",
     "static/media/pytorch.svg": "/matereyes-portfolio/static/media/pytorch.84241efe2a57eb322bbfab0d921fdcf2.svg",
     "index.html": "/matereyes-portfolio/index.html",
-    "static/media/qgis.svg": "/matereyes-portfolio/static/media/qgis.6385c0d47025e01ce15b40538ad18cbc.svg",
+    "static/media/qgis.svg": "/matereyes-portfolio/static/media/qgis.5b51cc1fb217e6875823c161b78b0dd6.svg",
+    "static/media/orcid.svg": "/matereyes-portfolio/static/media/orcid.7f3d6154920ad83e5a6aebbd86f9e60a.svg",
     "static/media/css.svg": "/matereyes-portfolio/static/media/css.8fe37b3430423bafeedb1dc7875a165a.svg",
     "static/media/html.svg": "/matereyes-portfolio/static/media/html.f064b3740c16d30101bff45358ea72c1.svg",
-    "main.239085cf.css.map": "/matereyes-portfolio/static/css/main.239085cf.css.map",
-    "main.a5398088.js.map": "/matereyes-portfolio/static/js/main.a5398088.js.map",
+    "main.96b77279.css.map": "/matereyes-portfolio/static/css/main.96b77279.css.map",
+    "main.f2610b97.js.map": "/matereyes-portfolio/static/js/main.f2610b97.js.map",
     "453.995bebb1.chunk.js.map": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.239085cf.css",
-    "static/js/main.a5398088.js"
+    "static/css/main.96b77279.css",
+    "static/js/main.f2610b97.js"
   ]
 }
