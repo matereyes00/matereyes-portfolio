@@ -5,7 +5,6 @@ import WhoAmI from './WhoAmI'
 import './Home.css';
 import TabBar from '../Components/TabBar';
 import who_am_i_img from '../images/mate.jpg';
-import socialsimg from '../images/decentmate.jpg';
 
 function Home() {
     const who_am_i_headline = "Martina Therese R. Reyes, M.S.";
