@@ -5,6 +5,7 @@ import StackItem from '../About_/Stack_/StackItem';
 import github_img from '../images/github.svg'
 import linkedin_img from '../images/linkedin.svg'
 import orcid_img from '../images/orcid.svg'
+import socialsimg from '../images/decentmate.jpg';
 
 
 const socials = () => {
@@ -12,6 +13,8 @@ const socials = () => {
     const socialLinks = ["https://www.linkedin.com/in/martina-therese-reyes-8b490a205/", "https://github.com/matereyes00", "https://orcid.org/0009-0005-6656-2780"];
     const socialsImgs = [linkedin_img, github_img, orcid_img];
     return (
+        <>
+        <img src={socialsimg} alt="social-icon"/>
         <div className='socials-container'>
             {ItemName.map((name, index) => (
                 <div id={name}>
@@ -24,6 +27,7 @@ const socials = () => {
                 </div>
             ))}
         </div>
+        </>
     );
 };
 
