@@ -1,0 +1,61 @@
+@mixin container-format($padding, $margin, $bg-color) {
+	padding: $padding;
+	margin: $margin;
+	background: $bg-color;
+}
+
+@mixin flex-format($display, $flex-direction, $flex-wrap) {
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+}
+
+// auto rows
+@mixin grid-format($display, $grid-gap, $grid-template-columns, $grid-auto-rows, $margin) {
+	display: $display;
+	grid-gap: $grid-gap;
+	grid-template-columns: $grid-template-columns;
+	grid-auto-rows: $grid-auto-rows;
+	margin: $margin;
+}
+
+// template rows
+@mixin grid-format($display, $grid-gap, $grid-template-columns, $grid-template-rows, $margin) {
+	display: $display;
+	grid-gap: $grid-gap;
+	grid-template-columns: $grid-template-columns;
+	grid-template-rows: $grid-template-rows;
+	margin: $margin;
+}
+
+@mixin text-customization($color, $font-family, $font-size) {
+	color: $color;
+	font-family: $font-family;
+	font-size: $font-size;
+}
+
+@mixin magazine-image($max-width, $height) {
+	max-width: $max-width;
+	height: $height;
+}
+
+@mixin aside-format($float, $width, $margin-left, $margin-bottom, $border-radius, $background-color) {
+    float: $float;
+    width: $width;
+    margin-left: $margin-left;
+    margin-bottom: $margin-bottom;
+    border-radius: $border-radius;
+    background-color: $background-color;
+}
+
+// aside - extra margins
+@mixin aside-extended-format($float, $width, $margin-left, $margin-bottom, $margin-top, $margin-right, $border-radius, $background-color) {
+    float: $float;
+    width: $width;
+    margin-left: $margin-left;
+    margin-bottom: $margin-bottom;
+    margin-top: $margin-top;
+    margin-right: $margin-right;
+    border-radius: $border-radius;
+    background-color: $background-color;
+}
