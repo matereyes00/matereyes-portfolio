@@ -1,0 +1,170 @@
+/* INDEX.HTML */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    color: #2B2908;
+    background-color: #D2B341;
+    width: 100%;
+}
+
+header>h2 {
+    text-align: center;
+}
+
+/* == NAV BAR == */
+.top-nav, .footer-nav, .page-navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav-leftside {
+    flex-basis: 20%;
+}
+
+.index-navbar-ul, .footer-ul {
+    list-style: none;
+}
+
+.index-navbar-li, .footer-li {
+    display: inline;
+    padding: 0 1rem;
+}
+
+.page-navigation {
+    background-color: #C9C9C9;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: .2rem;
+}
+
+.page-header {
+    width: 90%;
+    padding: .2rem;
+    margin: 0 auto;
+}
+
+.page-header-partition {
+    display: flex;
+}
+
+.page-header-left {
+    flex-basis: 90%;
+}
+
+.update-form-nav {
+    color: #151851;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    padding: .1rem;
+}
+
+.link {
+    color: #151851;
+    text-decoration: underline;
+}
+
+.link:hover {
+    background-color: yellow;
+}
+
+a:focus {
+    border-style: dotted;
+    background-color: yellow;
+    text-decoration: none;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+th {
+    color: #151851;
+    background-color: #A8BCDF;
+}
+
+th, td{
+    padding: .7rem;
+}
+
+/* MYGRADES.HTML */
+.classschedule-settings, .mygrades-settings {
+    background-color: #C9C9C9;
+    color:#1A3737;
+    padding: .2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.dropdown-forms {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: .5rem;
+}
+
+.form-select {
+    margin-left: 1rem;
+}
+
+.form-select:focus {
+    background-color: yellow;
+}
+
+input {
+    width: 90%;
+    display: inline-block;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+button {
+    padding: .3rem;
+    border: 1px black solid;
+}
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+}
+
+/* UPDATE STUDENT INFO */
+.subform {
+    border: 1px solid black;
+    margin-bottom: .9rem;
+    padding: 1.5rem;
+}
+
+span {
+    color:red;
+}
+
+.save-panel {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+}
