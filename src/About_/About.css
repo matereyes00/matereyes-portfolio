@@ -16,6 +16,19 @@
     width: 100%;
 }
 
+
+#about-terminal {
+    color: #390060;
+    background-color: rgba(211, 195, 255, 0.75);
+    margin: 10vmin auto;
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    /* background-color:#3b3880; */
+    border-radius: 1vmin;
+}
+
+
 /* CAROUSEL */
 /* src/Carousel.css */
 .carousel {
