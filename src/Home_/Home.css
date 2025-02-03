@@ -3,7 +3,7 @@
     width: 50%;
     display: flex;
     flex-flow: column wrap;
-    background-color:#3b3880;
+    /* background-color:#3b3880; */
     border-radius: 1vmin;
 }
 

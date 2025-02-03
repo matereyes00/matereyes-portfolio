@@ -15,7 +15,7 @@ function Home() {
 
     const pub_titles = ["Using K-means clustering: performing site selection to identify build-able areas for health centers (RHUs)", "Rust Programming: A Safe, Fast, and Versatile Choice", "Back Propagation and Recurrent Neural Networks for Optimal Location of Rural Health Unit Facilities in the Philippines"];
     const pub_date = ['December 2, 2023', 'December 2, 2023', 'August 16, 2024'];
-    const pub_authors = ['Martina Therese R. Reyes', 'Martina Therese R. Reyes', 'Martina Therese R. Reyes, Dr. Ma. Regina Justina E. Estuar, Jann Railey E. Montalan, M.S.']
+    const pub_authors = ['Martina Therese R. Reyes', 'Martina Therese R. Reyes', 'Martina Therese R. Reyes, Dr. Ma. Regina Justina E. Estuar, Ph. D., Jann Railey E. Montalan, M.S.']
     const pub_article_urls = [
         "https://medium.com/@martina.therese.reyes/using-k-means-clustering-performing-site-selection-to-identify-build-able-areas-for-health-centers-a089ef18f86f", 
         "https://medium.com/@martina.therese.reyes/rust-programming-a-safe-fast-and-versatile-choice-71428b87c972", 
