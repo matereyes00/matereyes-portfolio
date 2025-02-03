@@ -59,26 +59,37 @@ const AboutStack = () => {
         return item.classifications.includes(selectedCategory);
     });
 
+    function chunkArray(array, chunkSize) {
+        const result = [];
+        for (let i = 0; i < array.length; i += chunkSize) {
+            result.push(array.slice(i, i + chunkSize));
+        }
+        return result;
+    }
+
     return (
         <div>
+            <div className="filter-container">
+                {classification.map((category) => (
+                    <button 
+                        key={category.code} 
+                        onClick={() => handleCategorySelect(category.code)}>
+                        {category.label}
+                    </button>
+                ))}
+            </div>
             <div className='stack-container'>
-                <div className="filter-container">
-                    {classification.map((category) => (
-                        <button 
-                            key={category.code} 
-                            onClick={() => handleCategorySelect(category.code)}
-                        >
-                            {category.label}
-                        </button>
-                    ))}
-                </div>
-                {filteredItems.map((item, index) => (
-                    <StackItem
+                {chunkArray(filteredItems, 3).map((row, rowIndex) => (
+                    <div key={rowIndex} className="row"> {/* Row container */}
+                    {row.map((item, index) => (
+                        <StackItem
                         key={index}
                         ItemName={item.name}
                         image={item.image}
                         className="Applogo"
-                    />
+                        />
+                    ))}
+                    </div>
                 ))}
             </div>
         </div>
