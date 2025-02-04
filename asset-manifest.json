@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/matereyes-portfolio/static/css/main.96b77279.css",
-    "main.js": "/matereyes-portfolio/static/js/main.f2610b97.js",
+    "main.css": "/matereyes-portfolio/static/css/main.ec9a38bd.css",
+    "main.js": "/matereyes-portfolio/static/js/main.e5681881.js",
     "static/js/453.995bebb1.chunk.js": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js",
     "static/media/mate.jpg": "/matereyes-portfolio/static/media/mate.78f59d75ac15b36682f8.jpg",
     "static/media/decentmate.jpg": "/matereyes-portfolio/static/media/decentmate.d717d04065bc7a68b2b8.jpg",
@@ -22,15 +22,15 @@
     "static/media/pytorch.svg": "/matereyes-portfolio/static/media/pytorch.84241efe2a57eb322bbfab0d921fdcf2.svg",
     "index.html": "/matereyes-portfolio/index.html",
     "static/media/qgis.svg": "/matereyes-portfolio/static/media/qgis.5b51cc1fb217e6875823c161b78b0dd6.svg",
-    "static/media/orcid.svg": "/matereyes-portfolio/static/media/orcid.7f3d6154920ad83e5a6aebbd86f9e60a.svg",
+    "static/media/orcid.svg": "/matereyes-portfolio/static/media/orcid.4466987de208c7031dacebd06a5ac8a4.svg",
     "static/media/css.svg": "/matereyes-portfolio/static/media/css.8fe37b3430423bafeedb1dc7875a165a.svg",
     "static/media/html.svg": "/matereyes-portfolio/static/media/html.f064b3740c16d30101bff45358ea72c1.svg",
-    "main.96b77279.css.map": "/matereyes-portfolio/static/css/main.96b77279.css.map",
-    "main.f2610b97.js.map": "/matereyes-portfolio/static/js/main.f2610b97.js.map",
+    "main.ec9a38bd.css.map": "/matereyes-portfolio/static/css/main.ec9a38bd.css.map",
+    "main.e5681881.js.map": "/matereyes-portfolio/static/js/main.e5681881.js.map",
     "453.995bebb1.chunk.js.map": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96b77279.css",
-    "static/js/main.f2610b97.js"
+    "static/css/main.ec9a38bd.css",
+    "static/js/main.e5681881.js"
   ]
 }
