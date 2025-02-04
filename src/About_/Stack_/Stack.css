@@ -29,6 +29,12 @@
     width: 90%;
 }
 
+.Applogo {
+    height: 10vmin;
+    pointer-events: none;
+    width: 90%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
     animation: App-logo-spin infinite 20s linear;
