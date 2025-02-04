@@ -20,23 +20,10 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin: 0 auto;
-    width: 50%;
+    margin: 5vmin 2vmin;
 }
 
 .socialslogo {
-    height: 7vmin;
-    pointer-events: none;
-    width: 90%;
-}
-
-.App-logo {
-    height: 20vmin;
-    pointer-events: none;
-    width: 50%;
-}
-
-.Applogo {
     height: 10vmin;
     pointer-events: none;
     width: 90%;
