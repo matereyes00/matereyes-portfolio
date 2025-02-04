@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 #home-terminal {
     margin: 10vmin auto;
-    width: 50%;
+    width: 90%;
     display: flex;
     flex-flow: column wrap;
-    /* background-color:#3b3880; */
     border-radius: 1vmin;
+    color: #390060;
+    background-color: rgba(211, 195, 255, 0.75);
 }
 
 .tab-bar {
@@ -18,6 +21,7 @@
     border-bottom: none;
     width: 50%;
     font-size: 2vmin;
+    font-family: "Open Sans", serif; 
     width: 100%;
     cursor: pointer;
 }
@@ -29,23 +33,49 @@
     color: #eccfff;
 }
 
-#home-terminal {
-    /* padding: 11vmin; */
-    color: #390060;
-    background-color: rgba(211, 195, 255, 0.75);
-}
-
 #home-whoami {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 2vmin;
+    justify-content: space-evenly;
 }
-#home-whoami #home-whoami-flexleft {
-    width: 40%;
-    margin-top: 10%;
+
+#socials-tab-img {
+    margin: 2vmin;
+}
+
+#home-whoami #home-whoami-flexleft{
+    width: 30%;
+    margin-top: 10vmin;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
 }
 
 #home-whoami #home-whoami-flexright img{
     width: 70%;
-} 
+}
+
+.socials-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* Styles for tablets (typically 768px and up) */
+@media (max-width: 990px) {
+    #home-whoami {
+        display:block;
+        margin: 0 auto;
+        font-size: 2vmin;
+        width: 100%;
+        padding: 0;
+    }   
+    #home-whoami #home-whoami-flexleft {
+        margin: 0 auto;
+        padding: 0;
+        width:80%;
+    } 
+
+    
+}

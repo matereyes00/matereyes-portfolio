@@ -1,6 +1,7 @@
 // src/about/AboutStack.js
 import React from 'react';
 import '../About_/Stack_/Stack.css'; 
+import './Home.css'; 
 import StackItem from '../About_/Stack_/StackItem';
 import github_img from '../images/github.svg'
 import linkedin_img from '../images/linkedin.svg'
@@ -14,7 +15,8 @@ const socials = () => {
     const socialsImgs = [linkedin_img, github_img, orcid_img];
     return (
         <>
-        <img src={socialsimg} alt="social-icon"/>
+        <img src={socialsimg} alt="social-icon" id="socials-tab-img" />
+
         <div className='socials-container'>
             {ItemName.map((name, index) => (
                 <div id={name}>
