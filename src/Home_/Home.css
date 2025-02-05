@@ -2,7 +2,7 @@
 
 #home-terminal {
     margin: 10vmin auto;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-flow: column wrap;
     border-radius: 1vmin;
@@ -43,6 +43,10 @@
     margin: 2vmin;
 }
 
+#home-terminal-content {
+    margin: 1vmin 13vmin;
+}
+
 #home-whoami #home-whoami-flexleft{
     width: 30%;
     margin-top: 10vmin;
@@ -76,6 +80,4 @@
         padding: 0;
         width:80%;
     } 
-
-    
 }

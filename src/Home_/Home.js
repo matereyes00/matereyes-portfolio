@@ -46,7 +46,7 @@ function Home() {
         { label: 'Publications and Presentations', id: 'tab3', content: 
             <>
                 {pub_titles.map((title, index) => (
-                        <Publication
+                        <Publication class="home-pub"
                             key={index}  PubTitle={title}
                             PubId={`publication-${index}`} PubDate={pub_date[index]}
                             PubAuthors={pub_authors[index]} PubDescription={pub_descriptions[index]} articleUrl={pub_article_urls[index]} embed={embeds[index]}

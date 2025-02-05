@@ -23,9 +23,9 @@ function About() {
     ];
 
     return (
-        <div id="about-terminal">
+        <div id="home-terminal">
             <TabBar tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
-            {tabs[activeTab].content}
+            {tabs[activeTab].content} 
         </div>
     );
 }
