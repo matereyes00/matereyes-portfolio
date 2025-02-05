@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import Select from "react-dropdown-select";
+
+import './Stack.css';
+import '../../Home_/Home.css';
+
 import StackItem from './StackItem';
 import logo from '../../images/logo.svg';
 import python_logo from '../../images/python.svg';
@@ -17,10 +22,11 @@ import figma from '../../images/figma.svg';
 import qgis from '../../images/qgis.svg';
 import git from '../../images/git.svg';
 import github from '../../images/github.svg';
-import './Stack.css';
+
 
 const AboutStack = () => {
-    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [selectedCategory, setSelectedCategory] = useState('ALL');
+
     const stackItems = [
         { name: "React", classifications: ['FMW'], image: logo },
         { name: "Python", classifications: ['BE', 'DST'], image: python_logo },
@@ -47,16 +53,24 @@ const AboutStack = () => {
         { code: 'FE', label: 'Frontend' },
         { code: 'DB', label: 'Database' },
         { code: 'CT', label: 'Collaboration Tools' },
-        { code: 'GT', label: 'Geography Tools' }
+        { code: 'GT', label: 'Geography Tools' },
+        { code: 'ALL', label: 'All'},
     ];
 
-    const handleCategorySelect = (category) => {
-        setSelectedCategory(category);
+    const handleCategorySelect = (values) => {
+        if (values.length > 0) {
+            setSelectedCategory(values[0].code);
+        } else {
+            setSelectedCategory('ALL'); // Clear to "ALL"
+        }
     };
 
-    const filteredItems = stackItems.filter((item) => {
-        if (selectedCategory === 'All') return true;
-        return item.classifications.includes(selectedCategory);
+    const filteredItems = stackItems.filter(item => {
+        if (selectedCategory === 'ALL') { 
+            return true;
+        } else {
+            return item.classifications.includes(selectedCategory); 
+        }
     });
 
     function chunkArray(array, chunkSize) {
@@ -68,15 +82,20 @@ const AboutStack = () => {
     }
 
     return (
-        <div>
+        <div >
             <div className="filter-container">
-                {classification.map((category) => (
-                    <button 
-                        key={category.code} 
-                        onClick={() => handleCategorySelect(category.code)}>
-                        {category.label}
-                    </button>
-                ))}
+                <Select
+                    id="select-stack-classification"
+                    options={classification}
+                    labelField="label"  
+                    valueField="code"   
+                    onChange={handleCategorySelect} 
+                    multiSelect={false}
+                    closeOnSelect={true}
+                    searchable={false}
+                    clearable={true} 
+                    placeholder="Select a category" 
+                />
             </div>
             <div className='stack-container'>
                 {chunkArray(filteredItems, 3).map((row, rowIndex) => (
