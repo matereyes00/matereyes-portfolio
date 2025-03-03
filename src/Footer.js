@@ -1,11 +1,10 @@
 // src/Footer.js
 import React from 'react';
-import './Footer.css'; // Footer styling
 
 function Footer() {
     return (
-        <footer className="footer">
-        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <footer className="bg-violet-900 p-6 align-bottom text-2lg flex justify-center">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
         </footer>
     );
 }
