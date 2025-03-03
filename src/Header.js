@@ -5,7 +5,7 @@ import './Header.css';
 
 function Header() {
     return (
-        <header className="header">
+        <header className=" text-4xl font-bold text-blue-600">
         <nav>
             <ul>
             <li><Link to="/">Home</Link></li> {/* Link to Home page */}

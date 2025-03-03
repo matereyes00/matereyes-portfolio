@@ -42,8 +42,10 @@
   "homepage": "https://matereyes00.github.io/matereyes-portfolio",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "autoprefixer": "^10.4.20",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.37.4",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.3"
   }
 }
