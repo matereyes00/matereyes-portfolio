@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from "react-dropdown-select";
 
 import './Stack.css';
-import '../../Home_/Home.css';
+// import '../../Home_/Home.css';
 
 import StackItem from './StackItem';
 import logo from '../../images/logo.svg';

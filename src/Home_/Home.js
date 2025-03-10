@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Socials from './Socials'
 import Publication from './Publication'
 import WhoAmI from './WhoAmI'
-import './Home.css';
+// import './Home.css';
 import TabBar from '../Components/TabBar';
 import who_am_i_img from '../images/mate.jpg';
 
@@ -57,9 +57,9 @@ function Home() {
     ];
 
     return (
-        <div id="home-terminal">
+        <div id="home-terminal" className="bg-purple-300 text-purple-950 w-1/2 m-auto  rounded-md">
             <TabBar tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
-            <div id="home-terminal-content">
+            <div id="home-terminal-content" className="flex flex-col w-13">
                 {tabs[activeTab].content}
             </div>
         </div>
