@@ -15,7 +15,7 @@ const socials = () => {
     const socialsImgs = [linkedin_img, github_img, orcid_img];
     return (
         <>
-        <img src={socialsimg} alt="social-icon" id="socials-tab-img" />
+        <img src={socialsimg} alt="social-icon" id="socials-tab-img" className=" m-auto h-96 w-96 object-scale-down p-3" />
 
         <div className='socials-container'>
             {ItemName.map((name, index) => (
