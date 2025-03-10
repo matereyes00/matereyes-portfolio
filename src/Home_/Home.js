@@ -28,7 +28,7 @@ function Home() {
         //third
         "The 10th International Conference on Public Health - ICOPH 2024 was held in Bangkok, Thailand on the 15-16th of August 2024. This conference gave me the platform to share my research by presenting in a public forum. I showcased my work on optimizing health facility locations in the Philippines using neural networks. Though it was mainly a proof of concept, it can adapt and be flexible depending on the location it will be applied on. I was very proud to answer during the Q&A portion because the audience and panel seemed interested in the study. Overall, it was an engaging experience because I was able to listen to other students, health experts and/or policy makers and doctors (to name a few!) present their work on how they solve public health issues in their country."
     ];
-    const embeds = [<></>,<></>, <><iframe src="https://drive.google.com/file/d/10-Qm1QeDph4nSiPx-jGJ_S06IftOo0Va/preview" width="640" height="480" allow="autoplay"></iframe></>];
+    const embeds = [<></>,<></>, <><iframe src="https://drive.google.com/file/d/10-Qm1QeDph4nSiPx-jGJ_S06IftOo0Va/preview" width="440" height="280" allow="autoplay" className='m-auto'></iframe></>];
 
     const [activeTab, setCurrentTab] = useState(0); 
     const handleTabChange = (index) => {
@@ -57,7 +57,7 @@ function Home() {
     ];
 
     return (
-        <div id="home-terminal" className="bg-purple-300 text-purple-950 w-1/2 m-auto  rounded-md">
+        <div id="home-terminal" className="bg-purple-300 text-purple-950 w-3/4 h-3/4 m-auto rounded-md">
             <TabBar tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
             <div id="home-terminal-content" className="flex flex-col w-13">
                 {tabs[activeTab].content}
