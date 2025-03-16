@@ -57,7 +57,7 @@ function Home() {
     ];
 
     return (
-        <div id="home-terminal" className="bg-purple-300 text-purple-950 w-3/4 h-3/4 m-auto rounded-md">
+        <div id="home-terminal" className="bg-purple-300 text-purple-950 w-2/5 my-8 mx-auto rounded-md">
             <TabBar tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} />
             <div id="home-terminal-content" className="flex flex-col w-13">
                 {tabs[activeTab].content}

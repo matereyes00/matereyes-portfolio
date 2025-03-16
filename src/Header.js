@@ -9,7 +9,8 @@ function Header() {
                 <ul className="flex flex-row justify-around text-purple-300 ">
                     <li><Link to="/">Home</Link></li> {/* Link to Home page */}
                     <li><Link to="/about">About</Link></li> {/* Link to About page */}
-                    <li><Link to="/projects">Projects</Link></li> 
+                    {/* <li><Link to="/stack">Stack</Link></li> */}
+                    {/* <li><Link to="/projects">Projects</Link></li>  */}
                 </ul>
             </nav>
         </header>

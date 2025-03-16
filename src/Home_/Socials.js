@@ -1,8 +1,6 @@
 // src/about/AboutStack.js
 import React from 'react';
-import '../About_/Stack_/Stack.css'; 
-// import './Home.css'; 
-import StackItem from '../About_/Stack_/StackItem';
+import StackItem from '../Stack_/StackItem';
 import github_img from '../images/github.svg'
 import linkedin_img from '../images/linkedin.svg'
 import orcid_img from '../images/orcid.svg'

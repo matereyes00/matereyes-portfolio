@@ -15,7 +15,7 @@ const WhoAmI = ({ Name, container_id, imageUrl, flex_right, flex_left, Title }) 
                     <img 
                         src={imageUrl} 
                         alt={Name} 
-                        className="event-image h-48 w-96 object-scale-down p-5" 
+                        className="event-image w-96 object-scale-down p-5" 
                     />
                 )}
             </div>

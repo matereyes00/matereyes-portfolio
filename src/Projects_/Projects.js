@@ -4,7 +4,7 @@ function Projects() {
     
 
     return (
-        <div><h1>Projects</h1></div>
+        <div className='bg-purple-700'><h1>Projects</h1></div>
     );
 }
 
