@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-function Projects() {
-    
-
+const Projects = () => {
     return (
         <div className='bg-purple-700'><h1>Projects</h1></div>
     );
