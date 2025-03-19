@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/matereyes-portfolio/static/css/main.8809832b.css",
-    "main.js": "/matereyes-portfolio/static/js/main.5aa2c137.js",
+    "main.css": "/matereyes-portfolio/static/css/main.df22d205.css",
+    "main.js": "/matereyes-portfolio/static/js/main.f288daf9.js",
     "static/js/453.995bebb1.chunk.js": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js",
     "static/media/compsat-git-workshop.JPG": "/matereyes-portfolio/static/media/compsat-git-workshop.9931e29c4f41470ab4f9.JPG",
     "static/media/pov-19-grad.JPEG": "/matereyes-portfolio/static/media/pov-19-grad.f8d0d2da638b6747ef8d.JPEG",
@@ -33,12 +33,12 @@
     "static/media/tailwind-svgrepo-com.svg": "/matereyes-portfolio/static/media/tailwind-svgrepo-com.973c73e85d4daa24b257ba20298716c4.svg",
     "static/media/css.svg": "/matereyes-portfolio/static/media/css.8fe37b3430423bafeedb1dc7875a165a.svg",
     "static/media/html.svg": "/matereyes-portfolio/static/media/html.f064b3740c16d30101bff45358ea72c1.svg",
-    "main.8809832b.css.map": "/matereyes-portfolio/static/css/main.8809832b.css.map",
-    "main.5aa2c137.js.map": "/matereyes-portfolio/static/js/main.5aa2c137.js.map",
+    "main.df22d205.css.map": "/matereyes-portfolio/static/css/main.df22d205.css.map",
+    "main.f288daf9.js.map": "/matereyes-portfolio/static/js/main.f288daf9.js.map",
     "453.995bebb1.chunk.js.map": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8809832b.css",
-    "static/js/main.5aa2c137.js"
+    "static/css/main.df22d205.css",
+    "static/js/main.f288daf9.js"
   ]
 }
