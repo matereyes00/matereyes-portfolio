@@ -1,5 +1,5 @@
 import React from 'react';
-import Journey from './Milestones_/Journey';
+import Journey from './Journey';
 
 function About() {
     return (
