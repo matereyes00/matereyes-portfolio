@@ -42,7 +42,7 @@ function Home() {
                     Title={tab1_text} imageUrl={who_am_i_img} flex_left={event_flex_left} flex_right={event_flex_right}/>
             </>
         },
-        { label: 'Socials', id: 'tab2', content: <><Socials /></> },
+        // { label: 'Socials', id: 'tab2', content: <><Socials /></> },
         { label: 'Publications and Presentations', id: 'tab3', content: 
             <>
                 {pub_titles.map((title, index) => (
