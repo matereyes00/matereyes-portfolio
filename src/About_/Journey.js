@@ -27,17 +27,17 @@ const EventText = () => {
 		"Now, nearly finished with my Master's, I am working as a Junior Software Engineer at UBX. Once I complete my master's, I intend to focus on my career. I've been interested in taking on a full-stack developer role. My personal goal is to use the knowledge, skills, and understanding learned in my field to help other people. I advocate for creating a positive social impact through my work and the skills I have to offer. I work well individually but perfer working collaboratively on a team. I empathize with others, value inclusive environments and adapt a growth mindset in any project or task I partake in.";
 	return (
 		<>
-			<div className="md:flex md:flex-wrap mx-10 my-10 bg-[#8d5e9b] text-[#ddd7e1] bg-opacity-60 p-5">
+			<div className="md:flex md:flex-wrap mx-10 my-10  text-blue-950 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl">
 				<div className="hidden md:flex md:flex-wrap md:flex-row justify-center">
 					<img
 						src={poveda_grad}
 						alt="Poveda Graduation 2019"
-						className="h-2.4/3 w-1/3 mx-auto my-2 md:mx-4"
+						className="w-1/5 mx-auto my-2 md:mx-4"
 					/>
 					<img
 						src={bs_admu_grad}
 						alt="Ateneo Graduation 2023"
-						className="h-2.4/3 w-1/3 mx-auto my-2 md:mx-4"
+						className="w-1/5 mx-auto my-2 md:mx-4"
 					/>
 				</div>
 				<img
@@ -53,22 +53,22 @@ const EventText = () => {
 				/>
 			</div>
 
-			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "white" }} />
+			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "black" }} />
 
-			<div className="md:flex md:flex-row mx-10 my-10 bg-[#c2a8ca] bg-opacity-60 p-5">
+			<div className="md:flex md:flex-row mx-10 my-10 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl">
 				<img
 					src={compsat_workshop}
-					alt="Ateneo Graduation 2023"
-					className="h-1/2 w-1/2 mx-auto my-2"
+					alt="CompSAt Git Workshop 2019"
+					className="h-1/3 w-1/3 mx-auto my-2"
 				/>
 				<p className="my-auto text-center md:text-right">{content2}</p>
 			</div>
 			<FontAwesomeIcon
 				icon={faLocationDot}
 				size="3x"
-				style={{ color: "white" }}
+				style={{ color: "black" }}
 			/>
-			<div className="md:flex md:flex-row mx-10 my-10 bg-[#8d5e9b] text-[#ddd7e1] bg-opacity-60 p-5">
+			<div className="md:flex md:flex-row mx-10 my-10  text-blue-950 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl">
 				<p className="my-auto md:text-left">
 					In my third year, I was{" "}
 					<a
@@ -91,12 +91,14 @@ const EventText = () => {
 					className="mx-auto w-1/2 h-1/2 my-2 md:mx-4"
 				/>
 			</div>
-			<FontAwesomeIcon icon={faCoffee} size="3x" style={{ color: "white" }} />
-			<div className="flex flex-row mx-10 my-10 bg-[#c2a8ca] bg-opacity-60 p-5">
+			<FontAwesomeIcon icon={faCoffee} size="3x" style={{ color: "black" }} />
+
+			<div className="flex flex-row mx-10 my-10 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl">
 				<p className="my-auto">{content3}</p>
 			</div>
-			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "white" }} />
-			<div className="md:flex md:flex-row mx-10 my-10 bg-[#8d5e9b] text-[#ddd7e1] bg-opacity-60 p-5">
+			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "black" }} />
+
+			<div className="md:flex md:flex-row mx-10 my-10  text-blue-950 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl">
 				<p className="my-auto text-center md:text-left">{content4}</p>
 				<img
 					src={ico_ph}
@@ -107,13 +109,14 @@ const EventText = () => {
 			<FontAwesomeIcon
 				icon={faLocationDot}
 				size="3x"
-				style={{ color: "white" }}
+				style={{ color: "black" }}
 			/>
-			<div className="mx-10 my-10 bg-[#c2a8ca] bg-opacity-60 p-5 md:flex md:flex-row ">
+
+			<div className="mx-10 my-10 bg-opacity-60 p-5 md:flex md:flex-row  border-2 border-slate-900 rounded-xl">
 				<img
 					src={ubx_ps}
 					alt="UBX Photoshoot"
-					className="h-1/2 w-1/2 mx-auto"
+					className="h-1/3 w-1/3 mx-auto"
 				/>
 				<p className="my-auto text-center md:text-right ">{content5}</p>
 			</div>
