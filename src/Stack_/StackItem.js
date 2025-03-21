@@ -11,10 +11,6 @@ const StackItem = ({ ItemName, image }) => {
 					className="mx-auto my-auto h-3/5 w-3/5"
 				/>
 			</div>
-			<div className="md:mr-2 md:content-center mx-auto mt-5 md:basis-xl w-2/3">
-				<h3 className="text-xl md:text-md font-bold">{ItemName}</h3>
-				{/* <h3>Item category</h3> */}
-			</div>
 		</div>
 	);
 };

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Header() {
 	return (
-		<header className="Parent text-2lg font-bold bg-slate-900 p-2">
+		<header className="Parent text-2lg font-bold p-2">
 			<nav>
-				<ul className="flex flex-row justify-around text-red-200 ">
+				<ul className="flex flex-row justify-around text-slate-900 ">
 					<li>
 						<Link to="/">Home</Link>
 					</li>{" "}

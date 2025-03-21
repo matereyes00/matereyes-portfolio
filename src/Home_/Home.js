@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import Socials from "./Socials";
 import Publication from "./Publication";
 import WhoAmI from "./WhoAmI";
-// import './Home.css';
 import TabBar from "../Components/TabBar";
 import who_am_i_img from "../images/mate.jpg";
 
 function Home() {
 	const who_am_i_headline = "Martina Therese R. Reyes, M.S.";
-	const who_am_i_ID = "home-whoami";
-	const event_flex_left = "home-whoami-flexleft";
-	const event_flex_right = "home-whoami-flexright";
 	const tab1_text =
 		"Junior Software Engineer at UBX and current Master of Science in Computer Science student at Ateneo de Manila University";
 
@@ -51,51 +46,18 @@ function Home() {
 		</>,
 	];
 
-	const [activeTab, setCurrentTab] = useState(0);
-	const handleTabChange = (index) => {
-		setCurrentTab(index);
-	};
-
-	const tabs = [
-		{
-			label: "Who am I?",
-			id: "tab1",
-			content: (
-				<>
-					<WhoAmI
-						Name={who_am_i_headline}
-						container_id={who_am_i_ID}
-						// Title={tab1_text}
-						imageUrl={who_am_i_img}
-						flex_left={event_flex_left}
-						flex_right={event_flex_right}
-					/>
-				</>
-			),
-		},
-		// { label: 'Socials', id: 'tab2', content: <><Socials /></> },
-		{
-			label: "Publications and Presentations",
-			id: "tab3",
-			content: (
-				<>
-					{pub_titles.map((title, index) => (
-						<Publication
-							class="home-pub"
-							key={index}
-							PubTitle={title}
-							PubId={`publication-${index}`}
-							PubDate={pub_date[index]}
-							PubAuthors={pub_authors[index]}
-							PubDescription={pub_descriptions[index]}
-							articleUrl={pub_article_urls[index]}
-							embed={embeds[index]}
-						/>
-					))}
-				</>
-			),
-		},
-	];
+	const publications = pub_titles.map((title, index) => (
+        <Publication
+            class="home-pub"
+            key={index}
+            PubTitle={title}
+            PubId={`publication-${index}`}
+            PubDate={pub_date[index]}
+            PubAuthors={pub_authors[index]}
+            PubDescription={pub_descriptions[index]}
+            articleUrl={pub_article_urls[index]}
+            embed={embeds[index]}
+        />))
 
 	return (
 		<>
@@ -107,7 +69,6 @@ function Home() {
 					{/* {tabs[activeTab].content} */}
 					<WhoAmI
 						Name={who_am_i_headline}
-						container_id={who_am_i_ID}
 						Title={tab1_text}
 						imageUrl={who_am_i_img}
 					/>
@@ -119,39 +80,7 @@ function Home() {
 				</h1>
 			</div>
 			<div id="publications" className="md:grid md:grid-row grid-cols-2 gap:4">
-				<Publication
-					class="home-pub"
-					// key={index}
-					PubTitle={pub_titles[0]}
-					// PubId={`publication-${index}`}
-					PubDate={pub_date[0]}
-					PubAuthors={pub_authors[0]}
-					PubDescription={pub_descriptions[0]}
-					articleUrl={pub_article_urls[0]}
-					embed={embeds[0]}
-				/>
-				<Publication
-					class="home-pub"
-					// key={index}
-					PubTitle={pub_titles[1]}
-					// PubId={`publication-${index}`}
-					PubDate={pub_date[1]}
-					PubAuthors={pub_authors[1]}
-					PubDescription={pub_descriptions[1]}
-					articleUrl={pub_article_urls[1]}
-					embed={embeds[1]}
-				/>
-				<Publication
-					class="home-pub"
-					// key={index}
-					PubTitle={pub_titles[2]}
-					// PubId={`publication-${index}`}
-					PubDate={pub_date[2]}
-					PubAuthors={pub_authors[2]}
-					PubDescription={pub_descriptions[2]}
-					articleUrl={pub_article_urls[2]}
-					embed={embeds[2]}
-				/>
+				{publications}
 			</div>
 		</>
 	);
