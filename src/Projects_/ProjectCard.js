@@ -8,6 +8,7 @@ const ProjectCard = ({
 	projectTitle,
 	projectDescription,
 	projectLink,
+	deployedProjectLink,
 	projectStack,
 }) => {
 	return (
@@ -16,13 +17,15 @@ const ProjectCard = ({
 				<div
 					className="flex flex-row justify-center mt-3 border-b-2 border-slate-900 
                 w-2/3 mx-auto">
-					<h1 className="text-3xl">{projectTitle}</h1>
-					<FontAwesomeIcon
-						icon={faExternalLink}
-						size="xs"
-						style={{ color: "black" }}
-						className="ml-2"
-					/>
+					<a href={deployedProjectLink} target="_blank">
+						<h1 className="text-3xl">{projectTitle}</h1>
+						<FontAwesomeIcon
+							icon={faExternalLink}
+							size="xs"
+							style={{ color: "black" }}
+							className="ml-2"
+						/>
+					</a>
 				</div>
 
 				<div className="flex flex-wrap flex-row justify-around w-2/3 flex-auto my-3 mx-auto">

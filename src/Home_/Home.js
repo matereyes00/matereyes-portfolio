@@ -47,17 +47,18 @@ function Home() {
 	];
 
 	const publications = pub_titles.map((title, index) => (
-        <Publication
-            class="home-pub"
-            key={index}
-            PubTitle={title}
-            PubId={`publication-${index}`}
-            PubDate={pub_date[index]}
-            PubAuthors={pub_authors[index]}
-            PubDescription={pub_descriptions[index]}
-            articleUrl={pub_article_urls[index]}
-            embed={embeds[index]}
-        />))
+		<Publication
+			class="home-pub"
+			key={index}
+			PubTitle={title}
+			PubId={`publication-${index}`}
+			PubDate={pub_date[index]}
+			PubAuthors={pub_authors[index]}
+			PubDescription={pub_descriptions[index]}
+			articleUrl={pub_article_urls[index]}
+			embed={embeds[index]}
+		/>
+	));
 
 	return (
 		<>
@@ -79,7 +80,7 @@ function Home() {
 					Publications and Presentations
 				</h1>
 			</div>
-			<div id="publications" className="md:grid md:grid-row grid-cols-2 gap:4">
+			<div id="publications" className="md:grid md:grid-row grid-cols-3">
 				{publications}
 			</div>
 		</>
