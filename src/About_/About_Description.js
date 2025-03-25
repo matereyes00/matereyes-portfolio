@@ -1,5 +1,4 @@
 import React from 'react';
-import './About.css'; 
 
 
 const AboutDescription = ({ content, content2, content3, content4, content5 }) => {

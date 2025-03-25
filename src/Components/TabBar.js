@@ -9,17 +9,17 @@ function TabBar({ tabs, onTabChange }) {
     };
 
     return (
-        <div className="tab-bar">
-        {tabs.map((tab, index) => (
-            <button
-            key={index}
-            className={`tab ${index === activeTab ? 'active' : ''}`}
-            id={tab.id}
-            onClick={() => handleTabClick(index)}
-            >
-            {tab.label}
-            </button>
-        ))}
+        <div className="tab-bar flex flex-row justify-around bg-violet-400 rounded-sm">
+            {tabs.map((tab, index) => (
+                <button
+                key={index}
+                className={`tab ${index === activeTab ? 'active' : ''}`}
+                id={tab.id}
+                onClick={() => handleTabClick(index)}
+                >
+                    {tab.label}
+                </button>
+            ))}
         </div>
     );
 }
