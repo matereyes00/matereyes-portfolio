@@ -24,6 +24,9 @@ const Header = () => {
 					<li className={getLinkClass("/projects")}>
 						<Link to="/projects">Projects</Link>
 					</li>
+					<li className={getLinkClass("/mini-projects")}>
+						<Link to="/mini-projects">Mini Projects</Link>
+					</li>
 				</ul>
 			</nav>
 		</header>

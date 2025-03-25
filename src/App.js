@@ -6,9 +6,9 @@ import Footer from './Footer';
 import About from './About_/About';
 import Stack from './Stack_/Stack';
 import Projects from './Projects_/Projects'; 
+import MiniProjects from './Projects_/MiniProjects'; 
 import Home from './Home_/Home'; 
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function App() {
   
   
@@ -25,10 +25,10 @@ function App() {
               <Route path="/stack" element={<Stack />} />
               {/* Catch-all route: Redirect unknown routes to Home */}
               <Route path="/projects" element={<Projects />} />
+              <Route path="/mini-projects" element={<MiniProjects />} />
               <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
-        <FontAwesomeIcon icon="fa-solid fa-train" />
         <Footer />
       </div>
     </Router>
