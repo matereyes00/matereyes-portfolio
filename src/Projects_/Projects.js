@@ -155,18 +155,19 @@ const Projects = () => {
 			tags: ["school_project"],
 			description:
 				"A requirement for CSCI 115: Simulation class to observe the impact of fake-bots on X spreading misinformation and fake news.",
-			link: "#",
+			link: "",
 			stack: [
 				<FontAwesomeIcon icon={faPython} size="lg" />,
 				jupyter_logo,
 				// "simpy",
 			],
+			deployedProject: "https://drive.google.com/file/d/1ZOfkFYkSptU2AHnAvQHsWKJDl_D75sAZ/view?usp=sharing"
 		},
 		{
 			title: "Plantitas",
 			tags: ["school_project"],
 			description:
-				"Final project requirement for CSCI 111: Introduction to Artificial Intelligent. The aim of this project is to demonstrate the behavior of an AI model ",
+				"The aim of this project is to demonstrate the behavior of an agent using Depth First Search and Breadth First Search. The agent's actions are to plant a seed, check the plant's status, water, and harvest the plant. It's a mini game to showcase the navigation of an agent in its environment.",
 			link: "#",
 			stack: [<FontAwesomeIcon icon={faPython} size="lg" />],
 			deployedProject: "#",

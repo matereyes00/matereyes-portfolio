@@ -65,9 +65,7 @@ function Home() {
 			<div
 				id="home-terminal"
 				className="text-purple-950 w-4/5 my-8 mx-auto rounded-md">
-				{/* <TabBar tabs={tabs} activeTab={activeTab} onTabChange={handleTabChange} /> */}
 				<div id="home-terminal-content" className="flex flex-col w-full">
-					{/* {tabs[activeTab].content} */}
 					<WhoAmI
 						Name={who_am_i_headline}
 						Title={tab1_text}
