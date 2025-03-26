@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import wellDone from '../../images/steak-assets/Group 5.svg'
+import mediumWell from '../../images/steak-assets/Group 4.svg'
+import medium from '../../images/steak-assets/Group 3.svg'
+import mediumRare from '../../images/steak-assets/Group 2.svg'
+import rare from '../../images/steak-assets/Group 1.svg'
 
 const SteakTimer = () => {
 
@@ -7,24 +12,29 @@ const SteakTimer = () => {
     let [countdownStarted, setCountdownStarted] = useState(false);
 
     let stopTimer = (timer) => {
+        console.log('timer was stopped')
         clearInterval(timer);
-        setMsg("Times up!");
+        setTimer(0);
+        console.log(timer)
+        setMsg("Timer was abrumptly stopped!");
     }
 
     let countdownTimer = (seconds) => {
         let steakCookTimer  = setInterval( 
             function() {
-                if(seconds == 0) {
+                if(seconds === 0) {
                     setCountdownStarted(false);
-                    stopTimer(steakCookTimer);
                     setMsg("Times up!");
-                    setTimer(seconds)
+                    stopTimer(steakCookTimer);
+                    const stopNum = 0;
+                    setTimer(stopNum);
                     return;
+                } else {
+                    setCountdownStarted(true);
+                    setMsg("Timer ongoing");
+                    seconds -= 1;
+                    setTimer(seconds);
                 }
-                setCountdownStarted(true)
-                setMsg("Timer ongoing");
-                seconds -= 1;
-                setTimer(seconds)
             }, 
             1000);
     }
@@ -64,11 +74,36 @@ const SteakTimer = () => {
             {/* https://medium.com/@samsonspaddockau/whats-the-difference-between-rare-medium-and-well-done-steak-fe463e0f960f */}
             <h1 className='text-5xl'>Cook Steak with me</h1>
             <div className='grid grid-flow-row grid-cols-3 bg-slate-400 gap-9 justify-items-center p-5 w-3/4 mx-auto my-4'>
-                <button className="w-3/4 bg-slate-200 " onClick={rareTimer}><div >Rare</div></button>
-                <button className="w-3/4 bg-slate-200 " onClick={mediumRareTimer}><div >Medium Rare</div></button>
-                <button className="w-3/4 bg-slate-200 " onClick={mediumTimer}><div >Medium</div></button>
-                <button className="w-3/4 bg-slate-200 " onClick={mediumWellTimer}><div >Medium-well</div></button>
-                <button className="w-3/4 bg-slate-200 " onClick={wellTimer}><div >Well</div></button>
+                <button className="w-3/4 bg-slate-200 p-5 text-xl mt-30 " onClick={rareTimer}>
+                    <div className="flex flex-row-reverse justify-around">
+                        <h1>Rare</h1>
+                        <img src={rare} alt="type-of-steak" />
+                    </div>
+                </button>
+                <button className="w-3/4 bg-slate-200 p-5 text-xl mt-30 " onClick={mediumRareTimer}>
+                    <div className="flex flex-row-reverse justify-around">
+                        <h1>Medium Rare</h1>
+                        <img src={mediumRare} alt="type-of-steak" />
+                    </div>
+                </button>
+                <button className="w-3/4 bg-slate-200 p-5 text-xl mt-30 " onClick={mediumTimer}>
+                    <div className="flex flex-row-reverse justify-around">
+                        <h1>Medium</h1>
+                        <img src={medium} alt="type-of-steak" />
+                    </div>
+                </button>
+                <button className="w-3/4 bg-slate-200 p-5 text-xl mt-30 " onClick={mediumWellTimer}>
+                    <div className="flex flex-row-reverse justify-around">
+                        <h1>Medium Well</h1>
+                        <img src={mediumWell}  alt="type-of-steak"/>
+                    </div>
+                </button>
+                <button className="w-3/4 bg-slate-200 p-5 text-xl mt-30 " onClick={wellTimer}>
+                    <div className="flex flex-row-reverse justify-around">
+                        <h1>Well Done</h1>
+                        <img src={wellDone} alt="type-of-steak" />
+                    </div>
+                </button>
             </div>
         </>
     );
