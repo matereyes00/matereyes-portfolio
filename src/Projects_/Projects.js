@@ -138,6 +138,7 @@ const Projects = () => {
 				<FontAwesomeIcon icon={faFigma} size="lg" />,
 				qgis_logo,
 			],
+			deployedProject:""
 		},
 		{
 			title: "Rock, Paper, Scissors",
@@ -164,13 +165,13 @@ const Projects = () => {
 			deployedProject: "https://drive.google.com/file/d/1ZOfkFYkSptU2AHnAvQHsWKJDl_D75sAZ/view?usp=sharing"
 		},
 		{
-			title: "Plantitas",
+			title: "Plant Infinity",
 			tags: ["school_project"],
 			description:
 				"The aim of this project is to demonstrate the behavior of an agent using Depth First Search and Breadth First Search. The agent's actions are to plant a seed, check the plant's status, water, and harvest the plant. It's a mini game to showcase the navigation of an agent in its environment.",
 			link: "#",
-			stack: [<FontAwesomeIcon icon={faPython} size="lg" />],
-			deployedProject: "#",
+			stack: [<FontAwesomeIcon icon={faPython} size="lg" />, jupyter_logo],
+			deployedProject: "https://colab.research.google.com/drive/1QwDtTOLzgW08U26NKhIUt3NW_Bu8qyfR?usp=sharing",
 		},
 		{
 			title: "LostNFound",
@@ -267,7 +268,7 @@ const Projects = () => {
 		<>
 			<h1 className="font-bold text-4xl">Projects</h1>
 
-			<div className="w-4/5 mx-auto grid grid-flow-col grid-rows-4 gap-4">
+			<div className="w-4/5 mx-auto grid lg:grid-flow-col lg:grid-rows-4 gap-4">
 				{projects}
 			</div>
 		</>

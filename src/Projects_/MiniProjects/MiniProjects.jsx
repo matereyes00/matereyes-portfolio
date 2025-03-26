@@ -5,8 +5,8 @@ import { Link, useLocation } from "react-router-dom"; // Import Link from react-
 const MiniProjects = () => {
     return (
         <>
-            <h1>minu projects</h1>
-            <Link to="/mini-projects/steak-dashboard">Steak Dashboard</Link>
+            <h1>Mini projects</h1>
+            <Link to="/mini-projects/steak-dashboard" className='text-lg hover:bg-blue-300'>Steak Dashboard</Link>
         </>
     )
 }

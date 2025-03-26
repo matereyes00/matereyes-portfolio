@@ -18,7 +18,7 @@ const ProjectCard = ({
 					className="flex flex-row justify-center mt-3 border-b-2 border-slate-900 
                 w-2/3 mx-auto">
 					<a href={deployedProjectLink} target="_blank">
-						<h1 className="text-3xl">{projectTitle}</h1>
+						<h1 className="text-2xl">{projectTitle}</h1>
 						<FontAwesomeIcon
 							icon={faExternalLink}
 							size="xs"
