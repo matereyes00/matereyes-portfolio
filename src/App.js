@@ -14,7 +14,7 @@ function App() {
   
   
   return (
-    <Router>
+    <Router basename="/matereyes-portfolio">
       <div className="App">
         <Header />
         <main>
