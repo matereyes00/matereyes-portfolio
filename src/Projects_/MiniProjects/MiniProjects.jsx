@@ -3,8 +3,6 @@ import { Link, useLocation } from "react-router-dom"; // Import Link from react-
 import ProjectCard from "../ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { SqlIcon } from "@hugeicons/core-free-icons";
 import {
 	faCss3,
 	faGitlab,
@@ -39,7 +37,7 @@ const MiniProjects = () => {
 			tags: ["for fun", "academics"],
 			deployedProject: "/mini-projects/maze",
 			description:
-				"My first major coding project was to create a maze using the introductory python coding concepts taught during the first semester. The objective was to move around the maze (up, down, left right) until you reach the exit. Physically, i got out okay but not happy with my output. Mentally, it was challenging. Although I came from a STEM 800background, I only knew how to solve problems from a high level perspective. Programming was a new territory. I got help from stack overflow but with all the copypasting, I barely remember how the code cohesively works. Now, I know how to approach problems more efficiently using a structured approach. I re-coded my maze in Python, as I remember the specfications. I finished it in a day using a single jupyter notebook in a 128 lines (way less than my original 600+ lines). I understand the flow better and can explain each component. I don't know why I did this bu it's something I wanted to prove to myself I can do, because I've been getting impostor syndrome a lot more after college. I migrated the code to javascript where a simple frontend rendering of the maze can be done for players to interact with.",
+				"My first major coding project was to create a maze using Python coding concepts taught during the first semester of my freshman year. The objective was to move around the maze (up, down, left right) until you reach the exit. Physically, i got out okay but not happy with my output. Mentally, it was challenging. Although I came from a STEM background, I knew how to solve problems but from a high level perspective. Programming was a new territory. I got help from stack overflow but with all the copypasting, I barely remember how the code cohesively works. Now, I know how to approach problems more efficiently using a structured approach. I re-coded my maze in Python. I finished it in a day using a single jupyter notebook in a 128 lines (way less than my original 600+ lines). I understand the flow better and can explain each component. I don't know why I did this but it's something I wanted to prove to myself I can do, because I've been getting impostor syndrome a lot more after college. I migrated the code to javascript where a simple frontend rendering of the maze can be done for players to interact with. It's slightly more complex, adding in other components to the maze.",
 			link: "https://colab.research.google.com/drive/1QwDtTOLzgW08U26NKhIUt3NW_Bu8qyfR?usp=sharing",
 			stack: [
 				<FontAwesomeIcon icon={faPython} size="lg" />,

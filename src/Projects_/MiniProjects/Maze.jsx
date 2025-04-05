@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useWindowSize } from "react-use";
+import Confetti from "react-confetti";
 
 const Maze = () => {
 	const [rowsInput, setRowsInput] = useState(10);
@@ -10,8 +12,16 @@ const Maze = () => {
 	const [monsterPos, setMonsterPos] = useState({ x: 0, y: 0 });
 	const [mazeData, setMazeData] = useState([]); // <-- this stores "player", "exit", or "empty"
 
+	const [playerPoints, setPlayerPoints] = useState(0);
+
+	const { width, height } = useWindowSize();
+	const confetti = <Confetti width={width} height={height} />;
+	const [startConfetti, setConfetti] = useState("");
+
 	const generateMaze = () => {
 		setCongratsMessage("");
+		setConfetti("");
+		setPlayerPoints(0);
 		const rows = parseInt(rowsInput);
 		const cols = parseInt(colsInput);
 
@@ -62,6 +72,10 @@ const Maze = () => {
 		const nextCell = mazeData[x][y - 1];
 		if (nextCell === "exit") {
 			setCongratsMessage("🎉 Player reached the exit!");
+			setConfetti(confetti);
+		}
+		if (nextCell === "treasure") {
+			setPlayerPoints((prevPt) => prevPt + 5);
 		}
 		newMaze[x][y] = "empty";
 		newMaze[x][y - 1] = "player";
@@ -81,7 +95,13 @@ const Maze = () => {
 		const nextCell = mazeData[x][y + 1];
 		if (nextCell === "exit") {
 			setCongratsMessage("🎉 Player reached the exit!");
+			setConfetti(confetti);
 		}
+		if (nextCell === "treasure") {
+			setPlayerPoints((prevPt) => prevPt + 5);
+		}
+
+		// keep moving if not yet exit
 		newMaze[x][y] = "empty";
 		newMaze[x][y + 1] = "player";
 		let playerCoords = { x, y: y + 1 };
@@ -95,6 +115,10 @@ const Maze = () => {
 		const nextCell = mazeData[x - 1][y];
 		if (nextCell === "exit") {
 			setCongratsMessage("🎉 Player reached the exit!");
+			setConfetti(confetti);
+		}
+		if (nextCell === "treasure") {
+			setPlayerPoints((prevPt) => prevPt + 5);
 		}
 		newMaze[x][y] = "empty";
 		newMaze[x - 1][y] = "player";
@@ -113,7 +137,13 @@ const Maze = () => {
 		const nextCell = mazeData[x + 1][y];
 		if (nextCell === "exit") {
 			setCongratsMessage("🎉 Player reached the exit!");
+			setConfetti(confetti);
 		}
+		if (nextCell === "treasure") {
+			setPlayerPoints((prevPt) => prevPt + 5);
+		}
+
+		// keep moving if not yet exit
 		newMaze[x][y] = "empty";
 		newMaze[x + 1][y] = "player";
 		let playerCoords = { x: x + 1, y };
@@ -190,6 +220,8 @@ const Maze = () => {
 
 			<div>
 				<h1 className="text-3xl">{congratsMessage}</h1>
+				{startConfetti}
+				<h1>{playerPoints}</h1>
 			</div>
 
 			<div className="mx-auto mt-4">
