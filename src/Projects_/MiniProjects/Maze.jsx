@@ -6,6 +6,8 @@ const Maze = () => {
 	const [congratsMessage, setCongratsMessage] = useState("");
 	const [playerPos, setPlayerPos] = useState({ x: 0, y: 0 });
 	const [exitPos, setExitPos] = useState({ x: 0, y: 0 });
+	const [treasurePos, setTreasurePos] = useState({ x: 0, y: 0 });
+	const [monsterPos, setMonsterPos] = useState({ x: 0, y: 0 });
 	const [mazeData, setMazeData] = useState([]); // <-- this stores "player", "exit", or "empty"
 
 	const generateMaze = () => {
@@ -33,16 +35,23 @@ const Maze = () => {
 
 		let player = randCoord();
 		let exit = randCoord();
+		let treasure = randCoord();
+		let monster = randCoord();
 		// treasure
+		// monster
 		while (exit.x === player.x && exit.y === player.y) {
 			exit = randCoord();
 		}
 
 		newMaze[player.x][player.y] = "player";
 		newMaze[exit.x][exit.y] = "exit";
+		newMaze[treasure.x][treasure.y] = "treasure";
+		newMaze[monster.x][monster.y] = "monster";
 
 		setMazeData(newMaze);
 		setPlayerPos(player);
+		setTreasurePos(treasure);
+		setMonsterPos(monster);
 		setExitPos(exit);
 	};
 
@@ -130,6 +139,26 @@ const Maze = () => {
 		if (cell === "exit") {
 			return (
 				<div key={`${i}-${j}`} className="w-14 h-14 border bg-orange-600"></div>
+			);
+		}
+		if (cell === "monster") {
+			return (
+				<div
+					key={`${i}-${j}`}
+					className="w-14 h-14 border bg-gray-300 text-5xl"
+				>
+					👹
+				</div>
+			);
+		}
+		if (cell === "treasure") {
+			return (
+				<div
+					key={`${i}-${j}`}
+					className="w-14 h-14 border bg-gray-300 text-5xl"
+				>
+					💰
+				</div>
 			);
 		}
 		return (
