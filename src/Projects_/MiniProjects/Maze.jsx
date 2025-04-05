@@ -3,10 +3,13 @@ import React, { useState } from "react";
 const Maze = () => {
 	const [rowsInput, setRowsInput] = useState(10);
 	const [colsInput, setColsInput] = useState(10);
+	const [congratsMessage, setCongratsMessage] = useState("");
 	const [playerPos, setPlayerPos] = useState({ x: 0, y: 0 });
+	const [exitPos, setExitPos] = useState({ x: 0, y: 0 });
 	const [mazeData, setMazeData] = useState([]); // <-- this stores "player", "exit", or "empty"
 
 	const generateMaze = () => {
+		setCongratsMessage("");
 		const rows = parseInt(rowsInput);
 		const cols = parseInt(colsInput);
 
@@ -30,6 +33,7 @@ const Maze = () => {
 
 		let player = randCoord();
 		let exit = randCoord();
+		// treasure
 		while (exit.x === player.x && exit.y === player.y) {
 			exit = randCoord();
 		}
@@ -39,45 +43,77 @@ const Maze = () => {
 
 		setMazeData(newMaze);
 		setPlayerPos(player);
+		setExitPos(exit);
 	};
 
 	const moveLeft = () => {
 		const { x, y } = playerPos;
-		if (y === 0) return;
+		if (y <= 0) return;
 		const newMaze = mazeData.map((row) => [...row]); // deep copy
+		const nextCell = mazeData[x][y - 1];
+		if (nextCell === "exit") {
+			setCongratsMessage("🎉 Player reached the exit!");
+		}
 		newMaze[x][y] = "empty";
 		newMaze[x][y - 1] = "player";
-		setMazeData(newMaze);
-		setPlayerPos({ x, y: y - 1 });
+		let playerCoords = { x, y: y - 1 };
+		renderMaze(newMaze, playerCoords);
 	};
 
 	const moveRight = () => {
 		const { x, y } = playerPos;
-		if (y === 0) return;
+		// check if current row exists
+		if (!mazeData[x]) return;
+
+		// check if y is within bounds
+		if (y >= mazeData[x].length - 1) return;
 		const newMaze = mazeData.map((row) => [...row]); // deep copy
+
+		const nextCell = mazeData[x][y + 1];
+		if (nextCell === "exit") {
+			setCongratsMessage("🎉 Player reached the exit!");
+		}
 		newMaze[x][y] = "empty";
 		newMaze[x][y + 1] = "player";
-		setMazeData(newMaze);
-		setPlayerPos({ x, y: y + 1 });
+		let playerCoords = { x, y: y + 1 };
+		renderMaze(newMaze, playerCoords);
 	};
 
 	const moveUp = () => {
 		const { x, y } = playerPos;
-		if (y === 0) return;
+		if (x <= 0) return;
 		const newMaze = mazeData.map((row) => [...row]); // deep copy
+		const nextCell = mazeData[x - 1][y];
+		if (nextCell === "exit") {
+			setCongratsMessage("🎉 Player reached the exit!");
+		}
 		newMaze[x][y] = "empty";
 		newMaze[x - 1][y] = "player";
-		setMazeData(newMaze);
-		setPlayerPos({ x: x - 1, y });
+		let playerCoords = { x: x - 1, y };
+		renderMaze(newMaze, playerCoords);
 	};
+
 	const moveDown = () => {
 		const { x, y } = playerPos;
-		if (y === 0) return;
+		// Check if moving down stays within the maze bounds
+		if (x >= mazeData.length - 1) return;
+		// Also, make sure the row we're about to access exists
+		if (!mazeData[x + 1] || !mazeData[x + 1][y]) return;
 		const newMaze = mazeData.map((row) => [...row]); // deep copy
+
+		const nextCell = mazeData[x + 1][y];
+		if (nextCell === "exit") {
+			setCongratsMessage("🎉 Player reached the exit!");
+		}
 		newMaze[x][y] = "empty";
 		newMaze[x + 1][y] = "player";
+		let playerCoords = { x: x + 1, y };
+		renderMaze(newMaze, playerCoords);
+	};
+
+	const renderMaze = (newMaze, playerCoords) => {
 		setMazeData(newMaze);
-		setPlayerPos({ x: x + 1, y });
+		setPlayerPos(playerCoords);
 	};
 
 	const renderCell = (cell, i, j) => {
@@ -103,7 +139,7 @@ const Maze = () => {
 
 	return (
 		<>
-			<h1>Maze</h1>
+			<h1 className="text-5xl">Maze 2.0</h1>
 			<div className="flex flex-col w-1/2 mx-auto">
 				<input
 					value={rowsInput}
@@ -115,10 +151,19 @@ const Maze = () => {
 					onChange={(e) => setColsInput(e.target.value)}
 					type="number"
 				/>
-				<button onClick={generateMaze}>Generate Maze</button>
+				<button
+					onClick={generateMaze}
+					className="p-2 bg-blue-500 text-white mt-2"
+				>
+					Generate Maze
+				</button>
 			</div>
 
-			<div className="w-1/2 mx-auto mt-4">
+			<div>
+				<h1 className="text-3xl">{congratsMessage}</h1>
+			</div>
+
+			<div className="mx-auto mt-4">
 				{mazeData.map((row, i) => (
 					<div key={`row-${i}`} className="flex">
 						{row.map((cell, j) => renderCell(cell, i, j))}
@@ -126,9 +171,6 @@ const Maze = () => {
 				))}
 			</div>
 
-			<h2 className="text-center mt-4">
-				Player is at ({playerPos.x}, {playerPos.y})
-			</h2>
 			<div className="text-center">
 				<button onClick={moveLeft} className="p-2 bg-blue-500 text-white mt-2">
 					Left
