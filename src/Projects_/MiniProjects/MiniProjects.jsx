@@ -56,6 +56,16 @@ const MiniProjects = () => {
 			stack: [],
 			isExternal: false,
 		},
+		{
+			title: "Toggle Dark Mode",
+			tags: ["for fun"],
+			deployedProject: "/mini-projects/toggle-dark-mode",
+			description:
+				"Learned how to draw elements using html and animate these using Tailwindcss.",
+			link: "#",
+			stack: [],
+			isExternal: false,
+		},
 	];
 	const miniProjects = titleDict.map((item, idx) => (
 		<ProjectCard

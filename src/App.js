@@ -16,6 +16,7 @@ import SteakDashboard from "./Projects_/MiniProjects/SteakTimerProject";
 import Home from "./Home_/Home";
 import "./App.css";
 import Maze from "./Projects_/MiniProjects/Maze";
+import ToggleDarkMode from "./Projects_/MiniProjects/ToggleDarkMode";
 function App() {
 	return (
 		<Router basename="/matereyes-portfolio">
@@ -34,6 +35,10 @@ function App() {
 							element={<SteakDashboard />}
 						/>
 						<Route path="/mini-projects/maze" element={<Maze />} />
+						<Route
+							path="/mini-projects/toggle-dark-mode"
+							element={<ToggleDarkMode />}
+						/>
 						<Route path="*" element={<Navigate to="/" replace />} />
 					</Routes>
 				</main>

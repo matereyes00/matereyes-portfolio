@@ -17,7 +17,8 @@ const WhoAmI = ({ Name, container_id, imageUrl, Title }) => {
 	return (
 		<div
 			id={container_id}
-			className="block md:flex md:flex-row text-sm md:text-xl">
+			className="block md:flex md:flex-row text-sm md:text-xl"
+		>
 			<div className="m-auto p-5">
 				<h1>{Name}</h1>
 				<h4>{Title}</h4>
