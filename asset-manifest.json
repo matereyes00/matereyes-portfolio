@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/matereyes-portfolio/static/css/main.a22aea52.css",
-    "main.js": "/matereyes-portfolio/static/js/main.30c10ed9.js",
+    "main.js": "/matereyes-portfolio/static/js/main.caf71925.js",
     "static/js/453.995bebb1.chunk.js": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js",
     "static/media/compsat-git-workshop.JPG": "/matereyes-portfolio/static/media/compsat-git-workshop.9931e29c4f41470ab4f9.JPG",
     "static/media/pov-19-grad.JPEG": "/matereyes-portfolio/static/media/pov-19-grad.f8d0d2da638b6747ef8d.JPEG",
@@ -39,11 +39,11 @@
     "static/media/Group 4.svg": "/matereyes-portfolio/static/media/Group 4.44a51fc3f35d839c4c7e4d72182524e2.svg",
     "static/media/Group 5.svg": "/matereyes-portfolio/static/media/Group 5.f815cf6479513efd56d4d53f21a24999.svg",
     "main.a22aea52.css.map": "/matereyes-portfolio/static/css/main.a22aea52.css.map",
-    "main.30c10ed9.js.map": "/matereyes-portfolio/static/js/main.30c10ed9.js.map",
+    "main.caf71925.js.map": "/matereyes-portfolio/static/js/main.caf71925.js.map",
     "453.995bebb1.chunk.js.map": "/matereyes-portfolio/static/js/453.995bebb1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a22aea52.css",
-    "static/js/main.30c10ed9.js"
+    "static/js/main.caf71925.js"
   ]
 }
