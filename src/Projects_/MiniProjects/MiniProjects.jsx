@@ -66,6 +66,16 @@ const MiniProjects = () => {
 			stack: [],
 			isExternal: false,
 		},
+		{
+			title: "The Summer I Turned Pretty Dashboard",
+			tags: ["for fun"],
+			deployedProject: "https://dev-journey-tsitp-dashboard.streamlit.app/",
+			description:
+				"With the final season of The Summer I turned pretty coming to an end, I thought it would be fun to look at the overall series as a whole and how it impacted the fans of the series.",
+			link: "https://github.com/matereyes00/dev-journey/tree/learn-dashboard",
+			stack: [<FontAwesomeIcon icon={faPython} size="lg" />],
+			isExternal: true,
+		},
 	];
 	const miniProjects = titleDict.map((item, idx) => (
 		<ProjectCard
