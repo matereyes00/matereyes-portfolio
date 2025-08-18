@@ -13,6 +13,7 @@ import Stack from "./Stack_/Stack";
 import Projects from "./Projects_/Projects";
 import MiniProjects from "./Projects_/MiniProjects/MiniProjects";
 import SteakDashboard from "./Projects_/MiniProjects/SteakTimerProject";
+import ReactPractice from "./Projects_/MiniProjects/ReactPractice";
 import Home from "./Home_/Home";
 import "./App.css";
 import Maze from "./Projects_/MiniProjects/Maze";
@@ -38,6 +39,10 @@ function App() {
 						<Route
 							path="/mini-projects/toggle-dark-mode"
 							element={<ToggleDarkMode />}
+						/>
+						<Route
+							path="/mini-projects/react-practice"
+							element={<ReactPractice />}
 						/>
 						<Route path="*" element={<Navigate to="/" replace />} />
 					</Routes>

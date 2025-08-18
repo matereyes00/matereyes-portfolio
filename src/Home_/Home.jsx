@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Publication from "./Publication";
 import WhoAmI from "./WhoAmI";
 import TabBar from "../Components/TabBar";
@@ -20,12 +20,14 @@ function Home() {
 		"December 2, 2023",
 		"August 16, 2024",
 		"April 26, 2025",
+		// "June 26, 2025",
 	];
 	const pub_authors = [
 		"Martina Therese R. Reyes",
 		"Martina Therese R. Reyes",
 		"Martina Therese R. Reyes, Dr. Ma. Regina Justina E. Estuar, Ph. D., Jann Railey E. Montalan, M.S.",
 		"Martina Therese R. Reyes, Dr. Ma. Regina Justina E. Estuar, Ph. D., Jann Railey E. Montalan, M.S.",
+		// "Martina Therese R. Reyes, Dr. Ma. Regina Justina E. Estuar, Ph. D., Jann Railey E. Montalan, M.S.",
 	];
 	const pub_article_urls = [
 		"https://medium.com/@martina.therese.reyes/using-k-means-clustering-performing-site-selection-to-identify-build-able-areas-for-health-centers-a089ef18f86f",

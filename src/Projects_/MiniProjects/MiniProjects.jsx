@@ -76,6 +76,18 @@ const MiniProjects = () => {
 			stack: [<FontAwesomeIcon icon={faPython} size="lg" />],
 			isExternal: true,
 		},
+		{
+			title: "React Practice",
+			tags: ["for fun"],
+			deployedProject: "/mini-projects/react-practice",
+			description: "",
+			link: "#",
+			stack: [
+				<FontAwesomeIcon icon={faJs} size="lg" />,
+				<FontAwesomeIcon icon={faReact} size="lg" />,
+			],
+			isExternal: false,
+		},
 	];
 	const miniProjects = titleDict.map((item, idx) => (
 		<ProjectCard
