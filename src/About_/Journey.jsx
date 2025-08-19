@@ -53,7 +53,7 @@ const EventText = () => {
 
 	const content4 = (
 		<p>
-			Currently, I am taking up my Master of Science degree in computer science.
+			I took up my Master of Science degree in Computer Science.
 			I chose to take this to further improve on working as an individual and
 			expand on my undergraduate thesis on a national scale. I took a Data
 			Science Apprenticeship at Opswerks last February-May 2024 to explore my
@@ -68,8 +68,7 @@ const EventText = () => {
 
 	const content5 = (
 		<p>
-			Now, I am working as a Junior Software Engineer at UBX. Once I complete my
-			master's, I intend to focus on my career. I've been interested in taking
+			I am working as a Junior Software Engineer at UBX. I intend to focus on my career. I've been interested in taking
 			on a full-stack developer or data science roles. My personal goal is to
 			use the knowledge, skills, and understanding learned in my field to help
 			other people. I advocate for creating a positive social impact through my

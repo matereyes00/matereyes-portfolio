@@ -1,29 +1,46 @@
-import { Label, Input } from "react-aria-components";
-import { React, useId } from "react";
-
-function NameTextField() {
-	const textiFieldId = useId();
-	return (
-		<>
-			<label>
-				Name:
-				<input type="text" aria-describedby={textiFieldId} />
-			</label>
-		</>
-	);
-}
+import { useState } from "react";
+import ArrayVisualizer from "./AlgorithmVisualizer/ArrayVisualizer";
+// import LinkedListVisualizer from "../components/structures/LinkedListVisualizer";
+import StackVisualizer from "./AlgorithmVisualizer/StackVisualizer";
 
 const ReactPractice = () => {
-	return (
-		<>
-			<div className="bg-[#F0F5F1] p-10">
-				<h2 className="p-5">First Name</h2>
-				<NameTextField />
-				<h2 className="p-5">Last Name</h2>
-				<NameTextField />
-			</div>
-		</>
-	);
+  const [selectedStructure, setSelectedStructure] = useState(null);
+  const dataStructures = ["array", "linked list", "stack"];
+
+  return (
+    <>
+      <h1 className="text-center text-xl font-bold p-4">
+        Visualizing Data Structures and Algorithms
+      </h1>
+      <div className="bg-[#F0F5F1] p-2 flex">
+        <div className="bg-[#d2e1d5] w-[30%] p-4">
+          <h1 className="font-bold text-lg">Data Structures</h1>
+          {dataStructures.map((struct, idx) => (
+            <h1
+              key={idx}
+              className="ml-2 cursor-pointer hover:font-bold"
+              onClick={() => setSelectedStructure(struct)}
+            >
+              {struct}
+            </h1>
+          ))}
+          <h1 className="font-bold text-lg mt-4">Algorithms</h1>
+        </div>
+
+        {/* Main Content */}
+        <div className="w-[70%] flex flex-col items-center p-4">
+          <div className="bg-[#d2e1d5] w-full h-96 mt-4 flex items-center justify-center">
+            {selectedStructure === "array" && <ArrayVisualizer />}
+            {/* {selectedStructure === "linked list" && <LinkedListVisualizer />} */}
+            {selectedStructure === "stack" && <StackVisualizer />}
+            {!selectedStructure && (
+              <p>Select a data structure from the sidebar to begin.</p>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default ReactPractice;
