@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ArrayVisualizer from "./AlgorithmVisualizer/ArrayVisualizer";
-// import LinkedListVisualizer from "../components/structures/LinkedListVisualizer";
 import StackVisualizer from "./AlgorithmVisualizer/StackVisualizer";
+import Description from "./AlgorithmVisualizer/AlgoDescription";
 
 const ReactPractice = () => {
 	const [selectedStructure, setSelectedStructure] = useState(null);
@@ -29,9 +29,14 @@ const ReactPractice = () => {
 
 				{/* Main Content */}
 				<div className="w-[80%] flex flex-col items-center p-4">
+					<div className="bg-[#d2e1d5] w-full p-4">
+						{<Description type={selectedStructure} />}
+						{!selectedStructure && (
+							<p>Select a data structure from the sidebar to begin.</p>
+						)}
+					</div>
 					<div className="bg-[#d2e1d5] w-full h-96 mt-4 flex items-center justify-center">
 						{selectedStructure === "array" && <ArrayVisualizer />}
-						{/* {selectedStructure === "linked list" && <LinkedListVisualizer />} */}
 						{selectedStructure === "stack" && <StackVisualizer />}
 						{!selectedStructure && (
 							<p>Select a data structure from the sidebar to begin.</p>

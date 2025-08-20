@@ -13,7 +13,7 @@ import Stack from "./Stack_/Stack";
 import Projects from "./Projects_/Projects";
 import MiniProjects from "./Projects_/MiniProjects/MiniProjects";
 import SteakDashboard from "./Projects_/MiniProjects/SteakTimerProject";
-import ReactPractice from "./Projects_/MiniProjects/ReactPractice";
+import ReactPractice from "./Projects_/MiniProjects/AlgorithmVisualizer";
 import Home from "./Home_/Home";
 import "./App.css";
 import Maze from "./Projects_/MiniProjects/Maze";

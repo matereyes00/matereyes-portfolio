@@ -55,25 +55,9 @@ const ArrayVisualizer = () => {
 		}
 	};
 
-	const Description = () => {
-		return (
-			<>
-				<p>
-					An array is a data structure used to store elements in a particular
-					order. Elements can be pushed or popped. Pushing elements mean adding
-					elements while popping elements mean removing elements. An array is
-					differs from a stack because it needs not to follow the LIFO (last in,
-					first out) principle.
-				</p>
-			</>
-		);
-	};
-
 	return (
 		<>
 			<div className="flex flex-col items-center">
-				<Description />
-
 				<div className="flex gap-2 mb-4">
 					{squares.map((className, idx) => (
 						<Square key={idx} colorClassName={className} />

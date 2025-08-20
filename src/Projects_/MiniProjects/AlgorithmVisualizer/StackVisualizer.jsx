@@ -54,10 +54,6 @@ const StackVisualizer = () => {
 					</button>
 				</div>
 				<div>
-					<p>
-						A stack is a last-in-first-out (LIFO) data structure. In computer
-						science, it's similar to an array.
-					</p>
 					<h1>Top of the stack: {top}</h1>
 					<h1>Base of the stack: {base}</h1>
 				</div>

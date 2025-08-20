@@ -17,9 +17,10 @@ const EventText = () => {
 			preferred pronouns are she/her. I graduated high school from Saint Pedro
 			Poveda College in 2019. I completed undergraduate degree as cum laude in
 			Bachelor of Science in Computer Science with a specialization in Data
-			Science and Analytics from the Ateneo de Manila University. I am currently
-			a Master of Science student taking up Computer Science in the same
-			university while working as a Junior Software Engineer at UBX.
+			Science and Analytics from the Ateneo de Manila University. I took my
+			Master of Science degree in Computer Science at Ateneo de Manila
+			University. During the last leg of the degree, I started working as a
+			Junior Software Engineer at UBX.
 		</p>
 	);
 
@@ -53,29 +54,29 @@ const EventText = () => {
 
 	const content4 = (
 		<p>
-			I took up my Master of Science degree in Computer Science.
-			I chose to take this to further improve on working as an individual and
-			expand on my undergraduate thesis on a national scale. I took a Data
-			Science Apprenticeship at Opswerks last February-May 2024 to explore my
-			career options. It was a fulfilling experience because it was my first
-			on-site, hands-on professional work experience. The overall experience
-			inspired me to hone my technical skills and made me realize I work best
-			within a team setting. After the apprenticeship, I presented my research
-			on the international stage at a public health conference held in Bankok,
-			Thailand last August 2024.
+			I took up my Master of Science degree in Computer Science. I chose to take
+			this to further improve on working as an individual and expand on my
+			undergraduate thesis on a national scale. I took a Data Science
+			Apprenticeship at Opswerks last February-May 2024 to explore my career
+			options. It was a fulfilling experience because it was my first on-site,
+			hands-on professional work experience. The overall experience inspired me
+			to hone my technical skills and made me realize I work best within a team
+			setting. After the apprenticeship, I presented my research on the
+			international stage at a public health conference held in Bankok, Thailand
+			last August 2024.
 		</p>
 	);
 
 	const content5 = (
 		<p>
-			I am working as a Junior Software Engineer at UBX. I intend to focus on my career. I've been interested in taking
-			on a full-stack developer or data science roles. My personal goal is to
-			use the knowledge, skills, and understanding learned in my field to help
-			other people. I advocate for creating a positive social impact through my
-			work and the skills I have to offer. I work well individually but perfer
-			working collaboratively on a team. I empathize with others, value
-			inclusive environments and adapt a growth mindset in any project or task I
-			partake in.
+			I am working as a Junior Software Engineer at UBX. I intend to focus on my
+			career. I've been interested in taking on a full-stack developer or data
+			science roles. My personal goal is to use the knowledge, skills, and
+			understanding learned in my field to help other people. I advocate for
+			creating a positive social impact through my work and the skills I have to
+			offer. I work well individually but perfer working collaboratively on a
+			team. I empathize with others, value inclusive environments and adapt a
+			growth mindset in any project or task I partake in.
 		</p>
 	);
 
