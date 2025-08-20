@@ -2,9 +2,9 @@ import React from "react";
 // import '../About_/Milestones_/Event.css';
 
 import SocialMedia from "./Socials";
-import github_img from "../images/github.svg";
-import linkedin_img from "../images/linkedin.svg";
-import orcid_img from "../images/orcid.svg";
+import github_img from "../../assets/github.svg";
+import linkedin_img from "../../assets/linkedin.svg";
+import orcid_img from "../../assets/orcid.svg";
 
 const WhoAmI = ({ Name, container_id, imageUrl, Title }) => {
 	const ItemName = ["Linkedin", "Github", "ORCID"];

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../features/Projects/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
 import { HugeiconsIcon } from "@hugeicons/react";

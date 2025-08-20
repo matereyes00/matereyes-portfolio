@@ -1,13 +1,12 @@
 import React from "react";
-import Publication from "./Publication";
-import WhoAmI from "./WhoAmI";
-import TabBar from "../Components/TabBar";
-import who_am_i_img from "../images/mate.jpg";
+import Publication from "../features/Home/Publication";
+import WhoAmI from "../features/Home/WhoAmI";
+import TabBar from "../Components/layout/TabBar";
+import who_am_i_img from "../assets/mate.jpg";
 
 function Home() {
 	const who_am_i_headline = "Martina Therese R. Reyes, M.S.";
-	const tab1_text =
-		"Junior Software Engineer at UBX";
+	const tab1_text = "Junior Software Engineer at UBX";
 
 	const pub_titles = [
 		"Using K-means clustering: performing site selection to identify build-able areas for health centers (RHUs)",

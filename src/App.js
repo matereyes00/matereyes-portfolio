@@ -8,16 +8,16 @@ import {
 
 import Header from "./Header";
 import Footer from "./Footer";
-import About from "./About_/About";
-import Stack from "./Stack_/Stack";
-import Projects from "./Projects_/Projects";
-import MiniProjects from "./Projects_/MiniProjects/MiniProjects";
-import SteakDashboard from "./Projects_/MiniProjects/SteakTimerProject";
-import ReactPractice from "./Projects_/MiniProjects/AlgorithmVisualizer";
-import Home from "./Home_/Home";
+import About from "./Pages/AboutPage";
+import Stack from "./features/Stack/Stack";
+import Projects from "./Pages/ProjectsPage";
+import MiniProjects from "./Pages/MiniProjectsPage";
+import SteakDashboard from "./features/Projects/MiniProjects/SteakTimerProject";
+import ReactPractice from "./features/Projects/MiniProjects/AlgorithmVisualizer";
+import Home from "./Pages/HomePage";
 import "./App.css";
-import Maze from "./Projects_/MiniProjects/Maze";
-import ToggleDarkMode from "./Projects_/MiniProjects/ToggleDarkMode";
+import Maze from "./features/Projects/MiniProjects/Maze";
+import ToggleDarkMode from "./features/Projects/MiniProjects/ToggleDarkMode";
 function App() {
 	return (
 		<Router basename="/matereyes-portfolio">

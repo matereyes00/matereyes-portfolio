@@ -1,6 +1,6 @@
 import { React } from "react";
 import { Link, useLocation } from "react-router-dom"; // Import Link from react-router-dom
-import ProjectCard from "../ProjectCard";
+import ProjectCard from "../features/Projects/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
 import {
@@ -80,7 +80,8 @@ const MiniProjects = () => {
 			title: "React Practice",
 			tags: ["for fun"],
 			deployedProject: "/mini-projects/react-practice",
-			description: "",
+			description:
+				"This project helps users understand how the different data structures and algorithms behave.",
 			link: "#",
 			stack: [
 				<FontAwesomeIcon icon={faJs} size="lg" />,

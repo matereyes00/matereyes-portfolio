@@ -3,26 +3,26 @@ import Select from "react-dropdown-select";
 
 import StackItem from "./StackItem";
 
-import react_logo from "../images/logo.svg";
-import python_logo from "../images/python.svg";
-import html from "../images/html.svg";
-import css from "../images/css.svg";
-import js from "../images/javascript.svg";
-import android_studio from "../images/android-studio.svg";
-import django from "../images/django.svg";
-import jupyter from "../images/jupyter.svg";
-import streamlit from "../images/streamlit.svg";
-import tableau from "../images/tableau-software.svg";
-import pytorch from "../images/pytorch.svg";
-import postgres from "../images/postgresql.svg";
-import quasar from "../images/quasar.svg";
-import figma from "../images/figma.svg";
-import qgis from "../images/qgis.svg";
-import git from "../images/git.svg";
-import github from "../images/github.svg";
-import docker_logo from "../images/docker-svgrepo-com.svg";
-import postman_logo from "../images/postman-icon-svgrepo-com.svg";
-import tailwind_logo from "../images/tailwind-svgrepo-com.svg";
+import react_logo from "../../assets/logo.svg";
+import python_logo from "../../assets/python.svg";
+import html from "../../assets/html.svg";
+import css from "../../assets/css.svg";
+import js from "../../assets/javascript.svg";
+import android_studio from "../../assets/android-studio.svg";
+import django from "../../assets/django.svg";
+import jupyter from "../../assets/jupyter.svg";
+import streamlit from "../../assets/streamlit.svg";
+import tableau from "../../assets/tableau-software.svg";
+import pytorch from "../../assets/pytorch.svg";
+import postgres from "../../assets/postgresql.svg";
+import quasar from "../../assets/quasar.svg";
+import figma from "../../assets/figma.svg";
+import qgis from "../../assets/qgis.svg";
+import git from "../../assets/git.svg";
+import github from "../../assets/github.svg";
+import docker_logo from "../../assets/docker-svgrepo-com.svg";
+import postman_logo from "../../assets/postman-icon-svgrepo-com.svg";
+import tailwind_logo from "../../assets/tailwind-svgrepo-com.svg";
 
 // docker
 // postman
