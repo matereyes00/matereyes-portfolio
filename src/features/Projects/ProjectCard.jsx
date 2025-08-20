@@ -14,7 +14,7 @@ const ProjectCard = ({
 }) => {
 	return (
 		<>
-			<div className="border-2 border-slate-900 rounded-xl p-1">
+			<div className="border-2 border-slate-900 rounded-xl p-1 h-auto">
 				<div
 					className="flex flex-row justify-center mt-3 border-b-2 border-slate-900 
                 w-2/3 mx-auto"

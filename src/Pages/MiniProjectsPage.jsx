@@ -77,11 +77,11 @@ const MiniProjects = () => {
 			isExternal: true,
 		},
 		{
-			title: "React Practice",
+			title: "Algorithm Visualization",
 			tags: ["for fun"],
 			deployedProject: "/mini-projects/react-practice",
 			description:
-				"This project helps users understand how the different data structures and algorithms behave.",
+				"This project acts as a visualizing tool for users to understand how the different data structures and algorithms work. I was able to grasp the foundations of React and how to apply the basic functionalities through the behavior of stacks, arrays queues, etc.",
 			link: "#",
 			stack: [
 				<FontAwesomeIcon icon={faJs} size="lg" />,
@@ -102,8 +102,8 @@ const MiniProjects = () => {
 	));
 	return (
 		<>
-			<h1>Mini projects</h1>
-			{miniProjects}
+			<h1 className="text-4xl m-4">Mini projects</h1>
+			<div className="grid grid-cols-3 gap-4">{miniProjects}</div>
 		</>
 	);
 };
