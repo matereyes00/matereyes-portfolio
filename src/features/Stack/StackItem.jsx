@@ -1,5 +1,4 @@
 // src/about/Stack.js
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const StackItem = ({ ItemName, image }) => {

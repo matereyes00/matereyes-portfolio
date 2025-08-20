@@ -1,21 +1,20 @@
 import { React } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import Link from react-router-dom
 import ProjectCard from "../features/Projects/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
 import {
-	faCss3,
-	faGitlab,
-	faDocker,
-	faBootstrap,
-	faGit,
+	// faCss3,
+	// faGitlab,
+	// faDocker,
+	// faBootstrap,
+	// faGit,
 	faJs,
 	faPython,
-	faJava,
-	faFigma,
+	// faJava,
+	// faFigma,
 	faReact,
-	faHtml5,
-	faGithub,
+	// faHtml5,
+	// faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const MiniProjects = () => {

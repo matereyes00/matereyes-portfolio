@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ProjectCard from "../features/Projects/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
@@ -17,7 +17,7 @@ import {
 	faFigma,
 	faReact,
 	faHtml5,
-	faGithub,
+	// faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
