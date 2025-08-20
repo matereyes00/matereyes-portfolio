@@ -2,53 +2,105 @@ import { useState } from "react";
 import Square from "./Square";
 
 const ArrayVisualizer = () => {
-  const colorClasses = [
-    "bg-red-400",
-    "bg-orange-400",
-    "bg-yellow-400",
-    "bg-green-400",
-    "bg-blue-400",
-    "bg-purple-400",
-    "bg-pink-400",
-    "bg-teal-400"
-  ];
+	const colorClasses = [
+		"bg-red-400",
+		"bg-orange-400",
+		"bg-yellow-400",
+		"bg-green-400",
+		"bg-blue-400",
+		"bg-purple-400",
+		"bg-pink-400",
+		"bg-teal-400",
+	];
 
-  const [squares, setSquares] = useState(colorClasses);
+	const CustomPosPushPop = (props) => {
+		return (
+			<>
+				<label>
+					{props.label}
+					<input
+						type="text"
+						value={props.squareToPushPop}
+						onChange={(e) => setSquareToPushPop(e.target.value)}
+					/>
+				</label>
+			</>
+		);
+	};
 
-  const pushSquare = () => {
-    const randomColor =
-      colorClasses[Math.floor(Math.random() * colorClasses.length)];
-    setSquares([...squares, randomColor]);
-  };
+	const [squares, setSquares] = useState(colorClasses);
+	const [squareToPushPop, setSquareToPushPop] = useState("");
 
-  const popSquare = () => {
-    setSquares(squares.slice(0, -1));
-  };
+	const pushSquare = () => {
+		const randomColor =
+			colorClasses[Math.floor(Math.random() * colorClasses.length)];
+		if (squareToPushPop === "") {
+			setSquares([...squares, randomColor]);
+		} else {
+			const newSquares = [...squares];
+			var intSquareToPushPop = parseInt(squareToPushPop);
+			newSquares.splice(intSquareToPushPop, 0, randomColor);
+			setSquares(newSquares);
+		}
+	};
 
-  return (
-    <div className="flex flex-col items-center">
-      <div className="flex gap-2 mb-4">
-        {squares.map((className, idx) => (
-          <Square key={idx} colorClassName={className} />
-        ))}
-      </div>
+	const popSquare = () => {
+		if (squareToPushPop === "") {
+			setSquares(squares.slice(0, -1));
+		} else {
+			const newSquares = [...squares];
+			var intSquareToPushPop = parseInt(squareToPushPop);
+			newSquares.splice(intSquareToPushPop, 1);
+			setSquares(newSquares);
+		}
+	};
 
-      <div>
-        <button
-          onClick={pushSquare}
-          className="p-2 bg-green-500 text-white rounded mr-2"
-        >
-          Push
-        </button>
-        <button
-          onClick={popSquare}
-          className="p-2 bg-red-500 text-white rounded"
-        >
-          Pop
-        </button>
-      </div>
-    </div>
-  );
+	const Description = () => {
+		return (
+			<>
+				<p>
+					An array is a data structure used to store elements in a particular
+					order. Elements can be pushed or popped. Pushing elements mean adding
+					elements while popping elements mean removing elements. An array is
+					differs from a stack because it needs not to follow the LIFO (last in,
+					first out) principle.
+				</p>
+			</>
+		);
+	};
+
+	return (
+		<>
+			<div className="flex flex-col items-center">
+				<Description />
+
+				<div className="flex gap-2 mb-4">
+					{squares.map((className, idx) => (
+						<Square key={idx} colorClassName={className} />
+					))}
+				</div>
+
+				<div className="flex flex-col gap-3">
+					{/* push and pop - custom */}
+					<CustomPosPushPop label="Square:" squareToPushPop={squareToPushPop} />
+					{/* push - normal */}
+					<button
+						onClick={pushSquare}
+						className="p-2 bg-green-500 text-white rounded"
+					>
+						Push
+					</button>
+					{/* pop - normal */}
+					<button
+						onClick={popSquare}
+						className="p-2 bg-red-500 text-white rounded"
+					>
+						Pop
+					</button>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default ArrayVisualizer;

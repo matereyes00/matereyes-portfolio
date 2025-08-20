@@ -1,20 +1,69 @@
 import { useState } from "react";
-import Square from "./Square";
+import Rectangle from "./Rectangle";
 
 const StackVisualizer = () => {
+	const colorClasses = [
+		"bg-red-400",
+		"bg-orange-400",
+		"bg-yellow-400",
+		"bg-green-400",
+		"bg-blue-400",
+		"bg-purple-400",
+		"bg-pink-400",
+		"bg-teal-400",
+	];
 
+	const [stack, setStack] = useState([]);
 
-    // last in first out
-    // _ _ _ _ _
-    // _ _ _ C _
-    // _ _ B B B
-    // _ A A A A
+	const top = stack.length > 0 ? stack[stack.length - 1] : "Empty";
+	const base = stack.length > 0 ? stack[0] : "Empty";
 
-    return (
-        <>
-            <h1>Stack Viz</h1>
-        </>
-    )
-}
+	const pushRectangle = () => {
+		const randomColor =
+			colorClasses[Math.floor(Math.random() * colorClasses.length)];
+		setStack([...stack, randomColor]);
+	};
+
+	const popRectangle = () => {
+		if (stack.length > 0) {
+			setStack(stack.slice(0, -1));
+		}
+	};
+
+	return (
+		<>
+			<div className="flex flex-col items-center w-full">
+				{/* Stack container */}
+				<div className="flex flex-col-reverse gap-1 w-80">
+					{stack.map((rect, idx) => (
+						<Rectangle key={idx} colorClassName={rect} />
+					))}
+				</div>
+				<div className="mt-4">
+					<button
+						onClick={pushRectangle}
+						className="p-2 bg-green-500 text-white rounded mr-2"
+					>
+						Push
+					</button>
+					<button
+						onClick={popRectangle}
+						className="p-2 bg-red-500 text-white rounded"
+					>
+						Pop
+					</button>
+				</div>
+				<div>
+					<p>
+						A stack is a last-in-first-out (LIFO) data structure. In computer
+						science, it's similar to an array.
+					</p>
+					<h1>Top of the stack: {top}</h1>
+					<h1>Base of the stack: {base}</h1>
+				</div>
+			</div>
+		</>
+	);
+};
 
 export default StackVisualizer;
