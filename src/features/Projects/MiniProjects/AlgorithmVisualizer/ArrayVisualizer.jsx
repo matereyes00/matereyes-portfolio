@@ -28,7 +28,7 @@ const ArrayVisualizer = () => {
 		);
 	};
 
-	const [squares, setSquares] = useState(colorClasses);
+	const [squares, setSquares] = useState([]);
 	const [squareToPushPop, setSquareToPushPop] = useState("");
 
 	const pushSquare = () => {
@@ -60,7 +60,7 @@ const ArrayVisualizer = () => {
 			<div className="flex flex-col items-center">
 				<div className="flex gap-2 mb-4">
 					{squares.map((className, idx) => (
-						<Square key={idx} colorClassName={className} />
+						<Square key={idx} colorClassName={className} label={idx} />
 					))}
 				</div>
 

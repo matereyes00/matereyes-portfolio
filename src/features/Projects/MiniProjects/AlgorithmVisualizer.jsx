@@ -1,11 +1,12 @@
 import { useState } from "react";
 import ArrayVisualizer from "./AlgorithmVisualizer/ArrayVisualizer";
 import StackVisualizer from "./AlgorithmVisualizer/StackVisualizer";
+import QueueVisualizer from "./AlgorithmVisualizer/Data Structures/QueueViz";
 import Description from "./AlgorithmVisualizer/AlgoDescription";
 
 const ReactPractice = () => {
 	const [selectedStructure, setSelectedStructure] = useState(null);
-	const dataStructures = ["array", "linked list", "stack"];
+	const dataStructures = ["array", "stack", "queue"];
 
 	return (
 		<>
@@ -38,6 +39,7 @@ const ReactPractice = () => {
 					<div className="bg-[#d2e1d5] w-full h-96 mt-4 flex items-center justify-center">
 						{selectedStructure === "array" && <ArrayVisualizer />}
 						{selectedStructure === "stack" && <StackVisualizer />}
+						{selectedStructure === "queue" && <QueueVisualizer />}
 						{!selectedStructure && (
 							<p>Select a data structure from the sidebar to begin.</p>
 						)}

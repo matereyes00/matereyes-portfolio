@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import wellDone from "../../../assets/steak-assets/Group 5.svg";
-import mediumWell from "../../../assets/steak-assets/Group 4.svg";
-import medium from "../../../assets/steak-assets/Group 3.svg";
-import mediumRare from "../../../assets/steak-assets/Group 2.svg";
-import rare from "../../../assets/steak-assets/Group 1.svg";
+import wellDone from "../../../../assets/steak-assets/Group 5.svg";
+import mediumWell from "../../../../assets/steak-assets/Group 4.svg";
+import medium from "../../../../assets/steak-assets/Group 3.svg";
+import mediumRare from "../../../../assets/steak-assets/Group 2.svg";
+import rare from "../../../../assets/steak-assets/Group 1.svg";
 import "./projectBgs.css";
 
 const SteakTimer = () => {

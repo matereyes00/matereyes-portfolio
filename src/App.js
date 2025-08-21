@@ -12,7 +12,7 @@ import About from "./Pages/AboutPage";
 import Stack from "./features/Stack/Stack";
 import Projects from "./Pages/ProjectsPage";
 import MiniProjects from "./Pages/MiniProjectsPage";
-import SteakDashboard from "./features/Projects/MiniProjects/SteakTimerProject";
+import SteakDashboard from "./features/Projects/MiniProjects/SteakTimer/SteakTimerProject";
 import ReactPractice from "./features/Projects/MiniProjects/AlgorithmVisualizer";
 import Home from "./Pages/HomePage";
 import "./App.css";

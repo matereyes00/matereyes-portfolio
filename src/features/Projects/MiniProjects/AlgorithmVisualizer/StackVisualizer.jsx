@@ -14,6 +14,7 @@ const StackVisualizer = () => {
 	];
 
 	const [stack, setStack] = useState([]);
+	const [error, setErrorMsg] = useState("");
 
 	const top = stack.length > 0 ? stack[stack.length - 1] : "Empty";
 	const base = stack.length > 0 ? stack[0] : "Empty";
@@ -22,9 +23,13 @@ const StackVisualizer = () => {
 		const randomColor =
 			colorClasses[Math.floor(Math.random() * colorClasses.length)];
 		setStack([...stack, randomColor]);
+		setErrorMsg("");
 	};
 
 	const popRectangle = () => {
+		if (stack.length === 0) {
+			setErrorMsg("You don't have anything to pop");
+		}
 		if (stack.length > 0) {
 			setStack(stack.slice(0, -1));
 		}
@@ -36,9 +41,10 @@ const StackVisualizer = () => {
 				{/* Stack container */}
 				<div className="flex flex-col-reverse gap-1 w-80">
 					{stack.map((rect, idx) => (
-						<Rectangle key={idx} colorClassName={rect} />
+						<Rectangle key={idx} colorClassName={rect} label={idx} />
 					))}
 				</div>
+				{/* buttons */}
 				<div className="mt-4">
 					<button
 						onClick={pushRectangle}
@@ -56,6 +62,7 @@ const StackVisualizer = () => {
 				<div>
 					<h1>Top of the stack: {top}</h1>
 					<h1>Base of the stack: {base}</h1>
+					<h1 className="text-red-400">{error}</h1>
 				</div>
 			</div>
 		</>
