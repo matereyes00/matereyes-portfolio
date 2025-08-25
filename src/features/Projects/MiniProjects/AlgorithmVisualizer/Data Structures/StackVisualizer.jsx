@@ -50,13 +50,13 @@ const StackVisualizer = () => {
 						onClick={pushRectangle}
 						className="p-2 bg-green-500 text-white rounded mr-2"
 					>
-						Push
+						INSERT
 					</button>
 					<button
 						onClick={popRectangle}
 						className="p-2 bg-red-500 text-white rounded"
 					>
-						Pop
+						DELETE
 					</button>
 				</div>
 				<div>
