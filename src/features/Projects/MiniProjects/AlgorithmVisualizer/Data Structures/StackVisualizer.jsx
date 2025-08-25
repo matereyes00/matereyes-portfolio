@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Rectangle from "./Rectangle";
+import Rectangle from "../Rectangle";
 
 const StackVisualizer = () => {
 	const colorClasses = [

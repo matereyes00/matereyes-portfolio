@@ -1,5 +1,5 @@
 import React from "react";
-import Journey from "../features/About/Journey";
+import Journey from "../Features/About/Journey";
 
 function About() {
 	return (

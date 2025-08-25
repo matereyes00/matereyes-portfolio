@@ -1,8 +1,8 @@
 import React from "react";
-import Publication from "../features/Home/Publication";
-import WhoAmI from "../features/Home/WhoAmI";
+import Publication from "../Features/Home/Publication";
+import WhoAmI from "../Features/Home/WhoAmI";
 import TabBar from "../Components/layout/TabBar";
-import who_am_i_img from "../assets/mate.jpg";
+import who_am_i_img from "../Assets/mate.jpg";
 
 function Home() {
 	const who_am_i_headline = "Martina Therese R. Reyes, M.S.";

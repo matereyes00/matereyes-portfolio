@@ -1,5 +1,5 @@
 import { React } from "react";
-import ProjectCard from "../features/Projects/ProjectCard";
+import ProjectCard from "../Features/Projects/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
 import {

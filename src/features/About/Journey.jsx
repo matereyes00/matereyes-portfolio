@@ -1,10 +1,10 @@
 import React from "react";
-import poveda_grad from "../../assets/mate-ps/pov-19-grad.JPEG";
-import bs_admu_grad from "../../assets/mate-ps/bs-admu-grad.JPEG";
-import ico_ph from "../../assets/mate-ps/mate-icoph.jpg";
-import compsat_workshop from "../../assets/mate-ps/compsat-git-workshop.JPG";
-import compsat_dp from "../../assets/decentmate.jpg";
-import ubx_ps from "../../assets/mate-ps/mate-ubx.jpg";
+import poveda_grad from "../../Assets/mate-ps/pov-19-grad.JPEG";
+import bs_admu_grad from "../../Assets/mate-ps/bs-admu-grad.JPEG";
+import ico_ph from "../../Assets/mate-ps/mate-icoph.jpg";
+import compsat_workshop from "../../Assets/mate-ps/compsat-git-workshop.JPG";
+import compsat_dp from "../../Assets/decentmate.jpg";
+import ubx_ps from "../../Assets/mate-ps/mate-ubx.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faTrain } from "@fortawesome/free-solid-svg-icons";

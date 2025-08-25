@@ -1,12 +1,13 @@
 import { useState } from "react";
-import ArrayVisualizer from "./AlgorithmVisualizer/ArrayVisualizer";
-import StackVisualizer from "./AlgorithmVisualizer/StackVisualizer";
+import ArrayVisualizer from "./AlgorithmVisualizer/Data Structures/ArrayVisualizer";
+import StackVisualizer from "./AlgorithmVisualizer/Data Structures/StackVisualizer";
 import QueueVisualizer from "./AlgorithmVisualizer/Data Structures/QueueViz";
 import Description from "./AlgorithmVisualizer/AlgoDescription";
+import LinkedListVisualizer from "./AlgorithmVisualizer/Data Structures/LinkedListVisualizer";
 
 const ReactPractice = () => {
 	const [selectedStructure, setSelectedStructure] = useState(null);
-	const dataStructures = ["array", "stack", "queue"];
+	const dataStructures = ["array", "stack", "queue", "linked list"];
 
 	return (
 		<>
@@ -40,6 +41,7 @@ const ReactPractice = () => {
 						{selectedStructure === "array" && <ArrayVisualizer />}
 						{selectedStructure === "stack" && <StackVisualizer />}
 						{selectedStructure === "queue" && <QueueVisualizer />}
+						{selectedStructure === "linked list" && <LinkedListVisualizer />}
 						{!selectedStructure && (
 							<p>Select a data structure from the sidebar to begin.</p>
 						)}

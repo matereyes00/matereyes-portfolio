@@ -1,7 +1,7 @@
 import React from "react";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import github from "../../assets/github.svg";
+import github from "../../Assets/github.svg";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const ProjectCard = ({
