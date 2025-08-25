@@ -8,6 +8,10 @@ const Description = (props) => {
 	} else if (props.type === "stack") {
 		description =
 			"A stack is similar to an array but follows the last in, first out (LIFO) principle.";
+	} else if (props.type === "linked list") {
+		description = "A linked list is "
+	} else if (props.type === "queue") {
+		description = "A queue follows the  "
 	}
 
 	return (
