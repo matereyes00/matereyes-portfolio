@@ -16,10 +16,10 @@
 		]
 	},
 	{
-		"title": "To Do List",
+		"title": " All Tier",
 		"tags": ["personal"],
-		"description": "Simple to do list app that uses REST API to create, edit, and delete lists. Work in progress.",
-		"link": "https://github.com/matereyes00/toDoList",
+		"description": "This is a revamp and modification of TierMaker. It uses REST API to create, edit, and delete tier lists. Users could interact with one another. Work in progress. This is a collaboration with my co-worker from UBX, as we planned to skill up on backend and frontend.",
+		"link": "https://github.com/matereyes00/AllTier-backend",
 		"stack": ["NestJS", "Postman", "NodeJS", "Docker", "PostgreSQL", "Git"]
 	},
 	{

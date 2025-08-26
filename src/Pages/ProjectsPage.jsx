@@ -1,10 +1,8 @@
-import React from "react";
 import ProjectCard from "../Features/Projects/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { SqlIcon } from "@hugeicons/core-free-icons";
-
 import {
 	faCss3,
 	faGitlab,
@@ -17,8 +15,8 @@ import {
 	faFigma,
 	faReact,
 	faHtml5,
-	// faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import projectsData from "../db/projects.json";
 
 const Projects = () => {
 	const qgis_logo = (
@@ -67,23 +65,23 @@ const Projects = () => {
 			viewBox="0 0 48 48"
 		>
 			<path
-				fill-black
+				fill="black"
 				d="M24.5,32.88c0,0-0.01-0.04-0.02-0.12C24.5,32.84,24.5,32.88,24.5,32.88z"
 			></path>
 			<path
-				fill-black
+				fill="black"
 				d="M27.375,8.625c0,0-0.375-1.375,0.125-2.5s0.5-1.875-0.5-3c2-0.125,2.75,1.25,2.75,1.25l0.025,0.159 c0.118,0.766-0.278,1.494-0.946,1.888C28.219,6.781,27.563,7.437,27.375,8.625z"
 			></path>
 			<path
-				fill-black
+				fill="black"
 				d="M41.63,36.24c0.02-0.21,0.34-3.04-0.38-4.36c-1.5,4.24-3,8.12-7.37,10.87 c0.62-1.25,1.62-3.25,2.62-6.25c-3,4-9,8-13.5,8.25c3.04-1.68,4.75-3.84,5.5-5.25c0,0-1.75,0.5-3.88,0.75 c2.88-1.75,4.88-4.87,3.88-9.75c-2,6.25-4.75,8.25-8.38,8.62c-3.62,0.38-6.87-1.5-6.87-1.5l1.25-0.12c0,0-3.25-2.5-2.12-5.75 c0.05-0.16,0.11-0.31,0.18-0.45c0.82-1.82,3.61-0.9,3.32,1.07v0.01c0,0,0.87,2.37,3.24,1.74c0.76-1.24,1.26-2.5,1.26-2.5l0.37,1.63 c0,0,1.75-0.75,1.75-2.13c1.5,0.57,1.88,1.28,1.97,1.59c-0.26-1.4-2.52-11.03-14.49-10.89l-2.09,1.94 c-0.14,0.13-0.36,0.02-0.34-0.16L7.71,22l0.14-0.14c-0.04,0.01-0.09,0-0.13,0L7.71,22l-0.82,0.76c-0.14,0.13-0.36,0.02-0.34-0.16 l0.1-1.02c-1.74-0.74-1.9-2.7-1.9-2.7S2.58,18.27,3.5,15.5C4,14,5.2,13.85,5.71,13.97c0.65,0.15,1.32,0.16,1.94-0.09 c0.9-0.36,2.05-1.05,2.85-2.38C12,9,14.25,8,19.12,8c6.45,0,9.05,1.98,9.35,2.22c-0.18-0.21-1.27-1.66,1.03-3.84 c2.27-2.16,1.86-2.67,1.77-2.75c0.34,0.1,4.75,1.6,5.23,7.37c0.5,6-6.5,7.25-6.5,7.25s9,1.75,9.12-6.75 c1.76,1,5.38,4.75,5.88,12.88C45.49,32.26,41.84,36.03,41.63,36.24z"
 			></path>
 			<path
-				fill-black
+				fill="black"
 				d="M7.85,21.86L7.71,22l0.01-0.14C7.76,21.86,7.81,21.87,7.85,21.86z"
 			></path>
 			<path
-				fill-black
+				fill="black"
 				d="M7.85,21.86L7.71,22l0.01-0.14C7.76,21.86,7.81,21.87,7.85,21.86z"
 			></path>
 		</svg>
@@ -100,170 +98,37 @@ const Projects = () => {
 			<path d="M49.42 15.55c0 0-6.18 18.8-6.2 18.83L35 20.22l12.25-6.54c.57-.3 1.22-.22 1.7.19C49.44 14.28 49.62 14.94 49.42 15.55zM40.18 33.14L17.37 19.46l6.29-10.22c.27-.46.76-.73 1.28-.74.48 0 1.02.25 1.3.69L40.18 33.14zM40.22 35.5H9.81c-1.07 0-2.03-.68-2.4-1.69L.6 15.6c-.23-.6-.06-1.28.42-1.71.48-.43 1.15-.51 1.72-.21L40.22 35.5z"></path>
 		</svg>
 	);
-	const titleDict = [
-		{
-			title: "Media Tracker",
-			tags: ["personal"],
-			description:
-				"A Letterboxd, Goodreads, Fable clone. Users keep track of the different forms of media they consumed ranging from Movies, TV shows, Video Games, Books and Board games. This app uses external APIs for users to save consumed media on. Users can also custom watchlists and rank their favorite forms of media. Work in progress.",
-			link: "https://github.com/matereyes00/api_app",
-			stack: [
-				<FontAwesomeIcon icon={faHtml5} size="lg" />,
-				<FontAwesomeIcon icon={faCss3} size="lg" />,
-				<box-icon type="logo" name="django" size="sm" />,
-				<FontAwesomeIcon icon={faBootstrap} size="lg" />,
-				<FontAwesomeIcon icon={faDocker} size="lg" />,
-				<box-icon type="logo" name="postgresql" size="sm" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-				<FontAwesomeIcon icon={faPython} size="lg" />,
-			],
-		},
-		{
-			title: "To Do List",
-			tags: ["personal"],
-			description:
-				"Simple to do list app that uses REST API to create, edit, and delete lists. Work in progress.",
-			link: "https://github.com/matereyes00/toDoList",
-			stack: [
-				nestJs_logo,
-				postman_logo,
-				<box-icon type="logo" name="nodejs" />,
-				<FontAwesomeIcon icon={faDocker} size="lg" />,
-				<box-icon type="logo" name="postgresql" size="sm" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-			],
-		},
-		{
-			title: "I-HOPE",
-			tags: ["personal", "school_project"],
-			description:
-				"UI for the flow of data in my study. Users can view the current location of all existing RHUs in the Philippines and work their way towards determining the number of RHUs needed per city in a region. The site only accommodates region 1 data. Work in progress.",
-			link: "https://github.com/matereyes00/iHOPE",
-			stack: [
-				<FontAwesomeIcon icon={faPython} size="lg" />,
-				// "pandas",
-				streamlit_logo,
-				// pytorch,
-				jupyter_logo,
-				<FontAwesomeIcon icon={faFigma} size="lg" />,
-				qgis_logo,
-			],
-			deployedProject: "",
-		},
-		{
-			title: "Rock, Paper, Scissors",
-			tags: ["school_project", "personal"],
-			description:
-				"A rock paper scissors game that uses sockets for users to play remotely.",
-			link: "https://github.com/matereyes00/CSCI70-group-files/tree/master/Group%20Game",
-			stack: [
-				<FontAwesomeIcon icon={faPython} size="lg" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-			],
-		},
-		{
-			title: "Fake News Spread Simulation",
-			tags: ["school_project"],
-			description:
-				"A requirement for CSCI 115: Simulation class to observe the impact of fake-bots on X spreading misinformation and fake news.",
-			link: "",
-			stack: [
-				<FontAwesomeIcon icon={faPython} size="lg" />,
-				jupyter_logo,
-				// "simpy",
-			],
-			deployedProject:
-				"https://drive.google.com/file/d/1ZOfkFYkSptU2AHnAvQHsWKJDl_D75sAZ/view?usp=sharing",
-		},
-		{
-			title: "Plant Infinity",
-			tags: ["school_project"],
-			description:
-				"The aim of this project is to demonstrate the behavior of an agent using Depth First Search and Breadth First Search. The agent's actions are to plant a seed, check the plant's status, water, and harvest the plant. It's a mini game to showcase the navigation of an agent in its environment.",
-			link: "#",
-			stack: [<FontAwesomeIcon icon={faPython} size="lg" />, jupyter_logo],
-			deployedProject:
-				"https://colab.research.google.com/drive/1QwDtTOLzgW08U26NKhIUt3NW_Bu8qyfR?usp=sharing",
-		},
-		{
-			title: "LostNFound",
-			tags: ["school_project"],
-			description:
-				"Final requirement project for CSCI 281: Android Development. The task was to create a basic application that integrates all the concepts and modules delivered in the class. The aim of LostNFound is an improved version of an Ateneo facebook group. Members of the school can post pictures and claim items.",
-			link: "https://github.com/matereyes00/LostNFound",
-			stack: [
-				<box-icon type="logo" name="android" size="md" />,
-				<FontAwesomeIcon icon={faJava} size="lg" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-			],
-			deployedProject: "#",
-		},
-		{
-			title: "Boodle",
-			tags: ["school_project"],
-			description:
-				"This is an iterative project for our introduction to software engineering class. We decided to model an ecommerce website where users can buy and sell items. As buyers, users can bid on items they want for themselves. They can set the price and other users can see the highest bid priced for a specific item. As sellers, users can create their own shop where they can list items for bidding.",
-			link: "#",
-			stack: [
-				<FontAwesomeIcon icon={faPython} size="lg" />,
-				<box-icon type="logo" name="django" size="sm" />,
-				<HugeiconsIcon icon={SqlIcon} />,
-				<box-icon type="logo" name="postgresql" size="sm" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-				<FontAwesomeIcon icon={faGitlab} size="lg" />,
-			],
-			deployedProject: "#",
-		},
-		{
-			title: "Blizard Blast",
-			tags: ["school_project"],
-			description:
-				"This is a final project for our introduction to databases class. The task was to create a database for a real-world application. My group was assigned to a milkshare company. Our database is a static website designed for admin use. The user can view the store's inventory and keep track of different customer's orders.The idea was to demonstrate SQL querying in the context of a business setting.",
-			link: "https://github.com/matereyes00/Blizzard-Blast",
-			stack: [
-				<FontAwesomeIcon icon={faPython} size="lg" />,
-				<box-icon type="logo" name="django" size="sm" />,
-				<HugeiconsIcon icon={SqlIcon} />,
-				<box-icon type="logo" name="postgresql" size="sm" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-				<FontAwesomeIcon icon={faGitlab} size="lg" />,
-			],
-			deployedProject: "#",
-		},
-		{
-			title: "Byte: Startup Summit 2022",
-			tags: ["organization"],
-			description:
-				"This is a website for one of Byte's, an Ateneo organization, flagship projects: Startup Summit (SuS) for 2022. The task was to build a static website where users and participants could view information on the event.",
-			link: "https://github.com/BYTE-ADMU/startup-summit-2022",
-			stack: [
-				<FontAwesomeIcon icon={faJs} size="lg" />,
-				<FontAwesomeIcon icon={faHtml5} size="lg" />,
-				<FontAwesomeIcon icon={faCss3} size="lg" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-				<FontAwesomeIcon icon={faFigma} size="lg" />,
-				<FontAwesomeIcon icon={faReact} size="lg" />,
-			],
-		},
-		{
-			title: "Edsa Interactive",
-			tags: ["organization"],
-			deployedProject:
-				"https://interactive.theguidon.com/2023/02/from-the-hill-to-edsa/#battle-in-the-broadsheets",
-			description:
-				"This is a website for The Guidon's EDSA interactive for the EDSA Revolution's 37th anniversary. The website features different articles highlighting Ateneo's involvement and activism against the Marcoses.",
-			link: "https://github.com/theguidon/edsa-interactive-2223",
-			stack: [
-				<FontAwesomeIcon icon={faHtml5} size="lg" />,
-				<FontAwesomeIcon icon={faCss3} size="lg" />,
-				<FontAwesomeIcon icon={faJs} size="lg" />,
-				<FontAwesomeIcon icon={faGit} size="lg" />,
-				<FontAwesomeIcon icon={faFigma} size="lg" />,
-				<box-icon type="logo" name="wordpress" size="sm" />,
-				// "xampp",
-			],
-		},
-	];
+
+	const iconMap = {
+		HTML5: <FontAwesomeIcon icon={faHtml5} size="lg" />,
+		CSS3: <FontAwesomeIcon icon={faCss3} size="lg" />,
+		Django: <box-icon type="logo" name="django" size="sm" />,
+		Bootstrap: <FontAwesomeIcon icon={faBootstrap} size="lg" />,
+		Docker: <FontAwesomeIcon icon={faDocker} size="lg" />,
+		PostgreSQL: <box-icon type="logo" name="postgresql" size="sm" />,
+		Git: <FontAwesomeIcon icon={faGit} size="lg" />,
+		Python: <FontAwesomeIcon icon={faPython} size="lg" />,
+		NestJS: nestJs_logo,
+		Postman: postman_logo,
+		NodeJS: <box-icon type="logo" name="nodejs" />,
+		Streamlit: streamlit_logo,
+		Jupyter: jupyter_logo,
+		Figma: <FontAwesomeIcon icon={faFigma} size="lg" />,
+		QGIS: qgis_logo,
+		Android: <box-icon type="logo" name="android" size="md" />,
+		Java: <FontAwesomeIcon icon={faJava} size="lg" />,
+		SQL: <HugeiconsIcon icon={SqlIcon} />,
+		GitLab: <FontAwesomeIcon icon={faGitlab} size="lg" />,
+		JavaScript: <FontAwesomeIcon icon={faJs} size="lg" />,
+		React: <FontAwesomeIcon icon={faReact} size="lg" />,
+		WordPress: <box-icon type="logo" name="wordpress" size="sm" />,
+	};
+
+	// 3. Transform the imported JSON data into the format needed by your component
+	const titleDict = projectsData.map((project) => ({
+		...project, // Copy title, tags, description, link, etc.
+		stack: project.stack.map((techName) => iconMap[techName] || techName), // Convert stack names to components
+	}));
 
 	const projects = titleDict.map((item, idx) => (
 		<ProjectCard
@@ -279,7 +144,6 @@ const Projects = () => {
 	return (
 		<>
 			<h1 className="font-bold text-4xl">Projects</h1>
-
 			<div className="w-4/5 mx-auto grid lg:grid-flow-col lg:grid-rows-4 gap-4">
 				{projects}
 			</div>
