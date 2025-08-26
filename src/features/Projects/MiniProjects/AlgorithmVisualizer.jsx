@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ArrayVisualizer from "./AlgorithmVisualizer/Data Structures/ArrayVisualizer";
 import StackVisualizer from "./AlgorithmVisualizer/Data Structures/StackVisualizer";
-import QueueVisualizer from "./AlgorithmVisualizer/Data Structures/QueueViz";
+import QueueVisualizer from "./AlgorithmVisualizer/Data Structures/QueueVisualizer";
 import Description from "./AlgorithmVisualizer/AlgoDescription";
 import LinkedListVisualizer from "./AlgorithmVisualizer/Data Structures/LinkedListVisualizer";
 
