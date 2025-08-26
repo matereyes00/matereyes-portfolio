@@ -1,31 +1,8 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-
-function Node({ id, isHead, value, next, colorClassName, index }) {
-	return (
-		<>
-			<div>
-				{isHead ? (
-					<div
-						className={`w-10 h-10 p-10 ${colorClassName} border-8 border-red-700 text-black font-bold flex flex-col justify-center items-center`}
-					>
-						<p className="text-[6px]">{id}</p>
-						<p>{value}</p>
-					</div>
-				) : (
-					<div
-						className={`w-10 h-10 p-10 ${colorClassName} text-white font-bold flex flex-col justify-center items-center`}
-					>
-						<p className="text-[6px]">{id}</p>
-						<p>{value}</p>
-					</div>
-				)}
-				<p className="text-[11px]">Pos: {index}</p>
-			</div>
-			<div>{next && <div className="mx-2 text-2xl">➡️</div>}</div>
-		</>
-	);
-}
+import Node from "../../../../../Components/common/Node";
+import CustomInputField from "../../../../../Components/common/InputField";
+import SubmitButton from "../../../../../Components/common/Button";
 
 const LinkedListVisualizer = () => {
 	const colorClasses = [
@@ -135,9 +112,6 @@ const LinkedListVisualizer = () => {
 		setNodeToPushPop("");
 	};
 
-	// Update Node Value
-	// Let users modify the value at a certain position.
-	// Shows that random access is not direct like arrays.
 	const edit = () => {
 		const newLinkedList = [...linkedList];
 		const position = parseInt(nodeToPushPop, 10);
@@ -175,70 +149,52 @@ const LinkedListVisualizer = () => {
 				))}
 			</div>
 			<div className="flex flex-col gap-3">
-				<div className="flex flex-row gap-2">
-					<label>
-						Node at position:{" "}
-						<input
-							type="text"
-							value={nodeToPushPop}
-							onChange={(e) => setNodeToPushPop(e.target.value)}
-							className="w-10 rounded-md"
-						/>
-					</label>
-					<label>
-						<input
-							type="checkbox"
-							checked={setAsHead}
-							onChange={(e) => setSetAsHead(e.target.checked)}
-						/>
-						Set as Head
-					</label>
-				</div>
-
-				<label>
-					Value of node:{" "}
-					<input
+				<div className="flex flex-col gap-2">
+					<CustomInputField
+						label={`Node at position: `}
+						type="text"
+						value={nodeToPushPop}
+						onChange={(e) => setNodeToPushPop(e.target.value)}
+					/>
+					<CustomInputField
+						label={`Set as head`}
+						type="checkbox"
+						value={setAsHead}
+						onChange={(e) => setSetAsHead(e.target.checked)}
+					/>
+					<CustomInputField
+						label={`Value of node: `}
 						type="text"
 						value={valueInput}
 						onChange={(e) => setValueInput(e.target.value)}
-						className="w-10 rounded-md"
 					/>
-				</label>
-
-				<button
-					onClick={append}
-					className="p-2 bg-green-500 text-white rounded"
-				>
-					Append
-				</button>
-				<button onClick={remove} className="p-2 bg-red-500 text-white rounded">
-					Remove
-				</button>
-				<button onClick={edit} className="p-2 bg-blue-500 text-white rounded">
-					Edit
-				</button>
-				<button
-					onClick={clear}
-					className="p-2 border-2 border-red-800 text-black font-bold rounded"
-				>
-					Clear
-				</button>
+					<SubmitButton
+						func={append}
+						styling={"p-2 bg-green-500 text-white rounded"}
+						btnText={"Append Node"}
+					/>
+					<SubmitButton
+						func={remove}
+						styling={"p-2 bg-red-500 text-white rounded"}
+						btnText={"Remove Node"}
+					/>
+					<SubmitButton
+						func={edit}
+						styling={"p-2 bg-blue-500 text-white rounded"}
+						btnText={"Edit Node"}
+					/>
+					<SubmitButton
+						func={clear}
+						styling={"p-2 border-4 border-red-800 text-black font-bold rounded"}
+						btnText={"Clear"}
+					/>
+				</div>
 			</div>
 
 			<div>
 				<h1>Head: {head}</h1>
 				<h1 className="text-red-600 font-bold">{error}</h1>
 			</div>
-			{/* 🔑 Core Linked List Operations (to implement next) 
-      1. Search / Find Allow
-			users to type in a value and highlight the node if found. Teaches
-			traversal (O(n) lookup). 
-      ✅2. Update Node Value Let users modify the value at a
-			certain position. Shows that random access is not direct like arrays.
-			3. Insert After / Before Value Instead of inserting by index, insert relative
-			to a node with a certain value. Helps connect linked list traversal to
-			real-world operations. 
-      ✅4. Clear / Reset List Add a button to wipe everything. */}
 		</div>
 	);
 };
