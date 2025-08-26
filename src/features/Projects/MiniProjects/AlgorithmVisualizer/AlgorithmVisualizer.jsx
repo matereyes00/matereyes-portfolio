@@ -1,9 +1,9 @@
 import { useState } from "react";
-import ArrayVisualizer from "./AlgorithmVisualizer/Data Structures/ArrayVisualizer";
-import StackVisualizer from "./AlgorithmVisualizer/Data Structures/StackVisualizer";
-import QueueVisualizer from "./AlgorithmVisualizer/Data Structures/QueueVisualizer";
-import Description from "./AlgorithmVisualizer/AlgoDescription";
-import LinkedListVisualizer from "./AlgorithmVisualizer/Data Structures/LinkedListVisualizer";
+import ArrayVisualizer from "./Data Structures/ArrayVisualizer";
+import StackVisualizer from "./Data Structures/StackVisualizer";
+import QueueVisualizer from "./Data Structures/QueueVisualizer";
+import Description from "./AlgoDescription";
+import LinkedListVisualizer from "./Data Structures/LinkedListVisualizer";
 
 const ReactPractice = () => {
 	const [selectedStructure, setSelectedStructure] = useState(null);
