@@ -14,7 +14,7 @@ const ProjectCard = ({
 }) => {
 	return (
 		<>
-			<div className="border-2 border-slate-900 rounded-xl p-1 h-auto">
+			<div className="border-2 border-slate-900 rounded-lg shadow-2xl flex flex-col flex-grow justify-between w-full max-w-sm mx-auto gap-4">
 				<div
 					className="flex flex-row justify-center mt-3 border-b-2 border-slate-900 
                 w-2/3 mx-auto"
@@ -50,19 +50,19 @@ const ProjectCard = ({
 					)}
 				</div>
 
-				<div className="flex flex-wrap flex-row justify-around w-2/3 flex-auto my-3 mx-auto">
+				<div className="flex flex-wrap flex-row justify-around w-2/3 flex-auto my-2 mx-auto">
 					{projectStack.map((stackItem, index) => (
 						<div key={index} className="">
 							{stackItem}
 						</div>
 					))}
+					<p>{projectDescription}</p>
+					<a href={projectLink} target="_blank">
+						<img src={github} alt="github-icon" className="w-10 h-10 mx-auto" />
+					</a>
 				</div>
 
-				<p>{projectDescription}</p>
-
-				<a href={projectLink} target="_blank">
-					<img src={github} alt="github-icon" className="w-10 h-10 mx-auto" />
-				</a>
+				
 			</div>
 		</>
 	);

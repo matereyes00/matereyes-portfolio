@@ -1,61 +1,55 @@
 import React from "react";
 import {
-	BrowserRouter as Router,
-	Route,
-	Routes,
-	Navigate,
+    createBrowserRouter,
+    RouterProvider,
 } from "react-router-dom";
 
-import Header from "./Header";
-import Footer from "./Footer";
+// Import your Layout component
+import Layout from "./Components/layout/Layout"; // Make sure this path is correct
+
+// Import all your page and project components
+import Home from "./Pages/HomePage";
 import About from "./Pages/AboutPage";
 import Stack from "./Features/Stack/Stack";
 import Projects from "./Pages/ProjectsPage";
 import MiniProjects from "./Pages/MiniProjectsPage";
 import SteakDashboard from "./Features/Projects/MiniProjects/SteakTimer/SteakTimerProject";
-import ReactPractice from "./Features/Projects/MiniProjects/AlgorithmVisualizer/AlgorithmVisualizer";
-import Home from "./Pages/HomePage";
-import "./App.css";
 import Maze from "./Features/Projects/MiniProjects/Maze";
 import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode";
+import ReactPractice from "./Features/Projects/MiniProjects/AlgorithmVisualizer/AlgorithmVisualizer";
 import FloodControlBase from "./Features/Projects/MiniProjects/FloodControlProject/FloodControlBase";
+
+import "./App.css";
+
+// Define all your routes using the modern data API
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />, // The Layout component wraps all child routes
+    children: [
+      { index: true, element: <Home /> }, // Use index: true for the home page
+      { path: "about", element: <About /> },
+      { path: "stack", element: <Stack /> },
+      { path: "academic-projects", element: <Projects /> },
+      { path: "mini-projects", element: <MiniProjects /> },
+
+      // Your mini-project routes are nested here.
+      // The Layout will hide the Header and Footer for these routes.
+    //   { path: "mini-projects/steak-dashboard", element: <SteakDashboard /> },
+    //   { path: "mini-projects/maze", element: <Maze /> },
+    //   { path: "mini-projects/toggle-dark-mode", element: <ToggleDarkMode /> },
+      { path: "mini-projects/algorithm-visualizer", element: <ReactPractice /> },
+      { path: "mini-projects/flood-control", element: <FloodControlBase /> },
+    ],
+  },
+], {
+    // Add the basename here for deployment (e.g., on GitHub Pages)
+    basename: "/matereyes-portfolio",
+});
+
 function App() {
-	return (
-		<Router basename="/matereyes-portfolio">
-			<div className="App">
-				<Header />
-				<main>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/stack" element={<Stack />} />
-						{/* Catch-all route: Redirect unknown routes to Home */}
-						<Route path="/academic-projects" element={<Projects />} />
-						<Route path="/mini-projects" element={<MiniProjects />} />
-						<Route
-							path="/mini-projects/steak-dashboard"
-							element={<SteakDashboard />}
-						/>
-						<Route path="/mini-projects/maze" element={<Maze />} />
-						<Route
-							path="/mini-projects/toggle-dark-mode"
-							element={<ToggleDarkMode />}
-						/>
-						<Route
-							path="/mini-projects/react-practice"
-							element={<ReactPractice />}
-						/>
-						<Route
-							path="/mini-projects/flood-control"
-							element={<FloodControlBase />}
-						/>
-						<Route path="*" element={<Navigate to="/" replace />} />
-					</Routes>
-				</main>
-				<Footer />
-			</div>
-		</Router>
-	);
+    // The App component now only needs to provide the router
+    return <RouterProvider router={router} />;
 }
 
 export default App;
