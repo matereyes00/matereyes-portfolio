@@ -1,18 +1,46 @@
 import formatCurrency from "../../../../utils/CurrencyFormatter";
 
-const Receipt = ({ cart, totalSpentInCart, handleReset }) => {
+// Add props for customization: title, totalLabel, emptyMessage, themeColor, etc.
+const Receipt = ({ 
+    title, 
+    cart, 
+    totalAmount,
+    totalLabel,
+    emptyMessage,
+    handleReset,
+    themeColor = 'gray' // Default theme
+}) => {
+    // Define theme classes to work with TailwindCSS purging
+    const themes = {
+        gray: {
+            border: 'border-gray-300',
+            titleText: 'text-black',
+            totalText: 'text-black',
+            button: 'bg-gray-800 hover:bg-black',
+        },
+        red: {
+            border: 'border-red-400',
+            titleText: 'text-red-600',
+            totalText: 'text-red-600',
+            button: 'bg-red-700 hover:bg-red-800',
+        }
+    };
+
+    const currentTheme = themes[themeColor] || themes.gray;
+
     return (
         <>
-            <div className="bg-white text-black font-mono shadow-xl rounded-md p-4 flex flex-col text-sm border-t-4 border-dashed border-gray-300 border-b-4">
+            {/* Use props for dynamic classes and content */}
+            <div className={`bg-white text-black font-mono shadow-xl rounded-md p-4 flex flex-col text-sm border-t-4 border-dashed border-b-4 ${currentTheme.border}`}>
                  <div className="text-center mb-2">
-                    <h2 className="text-xl font-bold uppercase">Taxpayer's Receipt</h2>
+                    <h2 className={`text-xl font-bold uppercase ${currentTheme.titleText}`}>{title}</h2>
                 </div>
                 <div className="border-t border-b border-dashed border-gray-400 my-2 py-1 text-center">
                     <p className="uppercase font-semibold">Cash Receipt</p>
                 </div>
                 <div className="flex-grow overflow-y-auto pr-2 my-2 min-h-[200px]">
                     {Object.keys(cart).length === 0 ? (
-                        <p className="text-gray-500 text-center py-4">Your cart is empty.</p>
+                        <p className="text-gray-500 text-center py-4">{emptyMessage}</p>
                     ) : (
                         <table className="w-full">
                             <thead>
@@ -37,9 +65,9 @@ const Receipt = ({ cart, totalSpentInCart, handleReset }) => {
                     )}
                 </div>
                 <div className="border-t border-dashed border-gray-400 mt-auto pt-2">
-                    <div className="flex justify-between font-bold text-lg mb-2">
-                        <span>Total:</span>
-                        <span>{formatCurrency(totalSpentInCart)}</span>
+                    <div className={`flex justify-between font-bold text-lg mb-2 ${currentTheme.totalText}`}>
+                        <span>{totalLabel}</span>
+                        <span>{formatCurrency(totalAmount)}</span>
                     </div>
                     <div className="text-center text-xs my-2">
                         <p>************************************</p>
@@ -51,14 +79,13 @@ const Receipt = ({ cart, totalSpentInCart, handleReset }) => {
                 </div>
                 <button
                     onClick={handleReset}
-                    className="w-full bg-gray-800 hover:bg-black text-white font-bold py-2 px-4 rounded mt-4 transition-colors"
+                    className={`w-full text-white font-bold py-2 px-4 rounded mt-4 transition-colors ${currentTheme.button}`}
                 >
                     Start Over
                 </button>
             </div>
         </>
     )
-
 }
 
 export default Receipt;

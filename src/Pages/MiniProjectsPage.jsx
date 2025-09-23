@@ -92,8 +92,19 @@ const MiniProjects = () => {
 			title: "Flood Control",
 			tags: ["for fun"],
 			deployedProject: "/mini-projects/flood-control",
-			description:
-				"This project acts as a visualizing tool for users to understand the flood control scandal",
+			description: (
+				<>
+					This project acts as a visualizing tool for users to understand the flood control scandal. 
+					This project is inspired from @wreckzonee from <a 
+						href='https://www.tiktok.com/@wreckzonee/video/7548848135553043719' 
+						target='_blank' 
+						rel="noopener noreferrer" 
+						className="text-blue-400 hover:underline" // Optional: add styling
+					>
+						TikTok
+					</a>. It adds a feature where users can spend over a trillion pesos on both government projects and luxury items to see firsthand where their hard earned money goes to.
+				</>
+			),
 			link: "#",
 			stack: [
 				<FontAwesomeIcon icon={faJs} size="lg" />,

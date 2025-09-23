@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import formatCurrency from "../../../../utils/CurrencyFormatter";
 
 
@@ -7,6 +6,10 @@ const NepoAnalysis = ({
 	remainingBudget,
 	percentageSpent,
     equivalencyMessage,
+    stolenAmount,
+    percentageStolen,
+    taxPayersAmount,
+    percentageToTaxPayers,
 }) => {
 
     return (
@@ -14,17 +17,29 @@ const NepoAnalysis = ({
             <h2 className="text-2xl font-bold text-yellow-300 mb-4">Analysis</h2>
             <div className="space-y-3 text-lg">
                 <div>
-                    <span className="font-semibold text-gray-400">Funds Spent: </span>
-                    <span className="font-bold text-red-400">{formatCurrency(spentAmount)}</span>
-                </div>
-                <div>
                     <span className="font-semibold text-gray-400">Funds Left: </span>
                     <span className="font-bold text-green-400">{formatCurrency(remainingBudget)}</span>
                 </div>
                 <div>
-                    <span className="font-semibold text-gray-400">Percentage of Total: </span>
+                    <span className="font-semibold text-gray-400">Funds Spent: </span>
+                    <span className="font-bold text-red-400">{formatCurrency(spentAmount)}</span>
+                </div>
+                <div>
+                    <span className="font-semibold text-gray-400">Percentage of Total Fund Spent: </span>
                     <span className="font-bold text-yellow-400">{percentageSpent.toFixed(2)}%</span>
                 </div>
+                {stolenAmount > 0 && (
+                    <div>
+                        <span className="font-semibold text-gray-400">Percentage of Funds Stolen: </span>
+                        <span className="font-bold text-red-400">{percentageStolen.toFixed(2)}%</span>
+                    </div>
+                )}
+                {taxPayersAmount > 0 && (
+                    <div>
+                        <span className="font-semibold text-gray-400">Percentage of Funds To Tax Payers: </span>
+                        <span className="font-bold text-green-400">{percentageToTaxPayers.toFixed(2)}%</span>
+                    </div>
+                )}
             </div>
 
             {/* --- Equivalency Ticker UI --- */}

@@ -2,7 +2,7 @@ export const nepoBabyItems = [
     {
         name: "1pc Jollibee Chickenjoy Meal",
         price: 150,
-        description: "",
+        description: "Don't forget who made you libre.",
         image: "https://images.pexels.com/photos/30378549/pexels-photo-30378549.jpeg",
     },
     {
@@ -20,7 +20,7 @@ export const nepoBabyItems = [
     {
         name: "PlayStation 5",
         price: 30000,
-        description: "",
+        description: "Play your way out of committing crime.",
         image: "https://images.pexels.com/photos/32713615/pexels-photo-32713615.jpeg",
     },
     {
@@ -48,21 +48,21 @@ export const nepoBabyItems = [
         image: "https://images.pexels.com/photos/16690455/pexels-photo-16690455.jpeg",
     },
     {
-        name: "1-Bedroom Condo in Ortigas",
+        name: "3-Bedroom Condo in Makati",
         price: 7000000,
-        description: "",
+        description: "We all know you don't actually live here.",
         image: "https://placehold.co/400x300/4b5563/ffffff?text=Condo",
     },
     {
         name: "House & Lot in Metro Manila",
         price: 25000000,
-        description: "",
+        description: "Find solace in the most exclusive villages in the Metro. 40-car garage not included.",
         image: "https://plus.unsplash.com/premium_photo-1661962950719-7dfa9d62a0b6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmljaCUyMGhvdXNlfGVufDB8fDB8fHww",
     },
     {
         name: "Lamborghini Revuelto",
         price: 35000000,
-        description: "",
+        description: "Ride your newest automobile to the nearest casino today!",
         image: "https://images.pexels.com/photos/16170477/pexels-photo-16170477.jpeg",
     },
     {
@@ -72,10 +72,10 @@ export const nepoBabyItems = [
         image: "https://images.pexels.com/photos/3764986/pexels-photo-3764986.jpeg"
     },
     {
-        name: "Luxury Penthouse in BGC",
-        price: 150000000,
-        description: "",
-        image: "https://placehold.co/400x300/1e293b/ffffff?text=Penthouse",
+        name: "Private Jet",
+        price: 0,
+        description: "Fly away before they place a travel ban on you.",
+        image: "https://placehold.co/400x300/1e293b/ffffff?text=Private Jet",
     },
     { 
         name: "Lavish Office Christmas Party", 
@@ -92,6 +92,13 @@ export const taxPayerItems = [
         description: "Proxy cost in pesos per BHS facility. More can be found in the Philippine Health Facility Development Plan 2020-2040.",
         image: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zcGl0YWx8ZW58MHx8MHx8fDA%3D"
     },
+    {
+        name: "DOH: Health Emergency Preparedness and Response",
+        price: 313402000,
+        description: "This is classified as a Regular Program in the DOH. Currently operating, ₱420,687,000 is allocated to this program per operating unit. The price listed is for the National Capital Region (NCR). This can be found in the OFFICE OF THE SECRETARY document listed under the Department of Health in the National Expeniture Program of the Department of Budget and Management (DBM).",
+        image: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zcGl0YWx8ZW58MHx8MHx8fDA%3D"
+    },
+    // 
     {
         name: "DOH: Rural health unit (RHU)",
         price: 4775750,
@@ -119,19 +126,19 @@ export const taxPayerItems = [
     {
         name: "DOTr: Transportation (Train Line - new)",
         price: 45372954000,
-        description: "This is a foreign assisted project based on the Metro Manila Subway Project (MMSP) Phase I. Retrieved from the Office of the Secretary.",
+        description: "This is a foreign assisted project based on the Metro Manila Subway Project (MMSP) Phase I. Retrieved from the Office of the Secretary of DOTr section of the Department of Budget and Management (DBM).",
         image: "https://images.unsplash.com/uploads/1413387158190559d80f7/6108b580?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dHJhaW4lMjBzdGF0aW9ufGVufDB8fDB8fHww"
     },
     {
         name: "DOTr: Transportation (Train Line - extension)",
         price: 799639000,
-        description: "This is a foreign assisted project based on the Light Rail Transit (LRT) Line 1 Cavite Extension Project. Retrieved from the Office of the Secretary.",
+        description: "This is a foreign assisted project based on the Light Rail Transit (LRT) Line 1 Cavite Extension Project. Retrieved from the Office of the Secretary of DOTr section of the Department of Budget and Management (DBM).",
         image: "https://images.unsplash.com/photo-1495313196544-7d1adf4e628f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhaW4lMjBzdGF0aW9ufGVufDB8fDB8fHww"
     },
     {
         name: "DOTr: Transportation (Train Line - rehabilitation/reconstruction)",
         price: 1000000,
-        description: "This is a locally-funded project based on the Construction,Rehabilitation and Improvement of Other Transportation Infrastructure - Railways for the National Capital Region (NCR). Retrieved from the Office of the Secretary.",
+        description: "This is a locally-funded project based on the Construction,Rehabilitation and Improvement of Other Transportation Infrastructure - Railways for the National Capital Region (NCR). Retrieved from the Office of the Secretary of DOTr section of the Department of Budget and Management (DBM).",
         image: "https://plus.unsplash.com/premium_photo-1679691282472-657de0a00d54?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhaW4lMjBzdGF0aW9ufGVufDB8fDB8fHww"
     }
 ];

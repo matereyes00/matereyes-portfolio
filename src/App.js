@@ -30,7 +30,7 @@ function App() {
 						<Route path="/about" element={<About />} />
 						<Route path="/stack" element={<Stack />} />
 						{/* Catch-all route: Redirect unknown routes to Home */}
-						<Route path="/projects" element={<Projects />} />
+						<Route path="/academic-projects" element={<Projects />} />
 						<Route path="/mini-projects" element={<MiniProjects />} />
 						<Route
 							path="/mini-projects/steak-dashboard"

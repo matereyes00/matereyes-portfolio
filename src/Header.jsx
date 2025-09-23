@@ -21,8 +21,8 @@ const Header = () => {
 					{/* <li className={getLinkClass("/stack")}>
 						<Link to="/stack">Stack</Link>
 					</li> */}
-					<li className={getLinkClass("/projects")}>
-						<Link to="/projects">Projects</Link>
+					<li className={getLinkClass("/academic-projects")}>
+						<Link to="/academic-projects">Academic Projects</Link>
 					</li>
 					<li className={getLinkClass("/mini-projects")}>
 						<Link to="/mini-projects">Mini Projects</Link>

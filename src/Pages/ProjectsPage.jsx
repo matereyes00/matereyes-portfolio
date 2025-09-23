@@ -143,7 +143,7 @@ const Projects = () => {
 
 	return (
 		<>
-			<h1 className="font-bold text-4xl">Projects</h1>
+			<h1 className="font-bold text-4xl">Academic Projects</h1>
 			<div className="w-4/5 mx-auto grid lg:grid-flow-col lg:grid-rows-4 gap-4">
 				{projects}
 			</div>

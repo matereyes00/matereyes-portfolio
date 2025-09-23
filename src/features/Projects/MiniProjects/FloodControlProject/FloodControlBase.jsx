@@ -1,25 +1,28 @@
-import React, { useState, useEffect } from "react";
-import { nepoBabyItems, taxPayerItems  } from "../../../../db/floodControlItems"; // Import the items from the new file
+import { useState, useEffect } from "react";
+import { nepoBabyItems, taxPayerItems  } from "../../../../db/floodControlItems"; 
+import { equivalencyMilestones } from "../../../../db/expenses";
 import Receipt from "./nepoReceipt";
 import NepoItem from "./nepoItem";
 import NepoAnalysis from "./nepoAnalysis";
 
 const FloodControlBase = () => {
-
     const totalBudget = 1089000000000; // 1.089 Trillion
-    const [spentAmount, setSpentAmount] = useState(0);
-    const [cart, setCart] = useState({});
+    
+    const [nepoCart, setNepoCart] = useState({});
+    const [taxpayerCart, setTaxpayerCart] = useState({});
+
+    // This removes the need for separate useState hooks for each amount
+    const totalStolen = Object.values(nepoCart).reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const totalSpentInTaxpayerCart = Object.values(taxpayerCart).reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const spentAmount = totalStolen + totalSpentInTaxpayerCart;
+
+    // These calculations now work correctly based on the derived spentAmount
     const remainingBudget = totalBudget - spentAmount;
     const percentageSpent = totalBudget > 0 ? (spentAmount / totalBudget) * 100 : 0;
-    const totalSpentInCart = Object.values(cart).reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const percentageStolen = totalStolen > 0 ? (totalStolen / totalBudget) * 100 : 0;
+    const percentageToTaxPayers = totalSpentInTaxpayerCart > 0 ? (totalSpentInTaxpayerCart / totalBudget) * 100 : 0;
 
-    // --- Logic for the Equivalency Ticker ---
     const [equivalencyMessage, setEquivalencyMessage] = useState("");
-    const equivalencyMilestones = [
-        { threshold: 4000000, message: (spent) => `That's enough to cover the lifetime earnings of ${Math.floor(spent / 4000000)} average Filipinos.` },
-        { threshold: 2500000, message: (spent) => `That's enough to build ${Math.floor(spent / 2500000)} new public classrooms.` },
-        { threshold: 1750250, message: (spent) => `That's enough to build ${Math.floor(spent / 1750250)} new Barangay Health Stations.` },
-    ].sort((a, b) => b.threshold - a.threshold); // Sort descending to check largest first
     useEffect(() => {
         const currentMilestone = equivalencyMilestones.find(
             (milestone) => spentAmount >= milestone.threshold
@@ -32,33 +35,44 @@ const FloodControlBase = () => {
     }, [spentAmount, equivalencyMilestones]);
 
     // toggle between nepo baby
-    const [isNepoBaby, isTaxPayer] = useState(false);
+    const [isNepoBaby, setIsNepoBaby] = useState(false);
     const handleToggle = () => {
-        isTaxPayer((prev) => !prev);
+        setIsNepoBaby((prev) => !prev);
     };
 
-    const handleBuyItem = (item) => {
-        if (remainingBudget >= item.price) {
-            setSpentAmount(prevSpent => prevSpent + item.price);
-            setCart(prevCart => {
-                const existingItem = prevCart[item.name];
-                return {
-                    ...prevCart,
-                    [item.name]: {
-                        ...item,
-                        quantity: (existingItem ? existingItem.quantity : 0) + 1,
-                    },
-                };
-            });
-        } else {
+    const handleBuyItem = (item, quantity) => {
+        const totalCost = item.price * quantity; // Calculate total cost for the purchase
+        // The check against remainingBudget will still work correctly
+        if (remainingBudget < totalCost) {
             alert("You don't have enough money left to buy this!");
+            return;
+        }
+        // We no longer need to call setSpentAmount. It's calculated automatically.
+        const cartUpdater = (prevCart) => {
+            const existingItem = prevCart[item.name];
+            return {
+                ...prevCart,
+                [item.name]: {
+                    ...item,
+                    quantity: (existingItem ? existingItem.quantity : 0) + quantity,
+                },
+            };
+        };
+        
+        if (isNepoBaby) {
+            setTaxpayerCart(cartUpdater);
+        } else {
+            setNepoCart(cartUpdater);
         }
     };
 
-    const handleReset = () => {
-        setSpentAmount(0);
-        setCart({});
+    const handleResetTaxPayerReceipt = () => {
+        setTaxpayerCart({});
     };
+
+    const handleResetNepoReceipt = () => {
+        setNepoCart({});
+    }
 
 	const nepoItems = nepoBabyItems.map((item, idx) => (
 		<NepoItem
@@ -79,15 +93,19 @@ const FloodControlBase = () => {
     return(
         <>
             <div className="bg-gray-700 min-h-screen text-white font-sans p-4 sm:p-8">
-                {/* Header Section */}
                 <header className="text-center mb-8 max-w-4xl mx-auto">
                     <h1 className="text-4xl sm:text-5xl font-bold text-yellow-300">Hanggang saan aabot ang ₱1.089 Trillion pesos mo?</h1>
-                    {/* What Can ₱1.089 Trillion Buy? */}
                     <p className="text-lg text-gray-400 mt-2">
-                        This is the estimated amount of taxpayer money linked to recent flood control project scandals. Add items to your cart to see how much was allegedly spent.
+                        This is the estimated amount of taxpayer money linked to recent flood control project scandals. Add items to your cart to see how much was allegedly spent. This project and layout is heavily inspired by @wreckzonee's "Spend 100 Billion Pesos" website. Check out his TikTok <a 
+						href='https://www.tiktok.com/@wreckzonee/video/7548848135553043719' 
+						target='_blank' 
+						rel="noopener noreferrer" 
+						className="text-blue-400 hover:underline" // Optional: add styling
+					>
+						here
+					</a>.
                     </p>
                 </header>
-                {/* Main Content Grid */}
                 <div className="m-3 flex content-start">
                      <button
                         onClick={handleToggle}
@@ -96,28 +114,40 @@ const FloodControlBase = () => {
                         >
                         {isNepoBaby ? "Tax Payer" : "Nepo Baby"}
                     </button>
-
                 </div>
                
-                <div className="max-w-screen-2xl mx-auto grid grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* LEFT */}
+                <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                         {isNepoBaby ? taxItems : nepoItems }
                     </div>
-                    {/* RIGHT */}
                     <div className="lg:col-span-1 flex flex-col gap-8">
-                        {/* Analysis Panel */}
                         <NepoAnalysis 
                             spentAmount={spentAmount}
                             remainingBudget={remainingBudget}
                             percentageSpent={percentageSpent}
                             equivalencyMessage={equivalencyMessage}
+                            stolenAmount={totalStolen}
+                            percentageStolen={percentageStolen} // <-- ADD THIS PROP
+                            taxPayersAmount={totalSpentInTaxpayerCart}
+                            percentageToTaxPayers={percentageToTaxPayers}
                         />
-                        {/* Receipt Panel */}
                         <Receipt
-                            cart={cart}
-                            totalSpentInCart={totalSpentInCart}
-                            handleReset={handleReset}
+                            title="Funds Stolen"
+                            cart={nepoCart}
+                            totalAmount={totalStolen}
+                            totalLabel="Total Stolen:"
+                            emptyMessage="No funds have been misappropriated... yet."
+                            handleReset={handleResetNepoReceipt}
+                            themeColor="red"
+                        />
+                        <Receipt
+                            title="Taxpayer's Receipt"
+                            cart={taxpayerCart}
+                            totalAmount={totalSpentInTaxpayerCart}
+                            totalLabel="Total:"
+                            emptyMessage="Your cart is empty."
+                            handleReset={handleResetTaxPayerReceipt}
+                            themeColor="gray"
                         />
                     </div>
                 </div>
