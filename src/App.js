@@ -17,7 +17,6 @@ import SteakDashboard from "./Features/Projects/MiniProjects/SteakTimer/SteakTim
 import Maze from "./Features/Projects/MiniProjects/Maze";
 import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode";
 import ReactPractice from "./Features/Projects/MiniProjects/AlgorithmVisualizer/AlgorithmVisualizer";
-import FloodControlBase from "./Features/Projects/MiniProjects/FloodControlProject/FloodControlBase";
 
 import "./App.css";
 
@@ -35,11 +34,10 @@ const router = createBrowserRouter([
 
       // Your mini-project routes are nested here.
       // The Layout will hide the Header and Footer for these routes.
-    //   { path: "mini-projects/steak-dashboard", element: <SteakDashboard /> },
-    //   { path: "mini-projects/maze", element: <Maze /> },
-    //   { path: "mini-projects/toggle-dark-mode", element: <ToggleDarkMode /> },
+      { path: "mini-projects/steak-dashboard", element: <SteakDashboard /> },
+      { path: "mini-projects/maze", element: <Maze /> },
+      { path: "mini-projects/toggle-dark-mode", element: <ToggleDarkMode /> },
       { path: "mini-projects/algorithm-visualizer", element: <ReactPractice /> },
-      { path: "mini-projects/flood-control", element: <FloodControlBase /> },
     ],
   },
 ], {

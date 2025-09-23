@@ -31,50 +31,50 @@ const MiniProjects = () => {
 		</svg>
 	);
 	const titleDict = [
-		// {
-		// 	title: "Maze 2.0",
-		// 	tags: ["for fun", "academics"],
-		// 	deployedProject: "/mini-projects/maze",
-		// 	description:
-		// 		"My first major coding project was to create a maze using Python coding concepts taught during the first semester of my freshman year. The objective was to move around the maze (up, down, left right) until you reach the exit. Physically, i got out okay but not happy with my output. Mentally, it was challenging. Although I came from a STEM background, I knew how to solve problems but from a high level perspective. Programming was a new territory. I got help from stack overflow but with all the copypasting, I barely remember how the code cohesively works. Now, I know how to approach problems more efficiently using a structured approach. I re-coded my maze in Python. I finished it in a day using a single jupyter notebook in a 128 lines (way less than my original 600+ lines). I understand the flow better and can explain each component. I don't know why I did this but it's something I wanted to prove to myself I can do, because I've been getting impostor syndrome a lot more after college. I migrated the code to javascript where a simple frontend rendering of the maze can be done for players to interact with. It's slightly more complex, adding in other components to the maze.",
-		// 	link: "https://colab.research.google.com/drive/1QwDtTOLzgW08U26NKhIUt3NW_Bu8qyfR?usp=sharing",
-		// 	stack: [
-		// 		<FontAwesomeIcon icon={faPython} size="lg" />,
-		// 		<FontAwesomeIcon icon={faJs} size="lg" />,
-		// 		<FontAwesomeIcon icon={faReact} size="lg" />,
-		// 		jupyter_logo,
-		// 	],
-		// 	isExternal: false,
-		// },
-		// {
-		// 	title: "Steak Timer Dashboard",
-		// 	tags: ["for fun"],
-		// 	deployedProject: "/mini-projects/steak-dashboard",
-		// 	description: "Learned how to use react hooks.",
-		// 	link: "#",
-		// 	stack: [],
-		// 	isExternal: false,
-		// },
-		// {
-		// 	title: "Toggle Dark Mode",
-		// 	tags: ["for fun"],
-		// 	deployedProject: "/mini-projects/toggle-dark-mode",
-		// 	description:
-		// 		"Learned how to draw elements using html and animate these using Tailwindcss.",
-		// 	link: "#",
-		// 	stack: [],
-		// 	isExternal: false,
-		// },
-		// {
-		// 	title: "The Summer I Turned Pretty Dashboard",
-		// 	tags: ["for fun"],
-		// 	deployedProject: "https://dev-journey-tsitp-dashboard.streamlit.app/",
-		// 	description:
-		// 		"With the final season of The Summer I turned pretty coming to an end, I thought it would be fun to look at the overall series as a whole and how it impacted the fans of the series.",
-		// 	link: "https://github.com/matereyes00/dev-journey/tree/learn-dashboard",
-		// 	stack: [<FontAwesomeIcon icon={faPython} size="lg" />],
-		// 	isExternal: true,
-		// },
+		{
+			title: "Maze 2.0",
+			tags: ["for fun", "academics"],
+			deployedProject: "/mini-projects/maze",
+			description:
+				"My first major coding project was to create a maze using Python coding concepts taught during the first semester of my freshman year. The objective was to move around the maze (up, down, left right) until you reach the exit. Physically, i got out okay but not happy with my output. Mentally, it was challenging. Although I came from a STEM background, I knew how to solve problems but from a high level perspective. Programming was a new territory. I got help from stack overflow but with all the copypasting, I barely remember how the code cohesively works. Now, I know how to approach problems more efficiently using a structured approach. I re-coded my maze in Python. I finished it in a day using a single jupyter notebook in a 128 lines (way less than my original 600+ lines). I understand the flow better and can explain each component. I don't know why I did this but it's something I wanted to prove to myself I can do, because I've been getting impostor syndrome a lot more after college. I migrated the code to javascript where a simple frontend rendering of the maze can be done for players to interact with. It's slightly more complex, adding in other components to the maze.",
+			link: "https://colab.research.google.com/drive/1QwDtTOLzgW08U26NKhIUt3NW_Bu8qyfR?usp=sharing",
+			stack: [
+				<FontAwesomeIcon icon={faPython} size="lg" />,
+				<FontAwesomeIcon icon={faJs} size="lg" />,
+				<FontAwesomeIcon icon={faReact} size="lg" />,
+				jupyter_logo,
+			],
+			isExternal: false,
+		},
+		{
+			title: "Steak Timer Dashboard",
+			tags: ["for fun"],
+			deployedProject: "/mini-projects/steak-dashboard",
+			description: "Learned how to use react hooks.",
+			link: "#",
+			stack: [],
+			isExternal: false,
+		},
+		{
+			title: "Toggle Dark Mode",
+			tags: ["for fun"],
+			deployedProject: "/mini-projects/toggle-dark-mode",
+			description:
+				"Learned how to draw elements using html and animate these using Tailwindcss.",
+			link: "#",
+			stack: [],
+			isExternal: false,
+		},
+		{
+			title: "The Summer I Turned Pretty Dashboard",
+			tags: ["for fun"],
+			deployedProject: "https://dev-journey-tsitp-dashboard.streamlit.app/",
+			description:
+				"With the final season of The Summer I turned pretty coming to an end, I thought it would be fun to look at the overall series as a whole and how it impacted the fans of the series.",
+			link: "https://github.com/matereyes00/dev-journey/tree/learn-dashboard",
+			stack: [<FontAwesomeIcon icon={faPython} size="lg" />],
+			isExternal: true,
+		},
 		{
 			title: "Algorithm Visualization",
 			tags: ["for fun"],
@@ -91,7 +91,7 @@ const MiniProjects = () => {
 		{
 			title: "Flood Control",
 			tags: ["for fun"],
-			deployedProject: "/mini-projects/flood-control",
+			deployedProject: "https://matereyes00.github.io/flood-control-budget/",
 			description: (
 				<>
 					This project acts as a visualizing tool for users to understand the flood control scandal. 
@@ -110,7 +110,7 @@ const MiniProjects = () => {
 				<FontAwesomeIcon icon={faJs} size="lg" />,
 				<FontAwesomeIcon icon={faReact} size="lg" />,
 			],
-			isExternal: false,
+			isExternal: true,
 		},
 	];
 	const miniProjects = titleDict.map((item, idx) => (
