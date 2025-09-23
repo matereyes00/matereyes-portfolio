@@ -117,9 +117,10 @@ const EventText = () => {
 							alt="Ateneo Graduation 2023"
 							className="w-1/5 mx-auto my-2 md:mx-2"
 						/>
+						
 					</>
 				}
-				containerStyle="md:flex md:flex-wrap flex-col items-center mx-10 my-10 text-blue-950 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl"
+				containerStyle="md:flex md:flex-wrap flex-col items-center mx-5 my-5 text-blue-950 bg-opacity-60 border-2 border-slate-900 rounded-xl"
 			/>
 
 			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "black" }} />
@@ -136,7 +137,7 @@ const EventText = () => {
 						/>
 					</>
 				}
-				containerStyle="md:flex flex-col items-center mx-10 my-10 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl"
+				containerStyle="md:flex flex-col items-center mx-5 my-5 bg-opacity-60  border-2 border-slate-900 rounded-xl"
 			/>
 
 			<FontAwesomeIcon
@@ -155,7 +156,7 @@ const EventText = () => {
 						className="mx-auto w-1/5 h-1/5 my-2 md:mx-4"
 					/>
 				}
-				containerStyle="md:flex flex-col items-center mx-10 my-10  text-blue-950 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl"
+				containerStyle="md:flex flex-col items-center mx-5 my-5 text-blue-950 bg-opacity-60  border-2 border-slate-900 rounded-xl"
 			/>
 
 			<FontAwesomeIcon icon={faCoffee} size="3x" style={{ color: "black" }} />
@@ -163,7 +164,7 @@ const EventText = () => {
 			<RectangleContainerToggle
 				title="Side quests"
 				content={content3}
-				containerStyle="flex flex-col items-center mx-10 my-10 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl"
+				containerStyle="flex flex-col items-center mx-5 my-5 bg-opacity-60  border-2 border-slate-900 rounded-xl"
 			/>
 
 			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "black" }} />
@@ -181,7 +182,7 @@ const EventText = () => {
 				}
 				content={content4}
 				paragraphStyle="my-auto text-center md:text-left"
-				containerStyle="md:flex flex-col items-center mx-10 my-10  text-blue-950 bg-opacity-60 p-5 border-2 border-slate-900 rounded-xl"
+				containerStyle="md:flex flex-col items-center mx-5 my-5  text-blue-950 bg-opacity-60  border-2 border-slate-900 rounded-xl"
 			/>
 
 			<FontAwesomeIcon
@@ -200,7 +201,7 @@ const EventText = () => {
 					/>
 				}
 				content={content5}
-				containerStyle="mx-10 my-10 bg-opacity-60 p-5 md:flex md:flex-col items-center border-2 border-slate-900 rounded-xl"
+				containerStyle="mx-5 my-5 bg-opacity-60  md:flex md:flex-col items-center border-2 border-slate-900 rounded-xl"
 			/>
 		</>
 	);

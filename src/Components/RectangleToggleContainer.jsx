@@ -15,7 +15,25 @@ const RectangleContainerToggle = (props) => {
 	return (
 		<>
 			<div className={props.containerStyle}>
-				<h1 className="text-5xl">{props.title}</h1>
+				<div className="flex flex-row justify-between items-center w-full p-4">
+					<h1 className="text-5xl">{props.title}</h1>
+						<button onClick={showDescription}>
+							{isVisible ? (
+								<FontAwesomeIcon
+									icon={faArrowUp}
+									size="2x"
+									style={{ color: "#0f172a" }}
+								/>
+							) : (
+								<FontAwesomeIcon
+									icon={faArrowDown}
+									size="2x"
+									style={{ color: "black" }}
+								/>
+							)}
+						</button>
+				</div>
+				
 				{isVisible && (
 					<div className={props.imageStyle}>
 						<div>{props.images}</div>
@@ -23,21 +41,7 @@ const RectangleContainerToggle = (props) => {
 						{props.content}
 					</div>
 				)}
-				<button onClick={showDescription}>
-					{isVisible ? (
-						<FontAwesomeIcon
-							icon={faArrowUp}
-							size="2x"
-							style={{ color: "black" }}
-						/>
-					) : (
-						<FontAwesomeIcon
-							icon={faArrowDown}
-							size="2x"
-							style={{ color: "black" }}
-						/>
-					)}
-				</button>
+				
 			</div>
 		</>
 	);
