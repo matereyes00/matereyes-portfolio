@@ -88,6 +88,19 @@ const MiniProjects = () => {
 			],
 			isExternal: false,
 		},
+		{
+			title: "Flood Control",
+			tags: ["for fun"],
+			deployedProject: "/mini-projects/flood-control",
+			description:
+				"This project acts as a visualizing tool for users to understand the flood control scandal",
+			link: "#",
+			stack: [
+				<FontAwesomeIcon icon={faJs} size="lg" />,
+				<FontAwesomeIcon icon={faReact} size="lg" />,
+			],
+			isExternal: false,
+		},
 	];
 	const miniProjects = titleDict.map((item, idx) => (
 		<ProjectCard

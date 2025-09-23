@@ -18,6 +18,7 @@ import Home from "./Pages/HomePage";
 import "./App.css";
 import Maze from "./Features/Projects/MiniProjects/Maze";
 import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode";
+import FloodControlBase from "./Features/Projects/MiniProjects/FloodControlProject/FloodControlBase";
 function App() {
 	return (
 		<Router basename="/matereyes-portfolio">
@@ -43,6 +44,10 @@ function App() {
 						<Route
 							path="/mini-projects/react-practice"
 							element={<ReactPractice />}
+						/>
+						<Route
+							path="/mini-projects/flood-control"
+							element={<FloodControlBase />}
 						/>
 						<Route path="*" element={<Navigate to="/" replace />} />
 					</Routes>
