@@ -1,5 +1,3 @@
-// src/about/AboutStack.js
-import React from "react";
 const socials = ({ itemName, Link, Icon }) => {
 	return (
 		<>
