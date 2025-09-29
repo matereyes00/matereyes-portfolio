@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   },
 ], {
     // Add the basename here for deployment (e.g., on GitHub Pages)
-    basename: "/matereyes-portfolio",
+    // basename: "/matereyes-portfolio",
 });
 
 function App() {
