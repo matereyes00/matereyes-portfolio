@@ -1,11 +1,8 @@
-# This is the main build configuration for Netlify
 [build]
   command = "npm run build"
-  publish = "build/"
+  publish = "build"
 
-# This section tells the secrets scanner what to do
 [build.processing.secrets]
-  # Add the names of all the Firebase keys to this list
   omit_keys = [
     "REACT_APP_FIREBASE_API_KEY",
     "REACT_APP_FIREBASE_AUTH_DOMAIN",
