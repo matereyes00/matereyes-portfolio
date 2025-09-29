@@ -2,7 +2,7 @@ const socials = ({ itemName, Link, Icon }) => {
 	return (
 		<>
 			<div className="mt-5 md:mt-12 ">
-				<a href={Link} target="_blank">
+				<a href={Link} target="_blank" rel="noopener noreferrer">
 					<img
 						src={Icon}
 						alt={itemName}

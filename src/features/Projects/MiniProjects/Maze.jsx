@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
-
+// eslint-disable-next-line
 const Maze = () => {
 	const [rowsInput, setRowsInput] = useState(10);
 	const [colsInput, setColsInput] = useState(10);
@@ -13,6 +13,8 @@ const Maze = () => {
 	const [mazeData, setMazeData] = useState([]); // <-- this stores "player", "exit", or "empty"
 
 	const [playerPoints, setPlayerPoints] = useState(0);
+
+	console.log(`${exitPos}, ${treasurePos}, ${monsterPos}`)
 
 	const { width, height } = useWindowSize();
 	const confetti = <Confetti width={width} height={height} />;

@@ -1,5 +1,4 @@
 import {
-	faArrowCircleDown,
 	faArrowDown,
 	faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";

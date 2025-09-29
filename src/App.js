@@ -1,18 +1,14 @@
-import React from "react";
 import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
 
-// Import your Layout component
 import Layout from "./Components/layout/Layout"; // Make sure this path is correct
-
-// Import all your page and project components
 import Home from "./Pages/HomePage";
 import About from "./Pages/AboutPage";
-import Stack from "./Features/Stack/Stack";
 import Projects from "./Pages/ProjectsPage";
 import MiniProjects from "./Pages/MiniProjectsPage";
+import Stack from "./Features/Stack/StackElement";
 import SteakDashboard from "./Features/Projects/MiniProjects/SteakTimer/SteakTimerProject";
 import Maze from "./Features/Projects/MiniProjects/Maze";
 import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode";

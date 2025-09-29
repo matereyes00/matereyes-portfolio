@@ -1,7 +1,5 @@
-import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Header from '../../Header';
-import Footer from '../../Footer'; // Adjust path if needed
 import BackButton from '../common/BackButton';
 
 const Layout = () => {

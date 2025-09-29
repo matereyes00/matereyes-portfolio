@@ -1,4 +1,3 @@
-import React from "react";
 import StackItem from "./StackItem";
 
 import react_logo from "../../Assets/logo.svg";

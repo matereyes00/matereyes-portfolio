@@ -1,4 +1,3 @@
-import React from "react";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import github from "../../Assets/github.svg";
@@ -57,7 +56,7 @@ const ProjectCard = ({
 						</div>
 					))}
 					<p>{projectDescription}</p>
-					<a href={projectLink} target="_blank">
+					<a href={projectLink} target="_blank" rel="noreferrer">
 						<img src={github} alt="github-icon" className="w-10 h-10 mx-auto" />
 					</a>
 				</div>
