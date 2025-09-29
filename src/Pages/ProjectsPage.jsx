@@ -1,12 +1,13 @@
 import ProjectCard from "../Features/Projects/ProjectCard";
 import loadingGif from "../Assets/loading.gif";
-import { useFirestoreCollection } from '../hooks/useFirestoreCollectionHook'
+import { useFirestoreCollection } from "../hooks/useFirestoreCollectionHook";
 import { iconMap } from "../utils/iconMap";
+import { useLoadingDelay } from "../hooks/useLoadingDelay";
 
 const Projects = () => {
-	const { data: projectsData, loading } = useFirestoreCollection('projects');
-	
-	
+	const { data: projectsData, loading } = useFirestoreCollection("projects");
+	const showLoader = useLoadingDelay(loading, 2000); // 2s delay
+
 	// 3. Transform the imported JSON data into the format needed by your component
 	const titleDict = projectsData.map((project) => ({
 		...project, // Copy title, tags, description, link, etc.
@@ -24,18 +25,14 @@ const Projects = () => {
 		/>
 	));
 
-    if (loading) { 
-		return ( 
-			 <div className="flex items-center justify-center min-h-screen">
+	if (showLoader) {
+		return (
+			<div className="flex items-center justify-center min-h-screen">
 				<div className="flex flex-col items-center">
-					<img
-					src={loadingGif}
-					alt="Loading..."
-					className="w-40 h-40"
-					/>
+					<img src={loadingGif} alt="Loading..." className="w-40 h-40" />
 				</div>
 			</div>
-		); 
+		);
 	}
 
 	return (
