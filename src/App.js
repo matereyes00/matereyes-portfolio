@@ -10,7 +10,7 @@ import Projects from "./Pages/ProjectsPage";
 import MiniProjects from "./Pages/MiniProjectsPage";
 import SteakDashboard from "./Features/Projects/MiniProjects/SteakTimer/SteakTimerProject";
 import Maze from "./Features/Projects/MiniProjects/Maze";
-import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode";
+import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode.jsx";
 import ReactPractice from "./Features/Projects/MiniProjects/AlgorithmVisualizer/AlgorithmVisualizer";
 
 import "./App.css";
