@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Martina Reyes - Personal Portfolio
+This repository contains the source code for my personal portfolio, a dynamic single-page application built to showcase my projects and skills.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Site: ![matereyes-portfolio.netlify.app](matereyes-portfolio.netlify.app)
 
-## Available Scripts
+# Project Architecture
+This portfolio is built using a modern, serverless architecture that separates the frontend interface from the backend data, ensuring security and scalability.
 
-In the project directory, you can run:
+- Frontend: A responsive user interface built with React and styled with Tailwind CSS. Routing is handled by React Router.
+- Database: Project data is stored in Google Firestore, a NoSQL cloud database. This allows for project information to be updated dynamically without needing to redeploy the entire application.
+- Hosting: The static frontend is hosted on Netlify, which provides continuous deployment. Every push to the main branch automatically triggers a new build and deploy of the live site.
 
-### `npm start`
+**The data flow is as follows:**
+1. A user visits the Netlify-hosted site.
+2. The React application uses a custom hook to send a secure request to the Firebase backend.
+3. Firestore returns the project data, which is then rendered on the page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Key Features
+**Dynamic Project Loading:** All project and mini-project data is fetched live from the Firestore database, making content updates easy.
+**Reusable Components:** The UI is built with a component-based structure, promoting clean and maintainable code.
+**Custom Data Management:** Project data is managed locally in JSON files and synced to the live database using a custom Node.js script.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Managing Project Data
+To update the projects displayed on the portfolio, I do not edit the database directly. Instead, I follow this workflow:
+1. Local Data: All project metadata is stored in two files: scripts/projects.json and scripts/miniProjects.json.
+2. Sync Script: A custom Node.js script located at scripts/uploadData.js is used to sync this local data with Firestore.
+3. Execution: Running node scripts/uploadData.js in the terminal first deletes all existing documents in the projects and miniProjects collections to prevent duplicates, then uploads the fresh data from the JSON files.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# About This Repository
+This repository is a personal showcase of my work and is not intended to be a generic template. The code is tailored to my specific data structures and design choices. You are welcome to browse the code for inspiration, but I kindly request that you do not clone or fork this repository for direct reuse. Thank you!

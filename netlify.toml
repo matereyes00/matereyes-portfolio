@@ -1,0 +1,15 @@
+# This file configures the Netlify build process.
+
+[build]
+  # This section tells the secrets scanner which keys are safe to ignore.
+  # These Firebase keys are required to be in the client-side bundle for the app to function.
+  [build.secrets_scan]
+    omit_keys = [
+      "REACT_APP_FIREBASE_API_KEY",
+      "REACT_APP_FIREBASE_AUTH_DOMAIN",
+      "REACT_APP_FIREBASE_PROJECT_ID",
+      "REACT_APP_FIREBASE_STORAGE_BUCKET",
+      "REACT_APP_FIREBASE_MESSAGING_SENDER_ID",
+      "REACT_APP_FIREBASE_APP_ID",
+      "REACT_APP_FIREBASE_MEASUREMENT_ID"
+    ]
