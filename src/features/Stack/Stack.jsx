@@ -24,7 +24,7 @@ import tailwind_logo from "../../Assets/tailwind-svgrepo-com.svg";
 // docker
 // postman
 
-const StackElement = () => {
+const Stack = () => {
 	const images = {
 		react_logo: { src: react_logo, name: "React" },
 		python_logo: { src: python_logo, name: "Python" },
@@ -60,4 +60,4 @@ const StackElement = () => {
 	);
 };
 
-export default StackElement;
+export default Stack;
