@@ -91,7 +91,7 @@ const MiniProjects = () => {
 		{
 			title: "Flood Control",
 			tags: ["for fun"],
-			deployedProject: "https://matereyes00.github.io/flood-control-budget/",
+			deployedProject: "https://matereyes00.github.io/flood-control/",
 			description: (
 				<>
 					This project acts as a visualizing tool for users to understand the flood control scandal. 
