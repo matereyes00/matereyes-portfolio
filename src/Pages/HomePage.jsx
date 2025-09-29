@@ -11,19 +11,19 @@ function Home() {
 	const { data: publicationData, loading } = useFirestoreCollection("about");
 	const showLoader = useLoadingDelay(loading, 2000); // 2s delay
 
-	const embeds = [
-		<></>,
-		<></>,
-		<>
-			<iframe
-				src="https://drive.google.com/file/d/10-Qm1QeDph4nSiPx-jGJ_S06IftOo0Va/preview"
-				class="w-full aspect-video"
-				allow="autoplay"
-				className="m-auto"
-				title="ICOPH: presentation"
-			></iframe>
-		</>,
-	];
+	// const embeds = [
+	// 	<></>,
+	// 	<></>,
+	// 	<>
+	// 		<iframe
+	// 			src="https://drive.google.com/file/d/10-Qm1QeDph4nSiPx-jGJ_S06IftOo0Va/preview"
+	// 			class="w-full aspect-video"
+	// 			allow="autoplay"
+	// 			className="m-auto"
+	// 			title="ICOPH: presentation"
+	// 		></iframe>
+	// 	</>,
+	// ];
 
 	const publications = publicationData.map((pub, index) => (
 		<Publication
