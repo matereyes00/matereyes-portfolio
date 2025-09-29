@@ -16,9 +16,11 @@ import {
 	faReact,
 	faHtml5,
 } from "@fortawesome/free-brands-svg-icons";
-import projectsData from "../db/projects.json";
+import { useFirestoreCollection } from '../hooks/useFirestoreCollectionHook'
 
 const Projects = () => {
+	const { data: projectsData, loading } = useFirestoreCollection('projects');
+	
 	const qgis_logo = (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -140,6 +142,10 @@ const Projects = () => {
 			deployedProjectLink={item.deployedProject}
 		/>
 	));
+
+    if (loading) {
+        return <h1 className="font-bold text-4xl">Loading Projects...</h1>
+    }
 
 	return (
 		<>

@@ -16,8 +16,11 @@ import {
 	// faHtml5,
 	// faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import {useFirestoreCollection} from '../hooks/useFirestoreCollectionHook'
 
 const MiniProjects = () => {
+	const { data: miniProjectsData, loading } = useFirestoreCollection('miniProjects');
+
 	const jupyter_logo = (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -123,6 +126,11 @@ const MiniProjects = () => {
 			deployedProjectLink={item.deployedProject}
 		/>
 	));
+
+	if (loading) {
+        return <h1 className="text-4xl m-4">Loading Mini Projects...</h1>
+    }
+
 	return (
 		<>
 			<h1 className="text-4xl m-4">Mini projects</h1>
