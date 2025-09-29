@@ -1,7 +1,7 @@
 # This file configures the Netlify build process.
 
 [build]
-  # This section tells the secrets scanner which keys are safe to ignore.
+  # This section tells the secrets scanner which keys are safe to ignore in the build output.
   # These Firebase keys are required to be in the client-side bundle for the app to function.
   [build.secrets_scan]
     omit_keys = [

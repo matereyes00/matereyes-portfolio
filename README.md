@@ -1,8 +1,6 @@
 # Martina Reyes - Personal Portfolio
 This repository contains the source code for my personal portfolio, a dynamic single-page application built to showcase my projects and skills.
 
-Live Site: ![matereyes-portfolio.netlify.app](matereyes-portfolio.netlify.app)
-
 # Project Architecture
 This portfolio is built using a modern, serverless architecture that separates the frontend interface from the backend data, ensuring security and scalability.
 
