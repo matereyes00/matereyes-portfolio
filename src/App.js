@@ -8,7 +8,7 @@ import Home from "./Pages/HomePage";
 import About from "./Pages/AboutPage";
 import Projects from "./Pages/ProjectsPage";
 import MiniProjects from "./Pages/MiniProjectsPage";
-import Stack from "./Features/Stack/StackElement";
+import StackElement from "./Features/Stack/StackElement.jsx";
 import SteakDashboard from "./Features/Projects/MiniProjects/SteakTimer/SteakTimerProject";
 import Maze from "./Features/Projects/MiniProjects/Maze";
 import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode";
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> }, // Use index: true for the home page
       { path: "about", element: <About /> },
-      { path: "stack", element: <Stack /> },
+      { path: "stack", element: <StackElement /> },
       { path: "academic-projects", element: <Projects /> },
       { path: "mini-projects", element: <MiniProjects /> },
 
