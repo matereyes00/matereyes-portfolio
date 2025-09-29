@@ -1,17 +1,17 @@
-# Netlify build configuration for the portfolio project.
-
+# This is the main build configuration for Netlify
 [build]
-  # This section configures Netlify's secrets scanning feature.
-  [build.secrets_scan]
-    # A list of environment variable keys that are allowed to appear in the build output.
-    # These Firebase keys are required by the client-side app to connect to the database.
-    omit_keys = [
-      "REACT_APP_FIREBASE_API_KEY",
-      "REACT_APP_FIREBASE_AUTH_DOMAIN",
-      "REACT_APP_FIREBASE_PROJECT_ID",
-      "REACT_APP_FIREBASE_STORAGE_BUCKET",
-      "REACT_APP_FIREBASE_MESSAGING_SENDER_ID",
-      "REACT_APP_FIREBASE_APP_ID",
-      "REACT_APP_FIREBASE_MEASUREMENT_ID",
-    ]
+  command = "npm run build"
+  publish = "build/"
 
+# This section tells the secrets scanner what to do
+[build.processing.secrets]
+  # Add the names of all the Firebase keys to this list
+  omit_keys = [
+    "REACT_APP_FIREBASE_API_KEY",
+    "REACT_APP_FIREBASE_AUTH_DOMAIN",
+    "REACT_APP_FIREBASE_PROJECT_ID",
+    "REACT_APP_FIREBASE_STORAGE_BUCKET",
+    "REACT_APP_FIREBASE_MESSAGING_SENDER_ID",
+    "REACT_APP_FIREBASE_APP_ID",
+    "REACT_APP_FIREBASE_MEASUREMENT_ID"
+  ]
