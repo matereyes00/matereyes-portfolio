@@ -8,10 +8,10 @@ import Home from "./Pages/HomePage";
 import About from "./Pages/AboutPage";
 import Projects from "./Pages/ProjectsPage";
 import MiniProjects from "./Pages/MiniProjectsPage";
-import SteakDashboard from "./Features/Projects/MiniProjects/SteakTimer/SteakTimerProject";
-import Maze from "./Features/Projects/MiniProjects/Maze";
+import SteakDashboard from "./Features/Projects/MiniProjects/SteakTimer/SteakTimerProject.jsx";
+import Maze from "./Features/Projects/MiniProjects/Maze.jsx";
 import ToggleDarkMode from "./Features/Projects/MiniProjects/ToggleDarkMode.jsx";
-import ReactPractice from "./Features/Projects/MiniProjects/AlgorithmVisualizer/AlgorithmVisualizer";
+import ReactPractice from "./Features/Projects/MiniProjects/AlgorithmVisualizer/AlgorithmVisualizer.jsx";
 
 import "./App.css";
 
