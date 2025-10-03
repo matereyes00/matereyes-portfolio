@@ -1,5 +1,4 @@
 import ProjectCard from "../Features/Projects/ProjectCard";
-import loadingGif from "../Assets/loading.gif";
 import { useFirestoreCollection } from "../hooks/useFirestoreCollectionHook";
 import { iconMap } from "../utils/iconMap";
 import { useLoadingDelay } from "../hooks/useLoadingDelay";

@@ -2,7 +2,6 @@ import Publication from "../Features/Home/Publication";
 import WhoAmI from "../Features/Home/WhoAmI";
 import who_am_i_img from "../Assets/mate.jpg";
 import { useFirestoreCollection } from "../hooks/useFirestoreCollectionHook";
-import loadingGif from "../Assets/loading.gif";
 import { useLoadingDelay } from "../hooks/useLoadingDelay";
 import { loadingIcon } from "../Components/common/Loading";
 
