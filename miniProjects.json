@@ -1,0 +1,65 @@
+[
+  {
+    "deployedProject": "https://t.me/TableTopGameMasterBot",
+    "description": "A telegram bot a user can seek guidance from when playing the card game Sea Salt and Paper. It uses model context protocol (MCP) for a user to conveniently communicate on an existing chat app like Telegram.",
+    "isExternal": true,
+    "link": "https://github.com/matereyes00/Telegram-Bots",
+    "stack": ["Python", "Railway"],
+    "tags": ["for fun", "MCP"],
+    "title": "Sea, Salt & Paper Game Master"
+  },
+  {
+    "deployedProject": "/mini-projects/algorithm-visualizer",
+    "description": "This project acts as a visualizing tool for users to understand how the different data structures and algorithms work. I was able to grasp the foundations of React and how to apply the basic functionalities through the behavior of stacks, arrays queues, etc.",
+    "isExternal": false,
+    "link": "#",
+    "stack": ["JavaScript", "React"],
+    "tags": ["for fun"],
+    "title": "Algorithm Visualization"
+  },
+  {
+    "deployedProject": "https://matereyes00.github.io/flood-control/",
+    "description": "This project acts as a visualizing tool for users to understand the flood control scandal. This project is inspired from @wreckzonee from TikTok. It adds a feature where users can spend over a trillion pesos on both government projects and luxury items to see firsthand where their hard earned money goes to.",
+    "isExternal": true,
+    "link": "https://www.tiktok.com/@wreckzonee/video/7548848135553043719",
+    "stack": ["JavaScript", "React"],
+    "tags": ["for fun"],
+    "title": "Flood Control"
+  },
+  {
+    "deployedProject": "/mini-projects/maze",
+    "description": "My first major coding project was building a maze game in Python during freshman year where the goal was to reach the exit by moving up, down, left, and right. At the time, I struggled—I relied heavily on Stack Overflow, copy-pasted code, and ended up with 600+ lines I barely understood. Later, I revisited the project with a structured approach. I re-coded it in a single Jupyter notebook in just 128 lines, fully understanding the flow and being able to explain each component. To push myself further, I migrated it to JavaScript with a simple frontend so players could interact with the maze, adding more complexity but also proving to myself I could overcome the impostor syndrome I felt after college.",
+    "isExternal": false,
+    "link": "https://colab.research.google.com/drive/1QwDtTOLzgW08U26NKhIUt3NW_Bu8qyfR?usp=sharing",
+    "stack": ["Python", "JavaScript", "React", "Jupyter"],
+    "tags": ["for fun", "academics"],
+    "title": "Maze 2.0"
+  },
+  {
+    "deployedProject": "/mini-projects/toggle-dark-mode",
+    "description": "Learned how to draw elements using html and animate these using Tailwindcss.",
+    "isExternal": false,
+    "link": "#",
+    "stack": [],
+    "tags": ["for fun"],
+    "title": "Toggle Dark Mode"
+  },
+  {
+    "deployedProject": "https://dev-journey-tsitp-dashboard.streamlit.app/",
+    "description": "With the final season of The Summer I turned pretty coming to an end, I thought it would be fun to look at the overall series as a whole and how it impacted the fans of the series.",
+    "isExternal": true,
+    "link": "https://github.com/matereyes00/dev-journey/tree/learn-dashboard",
+    "stack": ["Python", "Streamlit"],
+    "tags": ["for fun"],
+    "title": "The Summer I Turned Pretty Dashboard"
+  },
+  {
+    "deployedProject": "/mini-projects/steak-dashboard",
+    "description": "Learned how to use react hooks.",
+    "isExternal": false,
+    "link": "#",
+    "stack": ["React"],
+    "tags": ["for fun"],
+    "title": "Steak Timer Dashboard"
+  }
+]

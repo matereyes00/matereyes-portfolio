@@ -70,9 +70,8 @@ const EventText = () => {
 
 	const content5 = (
 		<p>
-			I am working as a Junior Software Engineer at UBX. I intend to focus on my
-			career. I've been interested in taking on a full-stack developer or data
-			science roles. My personal goal is to use the knowledge, skills, and
+			My first full time job is as a Junior Software Engineer at UBX. I've been interested in taking on a full-stack developer or data
+			science roles. The most memorable part of my job was working on PeraHub. It was my first time being exposed to developing native mobile applications My personal goal is to use the knowledge, skills, and
 			understanding learned in my field to help other people. I advocate for
 			creating a positive social impact through my work and the skills I have to
 			offer. I work well individually but perfer working collaboratively on a
@@ -100,6 +99,11 @@ const EventText = () => {
 		</p>
 	);
 
+	const containerOneStyle ="md:flex md:flex-wrap flex-col items-center mx-5 my-5 text-blue-950 bg-opacity-60 border-2 border-slate-900 rounded-xl";
+	const containerTwoStyle = "md:flex flex-col items-center mx-5 my-5 bg-opacity-60  border-2 border-slate-900 rounded-xl"
+	const containerThreeStyle = "md:flex flex-col items-center mx-5 my-5 text-blue-950 bg-opacity-60  border-2 border-slate-900 rounded-xl"
+	const container4Style = "flex flex-col items-center mx-5 my-5 bg-opacity-60  border-2 border-slate-900 rounded-xl";
+	const containerFiveStyle = "md:flex flex-col items-center mx-5 my-5  text-blue-950 bg-opacity-60  border-2 border-slate-900 rounded-xl"
 	return (
 		<>
 			<RectangleContainerToggle
@@ -120,7 +124,7 @@ const EventText = () => {
 						
 					</>
 				}
-				containerStyle="md:flex md:flex-wrap flex-col items-center mx-5 my-5 text-blue-950 bg-opacity-60 border-2 border-slate-900 rounded-xl"
+				containerStyle={containerOneStyle}
 			/>
 
 			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "black" }} />
@@ -137,7 +141,7 @@ const EventText = () => {
 						/>
 					</>
 				}
-				containerStyle="md:flex flex-col items-center mx-5 my-5 bg-opacity-60  border-2 border-slate-900 rounded-xl"
+				containerStyle={containerTwoStyle}
 			/>
 
 			<FontAwesomeIcon
@@ -156,7 +160,7 @@ const EventText = () => {
 						className="mx-auto w-1/5 h-1/5 my-2 md:mx-4"
 					/>
 				}
-				containerStyle="md:flex flex-col items-center mx-5 my-5 text-blue-950 bg-opacity-60  border-2 border-slate-900 rounded-xl"
+				containerStyle={containerThreeStyle}
 			/>
 
 			<FontAwesomeIcon icon={faCoffee} size="3x" style={{ color: "black" }} />
@@ -164,7 +168,7 @@ const EventText = () => {
 			<RectangleContainerToggle
 				title="Side quests"
 				content={content3}
-				containerStyle="flex flex-col items-center mx-5 my-5 bg-opacity-60  border-2 border-slate-900 rounded-xl"
+				containerStyle={container4Style}
 			/>
 
 			<FontAwesomeIcon icon={faTrain} size="3x" style={{ color: "black" }} />
@@ -182,7 +186,7 @@ const EventText = () => {
 				}
 				content={content4}
 				paragraphStyle="my-auto text-center md:text-left"
-				containerStyle="md:flex flex-col items-center mx-5 my-5  text-blue-950 bg-opacity-60  border-2 border-slate-900 rounded-xl"
+				containerStyle={containerFiveStyle}
 			/>
 
 			<FontAwesomeIcon
