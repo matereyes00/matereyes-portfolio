@@ -25,30 +25,31 @@ jobs:
               with:
                   fetch-depth: 0
 
-            # 2. Set up Node.js (v20)
+            # 2. Set up Node.js
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: "20"
                   cache: "npm"
 
-            # 3. Install dependencies (React 18 + better-docs)
+            # 3. Install dependencies (normal install, no legacy-peer-deps needed)
             - name: Install dependencies
-              run: npm install --legacy-peer-deps
+              run: npm install
 
-            # 4. Generate documentation
-            - name: Generate documentation
-              run: npm run docs
+            # 4. Build Docusaurus documentation
+            - name: Build Docusaurus docs
+              run: npm run build --prefix docs
 
-            # 5. Commit and push updated documentation (skip if no changes)
-            - name: Commit and push documentation
+            # 5. Commit and push generated documentation (optional)
+            #    Only needed if you want built docs in the repo (e.g., for GitHub Pages)
+            - name: Commit and push generated docs
               if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
               run: |
                   git config --local user.email "action@github.com"
                   git config --local user.name "GitHub Action"
-                  git add -A
+                  git add docs/build
                   if git diff-index --quiet HEAD --; then
                     echo "No documentation changes to commit"
                   else
-                    git commit -m "docs: auto-generate documentation [skip ci]"
+                    git commit -m "docs: auto-generate Docusaurus docs [skip ci]"
                     git push
