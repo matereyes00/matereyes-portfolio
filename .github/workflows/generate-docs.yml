@@ -34,8 +34,10 @@ jobs:
             - name: Build Docusaurus docs
               run: npm run docs:build
 
-            - name: Deploy to GitHub Pages
+            - name: Deploy Docusaurus docs
               if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
               run: |
                   npm install -g gh-pages
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
                   gh-pages -d docs/build -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
