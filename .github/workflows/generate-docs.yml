@@ -3,16 +3,14 @@ name: Generate Documentation
 on:
     push:
         branches:
-            - main
-            - master
+            - develop
         paths:
             - "src/**"
             - "package.json"
             - "docs/**"
     pull_request:
         branches:
-            - main
-            - master
+            - develop
 
 jobs:
     generate-docs:
@@ -35,9 +33,11 @@ jobs:
               run: npm run docs:build
 
             - name: Deploy Docusaurus docs
-              if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+              if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/develop'
               run: |
                   npm install -g gh-pages
+                  # Set Git user identity so gh-pages can commit
                   git config --local user.email "action@github.com"
                   git config --local user.name "GitHub Action"
+                  # Deploy docs/build to gh-pages branch
                   gh-pages -d docs/build -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
