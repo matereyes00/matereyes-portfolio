@@ -13,6 +13,7 @@ npm install
 ```
 
 This will install:
+
 - **jsdoc**: JavaScript documentation generator
 - **better-docs**: Beautiful JSDoc template
 
@@ -40,19 +41,21 @@ npm run docs:watch
 
 The GitHub Actions workflow (`.github/workflows/generate-docs.yml`) automatically:
 
-1. **Triggers on**: 
-   - Push to `main` or `master` branches
-   - Changes to `src/`, `package.json`, or `scripts/` folders
-   - Pull requests (documentation check only, no commit)
+1. **Triggers on**:
+
+    - Push to `main` or `master` branches
+    - Changes to `src/`, `package.json`, or `scripts/` folders
+    - Pull requests (documentation check only, no commit)
 
 2. **Executes**:
-   - Checks out the code
-   - Installs dependencies
-   - Runs `npm run docs`
-   - Commits and pushes changes (on push events)
+
+    - Checks out the code
+    - Installs dependencies
+    - Runs `npm run docs`
+    - Commits and pushes changes (on push events)
 
 3. **Commits with message**: `docs: auto-generate documentation [skip ci]`
-   - The `[skip ci]` flag prevents infinite workflow loops
+    - The `[skip ci]` flag prevents infinite workflow loops
 
 ### Configuration
 
@@ -71,13 +74,14 @@ To ensure your code is included in the documentation, add JSDoc comments:
  * @throws {Error} If the API request fails
  */
 function getUserData(userId) {
-  // implementation
+	// implementation
 }
 ```
 
 ## Documentation Output
 
 Generated documentation is placed in the `docs/` folder and includes:
+
 - API reference for all functions and components
 - Source code links
 - Search functionality
@@ -86,17 +90,18 @@ Generated documentation is placed in the `docs/` folder and includes:
 ## Tips
 
 - Document React components with JSDoc:
-  ```javascript
-  /**
-   * Button component
-   * @component
-   * @param {Object} props
-   * @param {string} props.label - Button text
-   * @param {Function} props.onClick - Click handler
-   * @returns {JSX.Element}
-   */
-  export function Button({ label, onClick }) { ... }
-  ```
+
+    ```javascript
+    /**
+     * Button component
+     * @component
+     * @param {Object} props
+     * @param {string} props.label - Button text
+     * @param {Function} props.onClick - Click handler
+     * @returns {JSX.Element}
+     */
+    export function Button({ label, onClick }) { ... }
+    ```
 
 - The workflow skips commits if there are no documentation changes
 - Documentation is generated from the `src/` folder
@@ -105,13 +110,16 @@ Generated documentation is placed in the `docs/` folder and includes:
 ## Troubleshooting
 
 **Docs not generating?**
+
 - Check workflow status in GitHub Actions tab
 - Ensure `src/` has JSDoc comments
 - Verify `.jsdocrc.json` configuration
 
 **Infinite loops?**
+
 - The `[skip ci]` flag in commit messages prevents this
 - This is already configured in the workflow
 
 **Want to skip documentation generation?**
+
 - Include `[skip ci]` or `[ci skip]` in your commit message
