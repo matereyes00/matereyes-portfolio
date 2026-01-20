@@ -64,6 +64,8 @@
 	},
 	"devDependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+		"@docusaurus/core": "^3.9.2",
+		"@docusaurus/preset-classic": "^3.9.2",
 		"autoprefixer": "^10.4.20",
 		"eslint-config-prettier": "^10.1.1",
 		"eslint-config-react-app": "^7.0.1",
