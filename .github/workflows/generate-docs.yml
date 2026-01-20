@@ -19,43 +19,23 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # 1. Checkout the repository
             - name: Checkout code
               uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
 
-            # 2. Set up Node.js
             - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: "20"
                   cache: "npm"
 
-            # 3. Install dependencies
             - name: Install dependencies
               run: npm install
 
-            # 4. Build Docusaurus docs
             - name: Build Docusaurus docs
               run: npm run docs:build
 
-            # 5. Deploy docs to GitHub Pages (optional)
             - name: Deploy to GitHub Pages
               if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
               run: |
                   npm install -g gh-pages
-                  gh-pages -d docs/build
-
-            # 6. Commit and push updated docs (optional, if storing build in repo)
-            - name: Commit and push generated docs
-              if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-              run: |
-                  git config --local user.email "action@github.com"
-                  git config --local user.name "GitHub Action"
-                  git add docs/build
-                  if git diff-index --quiet HEAD --; then
-                    echo "No documentation changes to commit"
-                  else
-                    git commit -m "docs: auto-generate Docusaurus docs [skip ci]"
-                    git push
+                  gh-pages -d docs/build -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
