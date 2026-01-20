@@ -38,7 +38,7 @@ jobs:
 
             # 4. Build Docusaurus docs
             - name: Build Docusaurus docs
-              run: npm run build --prefix docs
+              run: npm run docs:build
 
             # 5. Deploy docs to GitHub Pages (optional)
             - name: Deploy to GitHub Pages
