@@ -40,7 +40,8 @@ const PillNav = ({
 				const R = ((w * w) / 4 + h * h) / (2 * h);
 				const D = Math.ceil(2 * R) + 2;
 				const delta =
-					Math.ceil(R - Math.sqrt(Math.max(0, R * R - (w * w) / 4))) + 1;
+					Math.ceil(R - Math.sqrt(Math.max(0, R * R - (w * w) / 4))) +
+					1;
 				const originY = D - delta;
 
 				circle.style.width = `${D}px`;
@@ -67,15 +68,21 @@ const PillNav = ({
 
 				tl.to(
 					circle,
-					{ scale: 1.2, xPercent: -50, duration: 2, ease, overwrite: "auto" },
-					0
+					{
+						scale: 1.2,
+						xPercent: -50,
+						duration: 2,
+						ease,
+						overwrite: "auto",
+					},
+					0,
 				);
 
 				if (label) {
 					tl.to(
 						label,
 						{ y: -(h + 8), duration: 2, ease, overwrite: "auto" },
-						0
+						0,
 					);
 				}
 
@@ -83,8 +90,14 @@ const PillNav = ({
 					gsap.set(white, { y: Math.ceil(h + 100), opacity: 0 });
 					tl.to(
 						white,
-						{ y: 0, opacity: 1, duration: 2, ease, overwrite: "auto" },
-						0
+						{
+							y: 0,
+							opacity: 1,
+							duration: 2,
+							ease,
+							overwrite: "auto",
+						},
+						0,
 					);
 				}
 
@@ -178,7 +191,12 @@ const PillNav = ({
 			const lines = hamburger.querySelectorAll(".hamburger-line");
 			if (newState) {
 				gsap.to(lines[0], { rotation: 45, y: 3, duration: 0.3, ease });
-				gsap.to(lines[1], { rotation: -45, y: -3, duration: 0.3, ease });
+				gsap.to(lines[1], {
+					rotation: -45,
+					y: -3,
+					duration: 0.3,
+					ease,
+				});
 			} else {
 				gsap.to(lines[0], { rotation: 0, y: 0, duration: 0.3, ease });
 				gsap.to(lines[1], { rotation: 0, y: 0, duration: 0.3, ease });
@@ -198,7 +216,7 @@ const PillNav = ({
 						duration: 0.3,
 						ease,
 						transformOrigin: "top center",
-					}
+					},
 				);
 			} else {
 				gsap.to(menu, {
@@ -278,7 +296,9 @@ const PillNav = ({
 										role="menuitem"
 										to={item.href}
 										className={`pill${activeHref === item.href ? " is-active" : ""}`}
-										aria-label={item.ariaLabel || item.label}
+										aria-label={
+											item.ariaLabel || item.label
+										}
 										onMouseEnter={() => handleEnter(i)}
 										onMouseLeave={() => handleLeave(i)}
 									>
@@ -290,8 +310,13 @@ const PillNav = ({
 											}}
 										/>
 										<span className="label-stack">
-											<span className="pill-label">{item.label}</span>
-											<span className="pill-label-hover" aria-hidden="true">
+											<span className="pill-label">
+												{item.label}
+											</span>
+											<span
+												className="pill-label-hover"
+												aria-hidden="true"
+											>
 												{item.label}
 											</span>
 										</span>
@@ -301,7 +326,9 @@ const PillNav = ({
 										role="menuitem"
 										href={item.href}
 										className={`pill${activeHref === item.href ? " is-active" : ""}`}
-										aria-label={item.ariaLabel || item.label}
+										aria-label={
+											item.ariaLabel || item.label
+										}
 										onMouseEnter={() => handleEnter(i)}
 										onMouseLeave={() => handleLeave(i)}
 									>
@@ -313,8 +340,13 @@ const PillNav = ({
 											}}
 										/>
 										<span className="label-stack">
-											<span className="pill-label">{item.label}</span>
-											<span className="pill-label-hover" aria-hidden="true">
+											<span className="pill-label">
+												{item.label}
+											</span>
+											<span
+												className="pill-label-hover"
+												aria-hidden="true"
+											>
 												{item.label}
 											</span>
 										</span>
