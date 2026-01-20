@@ -34,8 +34,7 @@ jobs:
 
             # 3. Install dependencies (React 18 + better-docs)
             - name: Install dependencies
-                run: npm install --legacy-peer-deps
-
+              run: npm install --legacy-peer-deps
 
             # 4. Generate documentation
             - name: Generate documentation
@@ -53,4 +52,3 @@ jobs:
                   else
                     git commit -m "docs: auto-generate documentation [skip ci]"
                     git push
-                  fi
