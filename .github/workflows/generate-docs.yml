@@ -8,7 +8,7 @@ on:
         paths:
             - "src/**"
             - "package.json"
-            - "scripts/**"
+            - "docs/**"
     pull_request:
         branches:
             - main
@@ -32,16 +32,22 @@ jobs:
                   node-version: "20"
                   cache: "npm"
 
-            # 3. Install dependencies (normal install, no legacy-peer-deps needed)
+            # 3. Install dependencies
             - name: Install dependencies
               run: npm install
 
-            # 4. Build Docusaurus documentation
+            # 4. Build Docusaurus docs
             - name: Build Docusaurus docs
               run: npm run build --prefix docs
 
-            # 5. Commit and push generated documentation (optional)
-            #    Only needed if you want built docs in the repo (e.g., for GitHub Pages)
+            # 5. Deploy docs to GitHub Pages (optional)
+            - name: Deploy to GitHub Pages
+              if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+              run: |
+                  npm install -g gh-pages
+                  gh-pages -d docs/build
+
+            # 6. Commit and push updated docs (optional, if storing build in repo)
             - name: Commit and push generated docs
               if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
               run: |
