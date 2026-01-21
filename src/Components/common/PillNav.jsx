@@ -28,6 +28,7 @@ const PillNav = ({
 	const mobileMenuRef = useRef(null);
 	const navItemsRef = useRef(null);
 	const logoRef = useRef(null);
+	const hasAnimatedRef = useRef(false);
 
 	useEffect(() => {
 		const layout = () => {
@@ -119,26 +120,26 @@ const PillNav = ({
 			gsap.set(menu, { visibility: "hidden", opacity: 0, scaleY: 1 });
 		}
 
-		if (initialLoadAnimation) {
+		if (initialLoadAnimation && !hasAnimatedRef.current) {
+			hasAnimatedRef.current = true;
+
 			const logo = logoRef.current;
 			const navItems = navItemsRef.current;
 
 			if (logo) {
-				gsap.set(logo, { scale: 0 });
-				gsap.to(logo, {
-					scale: 1,
-					duration: 0.6,
-					ease,
-				});
+				gsap.fromTo(
+					logo,
+					{ scale: 0 },
+					{ scale: 1, duration: 0.6, ease },
+				);
 			}
 
 			if (navItems) {
-				gsap.set(navItems, { width: 0, overflow: "hidden" });
-				gsap.to(navItems, {
-					width: "auto",
-					duration: 0.6,
-					ease,
-				});
+				gsap.fromTo(
+					navItems,
+					{ width: 0, overflow: "hidden" },
+					{ width: "auto", duration: 0.6, ease },
+				);
 			}
 		}
 
@@ -260,33 +261,6 @@ const PillNav = ({
 				aria-label="Primary"
 				style={cssVars}
 			>
-				{isRouterLink(items?.[0]?.href) ? (
-					<Link
-						className="pill-logo"
-						to={items[0].href}
-						aria-label="Home"
-						onMouseEnter={handleLogoEnter}
-						role="menuitem"
-						ref={(el) => {
-							logoRef.current = el;
-						}}
-					>
-						<img src={logo} alt={logoAlt} ref={logoImgRef} />
-					</Link>
-				) : (
-					<a
-						className="pill-logo"
-						href={items?.[0]?.href || "#"}
-						aria-label="Home"
-						onMouseEnter={handleLogoEnter}
-						ref={(el) => {
-							logoRef.current = el;
-						}}
-					>
-						<img src={logo} alt={logoAlt} ref={logoImgRef} />
-					</a>
-				)}
-
 				<div className="pill-nav-items desktop-only" ref={navItemsRef}>
 					<ul className="pill-list" role="menubar">
 						{items.map((item, i) => (
