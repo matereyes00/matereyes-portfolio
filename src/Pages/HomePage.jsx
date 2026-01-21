@@ -45,7 +45,10 @@ function Home() {
 				id="home-terminal"
 				className="text-purple-950 w-4/5 my-8 mx-auto rounded-md"
 			>
-				<div id="home-terminal-content" className="flex flex-col w-full">
+				<div
+					id="home-terminal-content"
+					className="flex flex-col w-full"
+				>
 					<WhoAmI
 						Name={who_am_i_headline}
 						Title={tab1_text}

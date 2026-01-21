@@ -13,7 +13,8 @@ const Publication = ({
 	return (
 		<div
 			id="publications-container-id"
-			className="w-96 my-8 bg-indigo-100 p-2 mx-auto rounded-lg">
+			className="w-96 my-8 bg-indigo-100 p-2 mx-auto rounded-lg"
+		>
 			<h1 className="font-semibold mx-8">
 				<a href={articleUrl} target="_blank" rel="noreferrer">
 					{PubTitle}
@@ -23,7 +24,13 @@ const Publication = ({
 				{PubDate} | {PubAuthors}
 			</h4>
 			<p className="text-sm mx-8 my-3">{PubDescription}</p>
-			{embed}
+			<iframe
+				src={embed}
+				class="w-full aspect-video"
+				allow="autoplay"
+				className="m-auto"
+				title={PubTitle}
+			></iframe>
 		</div>
 	);
 };

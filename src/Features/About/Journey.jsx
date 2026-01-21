@@ -1,6 +1,7 @@
 import React from "react";
 import poveda_grad from "../../Assets/mate-ps/pov-19-grad.JPEG";
 import bs_admu_grad from "../../Assets/mate-ps/bs-admu-grad.JPEG";
+import ms_admu_grad from "../../Assets/mate-ps/ms-admu-grad-ps.jpg";
 import ico_ph from "../../Assets/mate-ps/mate-icoph.jpg";
 import compsat_workshop from "../../Assets/mate-ps/compsat-git-workshop.JPG";
 import compsat_dp from "../../Assets/decentmate.jpg";
@@ -141,27 +142,18 @@ const EventText = () => {
 			The aim was to showcase what the organization was all about, given
 			the social-distancing aspect.
 			<br></br>
-			<br></br>I also branched out to other organizations such as the
-			Guidon and Byte. I applied my knowledge on basic web development
-			techniques and languages. It was here where I exposed myself to
-			seeing how technology is impactful in disseminating information to
-			the public and making it engaging for users from different
-			backgrounds.
+			<br></br>I also branched out to other organizations within the
+			Ateneo such as the Guidon and Byte. I applied my knowledge on basic
+			web development techniques and languages. It was here where I
+			exposed myself to seeing how technology is impactful in
+			disseminating information to the public and making it engaging for
+			users from different backgrounds.
 		</p>
 	);
 
-	const containerOneStyle =
+	const containerStyle =
 		"md:flex md:flex-wrap flex-col items-center mx-5 my-5 p-5 bg-opacity-60 border-2 border-slate-900 rounded-xl";
-	const containerTwoStyle =
-		"md:flex md:flex-wrap flex-col items-center mx-5 my-5 p-5 bg-opacity-60 border-2 border-slate-900 rounded-xl";
-	const containerThreeStyle =
-		"md:flex md:flex-wrap flex-col items-center mx-5 my-5 p-5 bg-opacity-60 border-2 border-slate-900 rounded-xl";
-	const container4Style =
-		"md:flex md:flex-wrap flex-col items-center mx-5 my-5 p-5 bg-opacity-60 border-2 border-slate-900 rounded-xl";
-	const containerFiveStyle =
-		"md:flex md:flex-wrap flex-col items-center mx-5 my-5 p-5 bg-opacity-60 border-2 border-slate-900 rounded-xl";
-	const containerSixStyle =
-		"md:flex md:flex-wrap flex-col items-center mx-5 my-5 p-5 bg-opacity-60 border-2 border-slate-900 rounded-xl";
+	const containerImgStyle = "h-1/5 w-1/5 mx-auto my-2 p-4";
 
 	return (
 		<>
@@ -173,16 +165,21 @@ const EventText = () => {
 						<img
 							src={poveda_grad}
 							alt="Poveda Graduation 2019"
-							className="w-1/5 mx-auto my-2 md:mx-2"
+							className={containerImgStyle}
 						/>
 						<img
 							src={bs_admu_grad}
 							alt="Ateneo Graduation 2023"
-							className="w-1/5 mx-auto my-2 md:mx-2"
+							className={containerImgStyle}
+						/>
+						<img
+							src={ms_admu_grad}
+							alt="Ateneo Graduation 2025"
+							className={containerImgStyle}
 						/>
 					</>
 				}
-				containerStyle={containerOneStyle}
+				containerStyle={containerStyle}
 			/>
 
 			<FontAwesomeIcon
@@ -203,7 +200,7 @@ const EventText = () => {
 						/>
 					</>
 				}
-				containerStyle={containerTwoStyle}
+				containerStyle={containerStyle}
 			/>
 
 			<FontAwesomeIcon
@@ -219,10 +216,10 @@ const EventText = () => {
 					<img
 						src={compsat_dp}
 						alt="CompSAt 2021 FB DP"
-						className="mx-auto w-1/5 h-1/5 my-2 md:mx-4"
+						className="mx-auto w-1/5 h-1/5 my-2"
 					/>
 				}
-				containerStyle={containerThreeStyle}
+				containerStyle={containerStyle}
 			/>
 
 			<FontAwesomeIcon
@@ -234,7 +231,7 @@ const EventText = () => {
 			<RectangleContainerToggle
 				title="Side quests"
 				content={content3}
-				containerStyle={container4Style}
+				containerStyle={containerStyle}
 			/>
 
 			<FontAwesomeIcon
@@ -250,13 +247,13 @@ const EventText = () => {
 						<img
 							src={ico_ph}
 							alt="ICOPH 2024 Conference"
-							className="h-1/5 w-1/5 mx-auto my-2"
+							className={containerImgStyle}
 						/>
 					</>
 				}
 				content={content4}
 				paragraphStyle="my-auto text-center md:text-left"
-				containerStyle={containerFiveStyle}
+				containerStyle={containerStyle}
 			/>
 
 			<FontAwesomeIcon
@@ -271,11 +268,11 @@ const EventText = () => {
 					<img
 						src={ubx_ps}
 						alt="UBX Photoshoot"
-						className="h-1/3 w-1/3 mx-auto"
+						className={containerImgStyle}
 					/>
 				}
 				content={content5}
-				containerStyle={containerSixStyle}
+				containerStyle={containerStyle}
 			/>
 		</>
 	);

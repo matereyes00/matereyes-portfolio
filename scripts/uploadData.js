@@ -61,7 +61,7 @@ const uploadJsonToFirestore = async (filePath, collectionName) => {
 			console.log(`Added document to ${collectionName}: ${item.title}`);
 		}
 		console.log(
-			`\nSuccessfully uploaded all data from ${filePath} to the '${collectionName}' collection!\n`
+			`\nSuccessfully uploaded all data from ${filePath} to the '${collectionName}' collection!\n`,
 		);
 	} catch (error) {
 		console.error(`Error uploading ${filePath}:`, error);
@@ -71,8 +71,8 @@ const uploadJsonToFirestore = async (filePath, collectionName) => {
 const runUploads = async () => {
 	// Upload both collections
 	// await uploadJsonToFirestore('projects.json', 'projects');
-	await uploadJsonToFirestore("miniProjects.json", "miniProjects");
-	// await uploadJsonToFirestore("about.json", "about");
+	// await uploadJsonToFirestore("miniProjects.json", "miniProjects");
+	await uploadJsonToFirestore("../about.json", "about");
 	process.exit(0); // Exit the script when done
 };
 

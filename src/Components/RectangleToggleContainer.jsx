@@ -41,7 +41,9 @@ const RectangleContainerToggle = (props) => {
 
 				{isVisible && (
 					<div className={props.imageStyle}>
-						<div>{props.images}</div>
+						<div className="flex flex-row flex-wrap justify-content-between">
+							{props.images}
+						</div>
 						{props.imagesOrigLayout}
 						<div className="text-xl">{props.content}</div>
 					</div>
