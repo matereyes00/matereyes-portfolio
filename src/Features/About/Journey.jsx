@@ -73,11 +73,12 @@ const EventText = () => {
 			<br></br>
 			It was here where I honed my research skills and learned how to work
 			individually. I continued to develop my undergraduate thesis
-			entitled (title) to accommodate all regions of the Philippines. I
+			entitled "Using Machine learning approaches to determine optimal health facility locations in rural areas in the Philippines
+			to accommodate all regions of the Philippines." I
 			was so fortunate to be mentored by Doctor Maria Regina Justina
 			Estuar during this time.
 			<br></br>
-			<br></br>I was fortunate to be given the opportunity to present my
+			<br></br>I was given the opportunity to present my
 			research on the international stage at a public health conference
 			held in Bankok, Thailand last August 2024. I also volunteered to
 			present my thesis at the 7th Graduate Research Festival held last

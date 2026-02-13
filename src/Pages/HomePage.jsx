@@ -7,7 +7,7 @@ import { loadingIcon } from "../Components/common/Loading";
 
 function Home() {
 	const who_am_i_headline = "Martina Therese R. Reyes, M.S.";
-	const tab1_text = "Junior Software Engineer at UBX";
+	const tab1_text = "MPE Software Engineer student at the University of Sydney";
 	const { data: publicationData, loading } = useFirestoreCollection("about");
 	const showLoader = useLoadingDelay(loading, 2000); // 2s delay
 
