@@ -72,7 +72,8 @@ const runUploads = async () => {
 	// Upload both collections
 	// await uploadJsonToFirestore('projects.json', 'projects');
 	// await uploadJsonToFirestore("miniProjects.json", "miniProjects");
-	await uploadJsonToFirestore("../about.json", "about");
+	// await uploadJsonToFirestore("../about.json", "about");
+	await uploadJsonToFirestore("../aboutContent.json", "aboutContent");
 	process.exit(0); // Exit the script when done
 };
 

@@ -15,8 +15,8 @@ const RectangleContainerToggle = (props) => {
 				style={{
 					backgroundColor: "#e5e5f7",
 					backgroundSize: "20px 20px",
-					backgroundImage:
-						"repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7)",
+					// backgroundImage:
+					// "repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7)",
 					boxShadow: "inset 0 0 0 9999px rgba(255,255,255,0.3)",
 				}}
 			>
