@@ -70,5 +70,14 @@
 		"stack": ["NestJS", "TypeScript"],
 		"tags": ["for fun", "AI"],
 		"title": "AI Documentation Generator - Microservice"
+	},
+	{
+		"deployedProject": "https://cringe-jar-fe.vercel.app/",
+		"description": "This project is a collaborative effort to create a fun and engaging way to share and discover cringe moments. Co-created with friends, this project allows users to submit their own cringe moments and view those submitted by others. The project is built using NestJS for the backend, TypeScript for type safety, React for the frontend, and deployed on Vercel for easy access. It serves as a lighthearted platform for users to connect over shared experiences and enjoy a good laugh.",
+		"isExternal": true,
+		"link": "https://github.com/matereyes00/Cringe-Jar-BE",
+		"stack": ["NestJS", "TypeScript", "React", "Vercel"],
+		"tags": ["for fun", "with friends"],
+		"title": "Cringe Jar"
 	}
 ]

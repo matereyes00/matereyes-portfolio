@@ -86,5 +86,21 @@
     "stack": ["JavaScript", "HTML5", "CSS3", "Git", "Figma", "React"],
     "tags": ["organization"],
     "title": "Byte: Startup Summit 2022"
+  },
+  {
+    "deployedProject": "#",
+    "description": "",
+    "link": "",
+    "stack": ["React", "SpringBoot", "Git", "PostgreSQL", "Docker"],
+    "tags": ["organization"],
+    "title": "TripPlanner"
+  },
+  {
+    "deployedProject": "#",
+    "description": "",
+    "link": "",
+    "stack": ["Django", "React", "TailwindCSS", "Git", "PostgreSQL", "Docker"],
+    "tags": ["organization"],
+    "title": "CodeGrind"
   }
 ]
