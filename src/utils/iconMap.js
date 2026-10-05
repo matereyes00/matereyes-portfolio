@@ -1,8 +1,8 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { SqlIcon } from "@hugeicons/core-free-icons";
+import { SiTypescript } from 'react-icons/si';
 // import { Railway } from "@lobehub/icons";
 import { Server } from "lucide-react";
-
 import {
 	faCss3,
 	faGitlab,
@@ -15,6 +15,7 @@ import {
 	faFigma,
 	faReact,
 	faHtml5,
+	faTypeScript
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
@@ -98,6 +99,17 @@ const streamlit_logo = (
 		<path d="M49.42 15.55c0 0-6.18 18.8-6.2 18.83L35 20.22l12.25-6.54c.57-.3 1.22-.22 1.7.19C49.44 14.28 49.62 14.94 49.42 15.55zM40.18 33.14L17.37 19.46l6.29-10.22c.27-.46.76-.73 1.28-.74.48 0 1.02.25 1.3.69L40.18 33.14zM40.22 35.5H9.81c-1.07 0-2.03-.68-2.4-1.69L.6 15.6c-.23-.6-.06-1.28.42-1.71.48-.43 1.15-.51 1.72-.21L40.22 35.5z"></path>
 	</svg>
 );
+const vercel_logo = (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        viewBox="0 0 512 512"
+        fill="currentColor"
+    >
+        <path d="M256 48L512 464H0L256 48z" />
+    </svg>
+);
 const railway_logo = <Server size={25} />;
 
 export const iconMap = {
@@ -124,4 +136,6 @@ export const iconMap = {
 	React: <FontAwesomeIcon icon={faReact} size="lg" />,
 	WordPress: <box-icon type="logo" name="wordpress" size="sm" />,
 	Railway: railway_logo,
+	TypeScript: <SiTypescript color="#000000" size={24} />,
+	Vercel: vercel_logo,
 };

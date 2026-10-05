@@ -20,9 +20,8 @@ import github from "../../Assets/github.svg";
 import docker_logo from "../../Assets/docker-svgrepo-com.svg";
 import postman_logo from "../../Assets/postman-icon-svgrepo-com.svg";
 import tailwind_logo from "../../Assets/tailwind-svgrepo-com.svg";
-
-// docker
-// postman
+import vercel_logo from "../../Assets/vercel-svgrepo-com.svg";
+import typescript_logo from "../../Assets/typescript-svgrepo-com.svg";
 
 const Stack = () => {
 	const images = {
@@ -46,6 +45,8 @@ const Stack = () => {
 		docker_logo: { src: docker_logo, name: "Docker" },
 		postman_logo: { src: postman_logo, name: "Postman" },
 		tailwind_logo: { src: tailwind_logo, name: "Tailwind CSS" },
+		typescript: { src: typescript_logo, name: "TypeScript" },
+		vercel: { src: vercel_logo, name: "Vercel" },
 	};
 
 	return (

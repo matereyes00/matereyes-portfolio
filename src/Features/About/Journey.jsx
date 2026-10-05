@@ -17,6 +17,7 @@ import {
 	faLocationDot,
 	faTrain,
 	faCoffee,
+	faBoxesPacking
 } from "@fortawesome/free-solid-svg-icons";
 import RectangleContainerToggle from "../../Components/RectangleToggleContainer";
 
@@ -100,7 +101,7 @@ const EventText = () => {
 					className={containerImgStyle}
 				/>
 			),
-			icon: null,
+			icon: faBoxesPacking,
 		},
 		australia: {
 			displayTitle: "A few timezones away from home",
